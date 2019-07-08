@@ -1,0 +1,17 @@
+127.0.0.1 - - [30/Jun/2019:15:59:48 +0900] "GET / HTTP/1.1" 404 1115
+0:0:0:0:0:0:0:1 - - [30/Jun/2019:15:59:49 +0900] "GET /web-study-02/07_login.jsp HTTP/1.1" 200 426
+0:0:0:0:0:0:0:1 - - [30/Jun/2019:15:59:49 +0900] "GET /favicon.ico HTTP/1.1" 404 1126
+0:0:0:0:0:0:0:1 - - [30/Jun/2019:16:00:18 +0900] "GET /web-study-02/07_login.jsp HTTP/1.1" 200 441
+0:0:0:0:0:0:0:1 - - [30/Jun/2019:16:00:22 +0900] "GET /web-study-02/LoginServlet?id=jkkball&pwd=asda HTTP/1.1" 200 172
+127.0.0.1 - - [30/Jun/2019:16:10:49 +0900] "GET / HTTP/1.1" 404 1115
+0:0:0:0:0:0:0:1 - - [30/Jun/2019:16:10:51 +0900] "GET /web-study-02/08_radio.jsp HTTP/1.1" 200 847
+0:0:0:0:0:0:0:1 - - [30/Jun/2019:16:10:56 +0900] "GET /web-study-02/RadioServlet?gender=%EC%97%AC%EC%9E%90&chk_mail=no&content=dsadsdas HTTP/1.1" 200 221
+0:0:0:0:0:0:0:1 - - [30/Jun/2019:16:11:02 +0900] "GET /web-study-02/RadioServlet?gender=%EB%82%A8%EC%9E%90&chk_mail=yes&content=qwewqewq HTTP/1.1" 200 222
+127.0.0.1 - - [30/Jun/2019:16:24:59 +0900] "GET / HTTP/1.1" 404 1115
+0:0:0:0:0:0:0:1 - - [30/Jun/2019:16:25:01 +0900] "GET /web-study-02/09_checkbox.jsp HTTP/1.1" 200 701
+0:0:0:0:0:0:0:1 - - [30/Jun/2019:16:25:05 +0900] "GET /web-study-02/CheckboxServlet?item=%EA%B0%80%EB%B0%A9&item=%EB%B2%A8%ED%8A%B8&item=%EC%8B%9C%EA%B3%84 HTTP/1.1" 200 141
+0:0:0:0:0:0:0:1 - - [30/Jun/2019:16:25:11 +0900] "GET /web-study-02/CheckboxServlet?item=%EC%8B%A0%EB%B0%9C&item=%EA%B0%80%EB%B0%A9&item=%EB%B2%A8%ED%8A%B8&item=%EB%AA%A8%EC%9E%90&item=%EC%8B%9C%EA%B3%84&item=%EC%A5%AC%EC%96%BC%EB%A6%AC HTTP/1.1" 200 165
+127.0.0.1 - - [30/Jun/2019:19:29:56 +0900] "GET / HTTP/1.1" 404 1115
+0:0:0:0:0:0:0:1 - - [30/Jun/2019:19:29:58 +0900] "GET /jsp-study/01_hello.jsp HTTP/1.1" 200 148
+0:0:0:0:0:0:0:1 - - [30/Jun/2019:19:32:08 +0900] "GET /jsp-study/01_hello.jsp HTTP/1.1" 200 134
+0:0:0:0:0:0:0:1 - - [30/Jun/2019:19:39:13 +0900] "GET /jsp-study/03_addition.jsp HTTP/1.1" 200 122

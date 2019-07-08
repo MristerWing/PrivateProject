@@ -1,0 +1,17 @@
+INDEX VERSION 1.131
+H:\PrivateProject\4.Web_project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4105448875.index
+\web-study-01\src
+H:\Git_PC\Web_project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2200633179.index
+\web-study-02\src
+H:\Git_PC\Web_project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1813469883.index
+\web-study-04\src
+H:\PrivateProject\4.Web_project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2200633179.index
+\web-study-02\src
+H:\PrivateProject\4.Web_project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1813469883.index
+\web-study-04\src
+H:\Git_PC\Web_project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4105448875.index
+\web-study-01\src
+H:\Git_PC\Web_project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\412070708.index
+\web-study-03\src
+H:\PrivateProject\4.Web_project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\412070708.index
+\web-study-03\src

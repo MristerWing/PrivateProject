@@ -1,0 +1,8 @@
+
+6월 26, 2019 20:37:43.67 NEW SESSION
+6월 26, 2019 20:37:43.68 [14140:14184:0626/203743.651:ERROR:socket_stream.cc(219)] Closing stream with result -2
+6월 26, 2019 20:37:43.98 [14140:14184:0626/203743.980:ERROR:socket_stream.cc(219)] Closing stream with result -2
+6월 26, 2019 21:07:42.93 [14140:14184:0626/210742.932:ERROR:socket_stream.cc(219)] Closing stream with result -2
+6월 26, 2019 21:07:43.21 [14140:14184:0626/210743.211:ERROR:socket_stream.cc(219)] Closing stream with result -2
+6월 26, 2019 21:57:12.71 [14140:13028:0626/215712.716:ERROR:http_bridge.cc(110)] NOT IMPLEMENTED
+6월 26, 2019 21:57:12.89 [14140:14184:0626/215712.893:ERROR:browser_process_sub_thread.cc(221)] Waited 41 ms for network service
