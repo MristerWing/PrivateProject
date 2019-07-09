@@ -10,3 +10,14 @@
 0:0:0:0:0:0:0:1 - - [08/Jul/2019:15:34:24 +0900] "GET /web-study-04/02_research.jsp HTTP/1.1" 500 2876
 0:0:0:0:0:0:0:1 - - [08/Jul/2019:15:34:29 +0900] "POST /web-study-04/02_research.jsp HTTP/1.1" 200 503
 0:0:0:0:0:0:0:1 - - [08/Jul/2019:15:36:24 +0900] "GET /web-study-04/03_redirect.jsp HTTP/1.1" 302 -
+127.0.0.1 - - [08/Jul/2019:17:31:55 +0900] "GET / HTTP/1.1" 404 1115
+0:0:0:0:0:0:0:1 - - [08/Jul/2019:17:31:56 +0900] "GET /web-study-04/04_loginForm.jsp HTTP/1.1" 200 446
+0:0:0:0:0:0:0:1 - - [08/Jul/2019:17:32:03 +0900] "POST /web-study-04/04_testLogin.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [08/Jul/2019:17:32:03 +0900] "GET /web-study-04/04_main.jsp?name=%EA%B9%80%EC%A7%84%EC%88%98 HTTP/1.1" 200 250
+0:0:0:0:0:0:0:1 - - [08/Jul/2019:17:32:08 +0900] "POST /web-study-04/04_testLogin.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [08/Jul/2019:17:32:08 +0900] "GET /web-study-04/04_loginForm.jsp HTTP/1.1" 200 446
+0:0:0:0:0:0:0:1 - - [08/Jul/2019:17:47:20 +0900] "GET /web-study-04/05_forwardForm.jsp HTTP/1.1" 200 352
+0:0:0:0:0:0:0:1 - - [08/Jul/2019:17:47:22 +0900] "GET /web-study-04/05_forwardTest.jsp?age=21 HTTP/1.1" 200 217
+0:0:0:0:0:0:0:1 - - [08/Jul/2019:17:47:28 +0900] "GET /web-study-04/05_forwardTest.jsp?age=12 HTTP/1.1" 200 209
+0:0:0:0:0:0:0:1 - - [08/Jul/2019:17:47:59 +0900] "GET /web-study-04/05_forwardForm.jsp HTTP/1.1" 200 352
+0:0:0:0:0:0:0:1 - - [08/Jul/2019:17:48:02 +0900] "GET /web-study-04/05_forwardTest.jsp?age=25 HTTP/1.1" 200 219
