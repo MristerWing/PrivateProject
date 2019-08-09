@@ -1,4 +1,4 @@
-package reactivejava;
+package com.gmx0807.reactivejava.chapter01;
 
 import io.reactivex.Observable;
 
