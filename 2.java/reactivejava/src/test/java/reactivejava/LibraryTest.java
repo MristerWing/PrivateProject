@@ -4,6 +4,9 @@
 package reactivejava;
 
 import org.junit.Test;
+
+import com.gmx0807.reactivejava.Library;
+
 import static org.junit.Assert.*;
 
 public class LibraryTest {
