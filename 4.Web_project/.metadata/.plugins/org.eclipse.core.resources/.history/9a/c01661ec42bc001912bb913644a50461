@@ -1,0 +1,16 @@
+<%@ page import = "java.net.URLDecoder" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSP</title>
+</head>
+<body>
+<%=URLDecoder.decode(request.getParameter("inputNumber"), "UTF-8") %>
+<%=URLDecoder.decode(request.getParameter("resultNumber"), "UTF-8") %>
+1부터 <%=request.getParameter("inputNumber") %>까지 자연수 합 구하기
+<%=request.getParameter("resultNumber") %>
+</body>
+</html>

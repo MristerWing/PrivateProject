@@ -1,0 +1,23 @@
+<%@page import="java.net.URLEncoder"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+String reslut = "";
+int sum = 0;
+int num = Integer.parseInt(request.getParameter("number"));
+for(int i = 1;i >= num;i++) {
+	System.out.print(i);
+	sum += i;
+	if(i == num) {
+		 reslut.compareTo(" = " + sum);
+	}
+	else if(i == 1) {
+		reslut.compareTo("" + i);
+	}
+	else reslut.compareTo(" + " + i);
+}
+%>
+<jsp:forward page="result.jsp">
+	<jsp:param value='<%=URLEncoder.encode("result", "UTF-8")%>'
+		name="resultNumber" />
+</jsp:forward>

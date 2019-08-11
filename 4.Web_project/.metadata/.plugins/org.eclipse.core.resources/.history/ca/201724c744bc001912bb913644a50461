@@ -1,0 +1,30 @@
+<%@ page import = "java.net.URLDecoder" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSP</title>
+</head>
+<body>
+<%
+String reslut = "";
+int sum = 0;
+int num = Integer.parseInt(request.getParameter("number"));
+for(int i = 1;i >= num;i++) {
+	System.out.print(i);
+	sum += i;
+	if(i == num) {
+		 reslut.compareTo(" = " + sum);
+	}
+	else if(i == 1) {
+		reslut.compareTo("" + i);
+	}
+	else reslut.compareTo(" + " + i);
+}
+%>
+<h1>1부터 <%=request.getParameter("number") %>까지 자연수 합 구하기</h1>
+<%=reslut %> 이다.
+</body>
+</html>
