@@ -1,10 +1,12 @@
 package com.gmx0807.reactivejava.chapter02;
 
-import java.util.concurrent.*;
+import com.gmx0807.reactivejava.common.*;
+
+import java.util.concurrent.Callable;
 
 import io.reactivex.Observable;
 
-public class ObservableFromCallable implements Callable<String> {
+public class ObservableFromCallable {
 
 	public void emit() {
 
@@ -16,6 +18,7 @@ public class ObservableFromCallable implements Callable<String> {
 
 		Observable<String> source = Observable.fromCallable(callable);
 		source.subscribe(System.out::println);
+		CommonUtils.exampleComplete();
 	}
 	
 //	not lambda
@@ -29,12 +32,6 @@ public class ObservableFromCallable implements Callable<String> {
 	public static void main(String[] args) {
 		ObservableFromCallable demo = new ObservableFromCallable();
 		demo.emit();
-	}
-
-	@Override
-	public String call() throws Exception {
-		// TODO Auto-generated method stub
-		return "error";
 	}
 
 }
