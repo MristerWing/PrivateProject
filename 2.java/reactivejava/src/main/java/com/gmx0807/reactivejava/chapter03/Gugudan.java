@@ -18,7 +18,7 @@ public class Gugudan {
 
 	public void reactiveV2() {
 		Scanner in = new Scanner(System.in);
-		System.out.println("Guguda Input: ");
+		System.out.println("Gugudan Input: ");
 		int dan = Integer.parseInt(in.nextLine());
 
 		//gugudan 함수를 생성하여 입력값을 확인
@@ -61,6 +61,11 @@ public class Gugudan {
 		
 		source.subscribe(System.out::println);
 		in.close();
+	}
+	
+	public void doubleRangeGugu() {
+
+		
 	}
 
 	public static void main(String[] args) {
