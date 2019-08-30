@@ -1,8 +1,10 @@
 package page;
 
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import utils.*;
+
+import utils.printLine;
 
 public class Quiz0828 {
 
@@ -16,16 +18,25 @@ public class Quiz0828 {
 		}
 		printLine.l();
 	}
+	
 
 	@FunctionalInterface
 	public interface LambdaPractice {
 		public void method();
 	}
+	
+	@FunctionalInterface
+	public interface LambdaSwap {
+		public int[] method(int[] arr);
+	}
 
 	public static void main(String[] args) {
 		LambdaPractice lp;
+		LambdaSwap swap;
 		Scanner in = new Scanner(System.in);
 		Quiz0828 q = new Quiz0828();
+		
+		
 
 		// 136p
 		// q.Quiz5();
@@ -100,16 +111,65 @@ public class Quiz0828 {
 
 		};
 		//lp.method();
-
+		
+		//reverse lambda
+		swap = arr -> {
+			
+			for(int j = 0;j < (arr.length - 1) / 2;j++) {
+				int tmp = arr[Math.abs(j - (arr.length - 1))];
+				arr[Math.abs(j - (arr.length - 1))] = arr[j];
+				arr[j] = tmp;
+			}
+			
+			return arr;
+		};
+		
+//		배열1
 		lp = () -> {
 			int[] arr = new int[9];
 			
+			int sum = 0;
+			double avg = 0.0;
+			int max = 0;
+			int min = 0;
+			
 			for(int i =0;i < 9;i++) {
 				arr[i] = 2 * (i + 1);
+				
+				
+				if(i == 0) min = arr[i];
+				
+				sum += arr[i];
+				if(min > arr[i]) min = arr[i];
+				if(max < arr[i]) max = arr[i];
+				
 				System.out.println(2 + " X " + (i + 1) + " = " + (2 * (i + 1)));
 			}
+			
+			System.out.println("sum is " + sum);
+			avg = (double)sum / 9.0;
+			System.out.println("avg is " + avg);
+			System.out.println("max is " + max);
+			System.out.println("min is " + min);
+			
+			System.out.println(Arrays.toString(swap.method(arr)));
+			
 		};
 		lp.method();
+		
+//		배열1 reverse
+		lp = () -> {
+			int[] arr = new int[9];
+			
+			for(int i = 8;i >= 0;i--) {
+				arr[Math.abs(i - (arr.length - 1))] = 2 * (i + 1);
+				System.out.println(2 + " X " + (i + 1) + " = " + (2 * (i + 1)));
+			}
+			
+			System.out.println(Arrays.toString(arr));
+		};
+		
+//		lp.method();
 	}
 
 }

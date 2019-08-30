@@ -9,7 +9,9 @@ import io.reactivex.Observable;
 
 public class IntervalRangeExample {
 	public void printNumbers() { 
-		Observable<Long> source = Observable.intervalRange(1, //start 
+		
+		//start 
+		Observable<Long> source = Observable.intervalRange(1, 
 				5, 						//count
 				100L ,					//intialDelay
 				100L, 					//period

@@ -4,16 +4,16 @@ import io.reactivex.Observable;
 import java.util.concurrent.TimeUnit;
 import com.gmx0807.reactivejava.common.*;
 
-/*ÀÏÁ¤°£°İÀ¸·Î µ¥ÀÌÅÍÀÇ Èå¸§À» »ı¼ºÇÏ´Â ÇÔ¼ö
- * ÁÖ¾îÁø ½Ã°£À¸·ÎºÎÅÍ 0ºÎÅÍ 1¾¿ Áõ°¡ÇÏ´Â Long °´Ã¼¸¦ ¹ßÇà
+/*ì¼ì •ê°„ê²©ìœ¼ë¡œ ë°ì´í„°ì˜ íë¦„ì„ ìƒì„±í•˜ëŠ” í•¨ìˆ˜
+ * ì£¼ì–´ì§„ ì‹œê°„ìœ¼ë¡œë¶€í„° 0ë¶€í„° 1ì”© ì¦ê°€í•˜ëŠ” Long ê°ì²´ë¥¼ ë°œí–‰
  * range = for
- * interval = ½º·¹µå µô·¹ÀÌ¸¦ ÁÖ´Â for*/
+ * interval = ìŠ¤ë ˆë“œ ë”œë ˆì´ë¥¼ ì£¼ëŠ” for*/
 
 public class IntervalExample {
 	
 	/*
-	 * 100ms°£°İÀ¸·Î 0ºÎÅÍ µ¥ÀÌÅÍ¸¦ ¹ßÇàÇÑ ÈÄ map()ÇÔ¼ö¸¦ È£ÃâÇÏ¿© 
-	 * ÀÔ·Â°ª¿¡1À» ´õÇÑ µÚ 100À» °öÇÏ´Â ÇÔ¼ö
+	 * 100msê°„ê²©ìœ¼ë¡œ 0ë¶€í„° ë°ì´í„°ë¥¼ ë°œí–‰í•œ í›„ map()í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ì—¬ 
+	 * ì…ë ¥ê°’ì—1ì„ ë”í•œ ë’¤ 100ì„ ê³±í•˜ëŠ” í•¨ìˆ˜
 	 */
 	public void printNumbers() {
 		CommonUtils.exampleComplete();
@@ -26,7 +26,7 @@ public class IntervalExample {
 	}
 	
 	
-//	µô·¹ÀÌÁ¦°Å
+//	ë”œë ˆì´ì œê±°
 	public void noInitialDelay() {
 		CommonUtils.exampleComplete();
 		Observable<Long> source = Observable.interval(0L, 100L, TimeUnit.MICROSECONDS)

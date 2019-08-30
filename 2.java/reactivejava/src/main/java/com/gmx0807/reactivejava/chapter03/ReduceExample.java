@@ -10,10 +10,10 @@ import static com.gmx0807.reactivejava.common.Shape.RED;
 import static com.gmx0807.reactivejava.common.Shape.GREEN;
 import static com.gmx0807.reactivejava.common.Shape.BLUE;
 
-/*reduce: °¨¼ÒÇÏ´Ù?
- * ball1, ball2¸¦ °¡Áö°í ball2(ball1)ÀÇ Çü½ÄÀ¸·Î ¸®ÅÏ
- * ÀÌÈÄ ¿Ï·áµÉ ¶§±îÁö ¸®ÅÏ°ª3(1)À» ball1À¸·Î ÀÎ½Ä,
- * ball2(3(1))Çü½ÄÀ¸·Î ¸¸µë. ÀÌÈÄ ¿Ï·áµÇ¸é ¿Ï·áµÈ °ªÀ» ¸®ÅÏ*/
+/*reduce: ê°ì†Œí•˜ë‹¤?
+ * ball1, ball2ë¥¼ ê°€ì§€ê³  ball2(ball1)ì˜ í˜•ì‹ìœ¼ë¡œ ë¦¬í„´
+ * ì´í›„ ì™„ë£Œë  ë•Œê¹Œì§€ ë¦¬í„´ê°’3(1)ì„ ball1ìœ¼ë¡œ ì¸ì‹,
+ * ball2(3(1))í˜•ì‹ìœ¼ë¡œ ë§Œë“¬. ì´í›„ ì™„ë£Œë˜ë©´ ì™„ë£Œëœ ê°’ì„ ë¦¬í„´*/
 
 
 public class ReduceExample {
@@ -40,7 +40,7 @@ public class ReduceExample {
 	public void Test() {
 		String[] balls = {RED, GREEN, BLUE, "7", "8", "9"};
 		Maybe<String> source = Observable.fromArray(balls)
-				.reduce((ball1, ball2) -> ball2 + "¡Ù" + ball1 + "¡Ú");
+				.reduce((ball1, ball2) -> ball2 + "â˜†" + ball1 + "â˜…");
 		source.subscribe(System.out::println);
 		CommonUtils.exampleComplete();
 	}
