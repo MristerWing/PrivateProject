@@ -36,17 +36,17 @@ public class Log {
 		System.out.println(getThreadName() + " | " + time + " | " + "value = " + obj);		
 	}
 	
-//	public static void it(List<String> list) { 
-//		long time = System.currentTimeMillis() - CommonUtils.startTime;
-//		StringBuffer sb = new StringBuffer();
-//		sb.append(getThreadName() + " | " + time + " | " + "value = {"); 
-//		for (String str : list) { 
-//			sb.append(str);
-//			sb.append(",");
-//		}
-//		sb.append("}");
-//		System.out.println(sb.toString().replace(",}", "}"));
-//	}
+	public static void it(List<String> list) { 
+		long time = System.currentTimeMillis() - CommonUtils.startTime;
+		StringBuffer sb = new StringBuffer();
+		sb.append(getThreadName() + " | " + time + " | " + "value = {"); 
+		for (String str : list) { 
+			sb.append(str);
+			sb.append(",");
+		}
+		sb.append("}");
+		System.out.println(sb.toString().replace(",}", "}"));
+	}
 
 	public static void dt(Object obj) { 
 		long time = System.currentTimeMillis() - CommonUtils.startTime;
