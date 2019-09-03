@@ -1,8 +1,8 @@
 package page.init.date0902;
 
-public class Singleton {
+public class SingleTon {
 	
-	private Singleton() {}
+	private SingleTon() {}
 	//private static Singleton sing = new Singleton();
 	
 	/* Initialization on demand holder idiom (holder에 의한 초기화)
@@ -17,10 +17,10 @@ public class Singleton {
 	 * 한번만 호출될 것이며, final을 사용하여 다시 값이 할당되지 않도록 하는 방법
 	 */
 	private static class LazyHolder {
-		private static final Singleton INSTANCE = new Singleton(); 
+		private static final SingleTon INSTANCE = new SingleTon(); 
 	}
 	
-	public static Singleton getInstance() {
+	public static SingleTon getInstance() {
 		return LazyHolder.INSTANCE;
 	}
 }

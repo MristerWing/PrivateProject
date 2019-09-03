@@ -23,6 +23,7 @@ public class ReactiveSum {
 	 * 입력시 바로 값을 확인하기 위해 startWith값을 0으로 초기화 하였다.
 	 */
 	public void run() {
+		
 		ConnectableObservable<String> source = userInput();
 		Observable<Integer> a = source
 				.filter(str -> str.startsWith("a: "))
