@@ -126,9 +126,9 @@ public class Quiz0827 {
 			loopw++;
 		}
 		
-		System.out.println("xÀÇ ÃÖ´ë°ø¾à¼ö" + xgc);
-		System.out.println("yÀÇ ÃÖ´ë°ø¾à¼ö" + ygc);
-		System.out.println("ÃÖ¼Ò°ø¹è¼ö" + cm);
+		System.out.println("xï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½" + xgc);
+		System.out.println("yï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½" + ygc);
+		System.out.println("ï¿½Ö¼Ò°ï¿½ï¿½ï¿½ï¿½" + cm);
 		
 		printLine.l();
 		
