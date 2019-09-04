@@ -1,11 +1,11 @@
 package com.gmx0807.view;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.Buffer;
+import java.util.ArrayList;
 
+import com.gmx0807.domain.EmpBean;
 import com.gmx0807.domain.EmpData;
 
 /*HRM 시스템 구성(Human Resource Management)
@@ -25,12 +25,8 @@ public class Menu {
 	public void main_menu() {
 
 		// define empData
-		EmpData[] emp = new EmpData[3];
-		emp[0] = new EmpData(9999, "Smith", 1111, "IT", 3000.0, 300.0, "2015-02-02", 10);
-		emp[1] = new EmpData(1111, "KING", 1111, "President", 5000.0, 800.0, "1996-12-02", 10);
-		emp[2] = new EmpData(2323, "Allen", 9999, "Salesman", 1600.0, 300.0, "2075-03-22", 20);
+		ArrayList<EmpBean> emp = new EmpData().defData();
 
-		Menu m = new Menu();
 		InputStreamReader in = new InputStreamReader(System.in);
 		BufferedReader br;
 
