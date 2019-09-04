@@ -21,37 +21,10 @@ public class EmpBean {
 		this.job = job;
 		this.hiredate = hiredate;
 	}
-
-	public void setEmpno(int empno) {
+	
+	//use empno Not Found 
+	public EmpBean(int empno) {
 		this.empno = empno;
-	}
-
-	public void setMgr(int mgr) {
-		this.mgr = mgr;
-	}
-
-	public void setSal(double sal) {
-		this.sal = sal;
-	}
-
-	public void setComm(double comm) {
-		this.comm = comm;
-	}
-
-	public void setDeptno(int deptno) {
-		this.deptno = deptno;
-	}
-
-	public void setEname(String ename) {
-		this.ename = ename;
-	}
-
-	public void setJob(String job) {
-		this.job = job;
-	}
-
-	public void setHiredate(String hiredate) {
-		this.hiredate = hiredate;
 	}
 
 	public String getData() {

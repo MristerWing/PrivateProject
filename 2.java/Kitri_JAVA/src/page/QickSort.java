@@ -98,13 +98,13 @@ public class QickSort {
 
 		System.out.println("origin: " + Arrays.toString(arr));
 
-//		quickSort(arr, 0, arr.length - 1);
+		quickSort(arr, 0, arr.length - 1);
 
-//		System.out.println("qick: " + Arrays.toString(arr));
+		System.out.println("qick: " + Arrays.toString(arr));
 
-		mergeSort(arr1, 0, arr.length - 1);
-
-		System.out.println("merge: " + Arrays.toString(arr1));
+//		mergeSort(arr1, 0, arr.length - 1);
+//
+//		System.out.println("merge: " + Arrays.toString(arr1));
 	}
 
 }

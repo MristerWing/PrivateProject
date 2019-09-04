@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Kakao {
 
@@ -16,7 +17,12 @@ public class Kakao {
 		
 		int result = solution(nodeinfo);
 		
-		System.out.println(Integer.toString(result));
+		System.out.println(Arrays.deepToString(nodeinfo));
+		
+		nodeinfo = null;
+		
+		System.out.println(Arrays.deepToString(nodeinfo));
+		
 		
 	}
 

@@ -16,7 +16,7 @@ public class IntervalExample {
 	 * 입력값에1을 더한 뒤 100을 곱하는 함수
 	 */
 	public void printNumbers() {
-		CommonUtils.exampleComplete();
+		CommonUtils.exampleStart();
 		Observable<Long> source = Observable.interval(100L, TimeUnit.MILLISECONDS)
 				.map(data -> (data + 1) * 100)
 				.take(5);
@@ -28,7 +28,7 @@ public class IntervalExample {
 	
 //	딜레이제거
 	public void noInitialDelay() {
-		CommonUtils.exampleComplete();
+		CommonUtils.exampleStart();
 		Observable<Long> source = Observable.interval(0L, 100L, TimeUnit.MICROSECONDS)
 				.map(val -> val + 100)
 				.take(5);
@@ -41,7 +41,7 @@ public class IntervalExample {
 	public static void main(String[] args) {
 		IntervalExample demo = new IntervalExample();
 		demo.printNumbers();
-//		demo.noInitialDelay();
+		demo.noInitialDelay();
 
 	}
 

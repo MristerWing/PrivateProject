@@ -26,11 +26,11 @@ public class Menu {
 
 		// define empData
 		ArrayList<EmpBean> emp = new EmpData().defData();
-
+		
 		InputStreamReader in = new InputStreamReader(System.in);
 		BufferedReader br;
 
-		int plag = 0;
+		int flag = 0;
 		boolean isStop = false;
 
 		br = new BufferedReader(in);
@@ -52,10 +52,10 @@ public class Menu {
 				// NumberFormatException, 값이 숫자가 아니면 예외처리로 경고
 				try {
 
-					plag = Integer.parseInt(br.readLine());
+					flag = Integer.parseInt(br.readLine());
 
-					// plag
-					if (plag <= 0 || plag > 6) {
+					// flag
+					if (flag <= 0 || flag > 6) {
 						System.err.print("정확한 값이 아닙니다. 다시입력하세요: ");
 						continue;
 					}
@@ -71,19 +71,21 @@ public class Menu {
 
 			// use class or method
 			System.out.print("입력한 메뉴: ");
-			switch (plag) {
+			switch (flag) {
 			case 1:
 				System.out.println("1. 사원정보조회");
 				new SearchEmp(br, emp).searchInfo();
 				break;
 			case 2:
 				System.out.println("2. 사원추가");
+				new AddEmp(br, emp).addEmp();
 				break;
 			case 3:
 				System.out.println("3. 사원수정");
 				break;
 			case 4:
 				System.out.println("4. 사원삭제");
+				new DeleteEmp(br, emp).delete();
 				break;
 			case 5:
 				System.out.println("5. 부서정보 조회");
