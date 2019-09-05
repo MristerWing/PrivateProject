@@ -10,7 +10,7 @@ public class EmpBean {
 	private String ename;
 	private String job;
 	private String hiredate;
-
+	
 	public EmpBean(int empno, String ename, int mgr, String job, double sal, String hiredate, int deptno) {
 		this.empno = empno;
 		this.mgr = mgr;

@@ -1,30 +1,24 @@
-package com.gmx0807.view;
+package com.gmx0807.view.emp;
 
-import java.io.BufferedReader;
 import java.util.ArrayList;
 
 import com.gmx0807.domain.EmpBean;
 import com.gmx0807.domain.EmpData;
+import com.gmx0807.view.InputMSG;
 
-public class DeleteEmp {
-	BufferedReader br;
+public class DeleteEmp extends InputMSG{
 	ArrayList<EmpBean> emp;
 
-	public DeleteEmp(BufferedReader br, ArrayList<EmpBean> emp) {
-		this.br = br;
+	public DeleteEmp(ArrayList<EmpBean> emp) {
 		this.emp = emp;
 	}
 
 	public void deleteEmp() {
-		// inputStream
-		InputMSG in = new InputMSG(br);
 
 		boolean isStop = false;
 		boolean isB = false;
 		String flag = "";
 		int empno;
-
-		System.out.println("삭제하고자 하는 사원의 번호를 입력하시오.");
 
 		while (!isStop) {
 
@@ -33,7 +27,7 @@ public class DeleteEmp {
 				System.out.println("a. 전체삭제");
 				System.out.println("b. 선택삭제");
 
-				flag = in.getString();
+				flag = getString();
 			}
 
 			//select a
@@ -44,8 +38,10 @@ public class DeleteEmp {
 				
 				//select b
 			} else if (flag.equals("b")) {
+				isB = true;
+				System.out.println("삭제하고자 하는 사원의 번호를 입력하시오.");
 				System.out.print("사원번호 입력: ");
-				empno = in.getInt();
+				empno = getInt();
 				if (empno <= 999) {
 					System.err.println("사원번호는 4자릿수 입니다. 다시입력하세요. ");
 					continue;
@@ -61,8 +57,9 @@ public class DeleteEmp {
 					int index = emp.indexOf(tmpBean);
 					
 					emp.remove(index);
-					System.out.println("선택한 사원번호가 삭제되었습니다.");
+					isB = false;
 					isStop = true;
+					System.out.println("선택한 사원번호가 삭제되었습니다.");
 				}
 			}
 

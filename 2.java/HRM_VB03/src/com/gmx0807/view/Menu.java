@@ -1,12 +1,19 @@
 package com.gmx0807.view;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import com.gmx0807.domain.DeptBean;
+import com.gmx0807.domain.DeptData;
 import com.gmx0807.domain.EmpBean;
 import com.gmx0807.domain.EmpData;
+import com.gmx0807.view.dept.AddDept;
+import com.gmx0807.view.dept.DeleteDept;
+import com.gmx0807.view.dept.FixDept;
+import com.gmx0807.view.dept.SearchDept;
+import com.gmx0807.view.emp.AddEmp;
+import com.gmx0807.view.emp.DeleteEmp;
+import com.gmx0807.view.emp.FixEmp;
+import com.gmx0807.view.emp.SearchEmp;
 
 /*HRM 시스템 구성(Human Resource Management)
 #1. 각 기능상의 목록을 출력 할 수 있는 메뉴 출력하기(Scanner, Sysytem.out, if~else, Loop)
@@ -20,20 +27,16 @@ import com.gmx0807.domain.EmpData;
 		5. 부서정보 조회
 		6. 종료*/
 
-public class Menu {
+public class Menu extends InputMSG {
 
 	public void main_menu() {
 
-		// define empData
+		// define Data
 		ArrayList<EmpBean> emp = new EmpData().defData();
-		
-		InputStreamReader in = new InputStreamReader(System.in);
-		BufferedReader br;
+		ArrayList<DeptBean> dept = new DeptData().defData();
 
 		int flag = 0;
 		boolean isStop = false;
-
-		br = new BufferedReader(in);
 
 		while (!isStop) {
 
@@ -44,29 +47,17 @@ public class Menu {
 			System.out.println("3. 사원수정");
 			System.out.println("4. 사원삭제");
 			System.out.println("5. 부서정보 조회");
-			System.out.println("6. 종료");
+			System.out.println("6. 부서추가");
+			System.out.println("7. 부서수정");
+			System.out.println("8. 부서삭제");
+			System.out.println("9. 종료");
 			System.out.print("값을 입력하세요: ");
 
-			// BufferedReader exception
-			try {
-				// NumberFormatException, 값이 숫자가 아니면 예외처리로 경고
-				try {
-
-					flag = Integer.parseInt(br.readLine());
-
-					// flag
-					if (flag <= 0 || flag > 6) {
-						System.err.print("정확한 값이 아닙니다. 다시입력하세요: ");
-						continue;
-					}
-
-				} catch (NumberFormatException e) {
-					System.err.print("정확한 값이 아닙니다. 다시입력하세요: ");
-					continue;
-				}
-
-			} catch (IOException e) {
-				System.err.println(e);
+			flag = getInt();
+			// flag
+			if (flag <= 0 || flag > 9) {
+				System.err.print("정확한 값이 아닙니다. 다시입력하세요: ");
+				continue;
 			}
 
 			// use class or method
@@ -74,25 +65,38 @@ public class Menu {
 			switch (flag) {
 			case 1:
 				System.out.println("1. 사원정보조회");
-				new SearchEmp(br, emp).searchInfo();
+				new SearchEmp(emp).searchInfo();
 				break;
 			case 2:
 				System.out.println("2. 사원추가");
-				new AddEmp(br, emp).addEmp();
+				new AddEmp(emp).addEmp();
 				break;
 			case 3:
 				System.out.println("3. 사원수정");
-				new FixEmp(br, emp).fixEmp();
+				new FixEmp(emp).fixEmp();
 				break;
 			case 4:
 				System.out.println("4. 사원삭제");
-				new DeleteEmp(br, emp).deleteEmp();
+				new DeleteEmp(emp).deleteEmp();
 				break;
 			case 5:
 				System.out.println("5. 부서정보 조회");
+				new SearchDept(dept).searchInfo();
 				break;
 			case 6:
-				System.out.println("6. 종료");
+				System.out.println("6. 부서추가");
+				new AddDept(dept).edit();
+				break;
+			case 7:
+				System.out.println("7. 부서수정");
+				new FixDept(dept).edit();
+				break;
+			case 8:
+				System.out.println("8. 부서삭제");
+				new DeleteDept(dept).deleteDept();
+				break;
+			case 9:
+				System.out.println("9. 종료");
 				isStop = true;
 				break;
 			}

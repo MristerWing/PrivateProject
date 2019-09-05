@@ -1,21 +1,18 @@
-package com.gmx0807.view;
+package com.gmx0807.view.emp;
 
-import java.io.BufferedReader;
-import java.io.IOException;
 import java.util.ArrayList;
 
 import com.gmx0807.domain.EmpBean;
 import com.gmx0807.domain.EmpData;
+import com.gmx0807.view.InputMSG;
 
 //1.사원정보 조회
-public class SearchEmp {
-	public BufferedReader br;
+public class SearchEmp extends InputMSG {
 	private boolean isStop = false;
 	private String flag = "";
 	private ArrayList<EmpBean> emp;
 
-	public SearchEmp(BufferedReader br, ArrayList<EmpBean> emp) {
-		this.br = br;
+	public SearchEmp(ArrayList<EmpBean> emp) {
 		this.emp = emp;
 	}
 
@@ -35,64 +32,52 @@ public class SearchEmp {
 				System.out.println("b. 선택사원정보조회");
 			}
 
-			// BufferedReader exception
-			try {
-				if (!isB) {
-					flag = br.readLine();
-				}
+			flag = getString();
 
-				// select a
-				if (flag.equals("a")) {
-					new SearchEmp().getAllEmp(emp);
-					continue;
-
-					// select b
-				} else if (flag.equals("b")) {
-					while(!code) {
-						isB = true;
-						System.out.print("사원사원번호를 입력하세요: ");
-
-						// insert sEmp
-						try {
-							sEmp = Integer.parseInt(br.readLine());
-							if (sEmp <= 999) {
-								System.err.println("사원번호는 4자릿수 입니다. 다시입력하세요. ");
-								continue;
-							}
-							new SearchEmp().getSelectEmp(emp, sEmp);
-							isB = false;
-							System.out.print("계속 검색하시겠습니까?(y/n)");
-							String chk = br.readLine();
-							if(chk.equals("y")) {
-								continue;								
-							}else if(chk.equals("n")) {
-								code = true;
-								isStop = true;
-								break;
-							}else {
-								System.out.println("정확한 값이 아닙니다. 제대로 입력하세요.");
-							}
-						} catch (NumberFormatException e) {
-							System.err.println("정확한 값이 아닙니다. 다시입력하세요. ");
-							continue;
-						}
-					}
-					
-
-					// select exit
-				} else if (flag.equals("exit")) {
-					isStop = true;
-					System.out.println("exit, 사원정보조회를 종료합니다.");
-					continue;
-				}
-				System.err.println("정확한 값이 아닙니다. 다시입력하세요. ");
+			if (flag.equals("a")) {
+				new SearchEmp().getAllEmp(emp);
 				continue;
 
-			} catch (IOException e) {
-				System.err.println(e);
+				// select b
+			} else if (flag.equals("b")) {
+				while (!code) {
+					isB = true;
+					System.out.print("사원사원번호를 입력하세요: ");
+					sEmp = getInt();
+
+					if (sEmp <= 999) {
+						System.err.println("사원번호는 4자릿수 입니다. 다시입력하세요. ");
+						continue;
+					}
+
+					new SearchEmp().getSelectEmp(emp, sEmp);
+					isB = false;
+					System.out.print("계속 검색하시겠습니까?(y/n)");
+					String chk = getString();
+
+					if (chk.equals("y")) {
+						continue;
+					} else if (chk.equals("n")) {
+						code = true;
+						isStop = true;
+						break;
+					} else {
+						System.out.println("정확한 값이 아닙니다. 제대로 입력하세요.");
+					}
+
+				} // while end
+
+				// select exit
+			} else if (flag.equals("exit")) {
+				isStop = true;
+				System.out.println("exit, 사원정보조회를 종료합니다.");
+				continue;
 			}
 
-		}
+			System.err.println("정확한 값이 아닙니다. 다시입력하세요. ");
+			continue;
+
+		} // while isStop end
 	}
 
 	// 모든 정보
@@ -103,6 +88,7 @@ public class SearchEmp {
 		for (int i = 0; i < emp.size(); i++) {
 			System.out.println(emp.get(i).getData());
 		}
+
 		System.out.println();
 
 	}
@@ -121,14 +107,12 @@ public class SearchEmp {
 
 		// find empno
 		if (empno.equals(index[0])) {
-
 			// print data
 			for (int j = 0; j < index.length; j++) {
 				System.out.print(index[j] + "\t");
 				isfind = true;
 			}
 			System.out.println();
-
 		} else
 			isfind = false;
 
