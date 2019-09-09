@@ -30,6 +30,39 @@ public class QickSort {
 		}
 	}
 
+	public static void quick(int[] arr, int left, int right) {
+		int l = left;
+		int r=right-1;
+		int p = right;
+		
+		while(l<=r) {
+			while(arr[l]<arr[p]) l++;
+			while(l<=r && arr[p]<arr[r])r--;
+			
+			if(l<=r) {
+				int tmp= arr[l];
+				arr[l]=arr[r];
+				arr[r]=tmp;
+				l++;r--;
+			}
+		}
+		if(arr[l]>arr[p]) {
+			int tmp=arr[l];
+			arr[l]=arr[p];
+			arr[p]=tmp;
+		}
+		
+		if(left<l-1) {
+			quick(arr,left,l-1);
+		}
+		if(l+1<right) {
+			quick(arr,l+1,right);
+		}
+		
+		
+	}
+	
+	
 	public static void mergeSort(int[] arr, int start, int end) {
 
 		int cnt = 0;
@@ -82,23 +115,24 @@ public class QickSort {
 	}
 
 	public static void main(String[] args) {
-		int[] arr = new int[8];
-		int[] arr1 = new int[8];
-		for (int i = 1; i <= arr.length; i++) {
-			arr[i - 1] = (int) (Math.random() * 45);
+		int[] arr = new int[30];
+		int[] arr1 = new int[10];
+		
 
-			for (int j = 0; j < i - 1; j++) {
-				if (arr[i - 1] == arr[j]) {
-					i--;
-					break;
-				}
-			}
-			arr1[i - 1] = arr[i - 1];
-		}
+		for(int i=0;i<arr.length;i++)
+			arr[i]=(int)(Math.random()*10);
+		
+		/*
+		 * for (int i = 1; i <= arr.length; i++) { arr[i - 1] = (int) (Math.random() *
+		 * 10);
+		 * 
+		 * for (int j = 0; j < i - 1; j++) { if (arr[i - 1] == arr[j]) { i--; break; } }
+		 * arr1[i - 1] = arr[i - 1]; }
+		 */
 
 		System.out.println("origin: " + Arrays.toString(arr));
 
-		quickSort(arr, 0, arr.length - 1);
+		quick(arr, 0, arr.length - 1);
 
 		System.out.println("qick: " + Arrays.toString(arr));
 

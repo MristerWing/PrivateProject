@@ -9,11 +9,15 @@ import com.gmx0807.domain.EmpData;
 import com.gmx0807.view.dept.AddDept;
 import com.gmx0807.view.dept.DeleteDept;
 import com.gmx0807.view.dept.FixDept;
+import com.gmx0807.view.dept.Io;
 import com.gmx0807.view.dept.SearchDept;
 import com.gmx0807.view.emp.AddEmp;
 import com.gmx0807.view.emp.DeleteEmp;
 import com.gmx0807.view.emp.FixEmp;
 import com.gmx0807.view.emp.SearchEmp;
+
+import ex.CodeValueNotFoundException;
+import ex.ExceptionRun;
 
 /*HRM 시스템 구성(Human Resource Management)
 #1. 각 기능상의 목록을 출력 할 수 있는 메뉴 출력하기(Scanner, Sysytem.out, if~else, Loop)
@@ -25,11 +29,14 @@ import com.gmx0807.view.emp.SearchEmp;
 		3. 사원수정
 		4. 사원삭제
 		5. 부서정보 조회
-		6. 종료*/
+		5. 부서추가
+		5. 부서수정
+		5. 부서삭제
+		9. 종료*/
 
 public class Menu extends InputMSG {
 
-	public void main_menu() {
+	public void main_menu() throws CodeValueNotFoundException {
 
 		// define Data
 		ArrayList<EmpBean> emp = new EmpData().defData();
@@ -53,59 +60,63 @@ public class Menu extends InputMSG {
 			System.out.println("9. 종료");
 			System.out.print("값을 입력하세요: ");
 
-			flag = getInt();
-			// flag
-			if (flag <= 0 || flag > 9) {
-				System.err.print("정확한 값이 아닙니다. 다시입력하세요: ");
+			try {
+				flag = getInt();
+				new ExceptionRun().run(flag);
+			} catch (CodeValueNotFoundException e) {
+				System.err.println("정확한 값이 아닙니다. 다시입력하세요: ");
 				continue;
 			}
 
-			// use class or method
-			System.out.print("입력한 메뉴: ");
-			switch (flag) {
-			case 1:
-				System.out.println("1. 사원정보조회");
-				new SearchEmp(emp).searchInfo();
-				break;
-			case 2:
-				System.out.println("2. 사원추가");
-				new AddEmp(emp).addEmp();
-				break;
-			case 3:
-				System.out.println("3. 사원수정");
-				new FixEmp(emp).fixEmp();
-				break;
-			case 4:
-				System.out.println("4. 사원삭제");
-				new DeleteEmp(emp).deleteEmp();
-				break;
-			case 5:
-				System.out.println("5. 부서정보 조회");
-				new SearchDept(dept).searchInfo();
-				break;
-			case 6:
-				System.out.println("6. 부서추가");
-				new AddDept(dept).edit();
-				break;
-			case 7:
-				System.out.println("7. 부서수정");
-				new FixDept(dept).edit();
-				break;
-			case 8:
-				System.out.println("8. 부서삭제");
-				new DeleteDept(dept).deleteDept();
-				break;
-			case 9:
-				System.out.println("9. 종료");
-				isStop = true;
-				break;
-			}
-
-			if (isStop) {
-				stop();
-			}
-
+		Io deptView;
+		// use class or method
+		System.out.print("입력한 메뉴: ");
+		switch (flag) {
+		case 1:
+			System.out.println("1. 사원정보조회");
+			new SearchEmp(emp).searchInfo();
+			break;
+		case 2:
+			System.out.println("2. 사원추가");
+			new AddEmp(emp).addEmp();
+			break;
+		case 3:
+			System.out.println("3. 사원수정");
+			new FixEmp(emp).fixEmp();
+			break;
+		case 4:
+			System.out.println("4. 사원삭제");
+			new DeleteEmp(emp).deleteEmp();
+			break;
+		case 5:
+			System.out.println("5. 부서정보 조회");
+			new SearchDept(dept).searchInfo();
+			break;
+		case 6:
+			System.out.println("6. 부서추가");
+			deptView = new AddDept(dept);
+			deptView.edit();
+			break;
+		case 7:
+			System.out.println("7. 부서수정");
+			deptView = new FixDept(dept);
+			deptView.edit();
+			break;
+		case 8:
+			System.out.println("8. 부서삭제");
+			new DeleteDept(dept).deleteDept();
+			break;
+		case 9:
+			System.out.println("9. 종료");
+			isStop = true;
+			break;
 		}
+
+		if (isStop) {
+			stop();
+		}
+
+	}
 
 	}
 

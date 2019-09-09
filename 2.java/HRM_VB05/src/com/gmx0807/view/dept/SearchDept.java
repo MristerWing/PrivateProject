@@ -62,7 +62,7 @@ public class SearchDept extends Search {
 						isStop = true;
 						break;
 					} else {
-						System.out.println("정확한 값이 아닙니다. 제대로 입력하세요.");
+						System.err.println("정확한 값이 아닙니다. 제대로 입력하세요.");
 					}
 
 				} // while end
@@ -98,10 +98,9 @@ public class SearchDept extends Search {
 	// 선택된 정보
 	@Override
 	public void selectView(Object obj) {
-		int sDept = Integer.parseInt(obj.toString());
 		
 		boolean isfind = false;
-		String Deptno = Integer.toString(sDept);
+		String Deptno = obj.toString();
 
 		System.out.println("조회 결과");
 
