@@ -1,9 +1,5 @@
 package com.gmx0807.view;
 
-import java.util.ArrayList;
-
-import com.gmx0807.domain.DeptBean;
-import com.gmx0807.domain.EmpBean;
 import com.gmx0807.domain.UserBean;
 import com.gmx0807.view.dept.AddDept;
 import com.gmx0807.view.dept.DeleteDept;
@@ -32,23 +28,17 @@ import ex.ExceptionRun;
 public class InnerMenu extends InputMSG {
 	private final boolean EXIT = true; // end flag
 	private UserBean loginUser;
-	private ArrayList<EmpBean> emp;
-	private ArrayList<DeptBean> dept;
 
-	public InnerMenu(UserBean loginUser, ArrayList<EmpBean> emp, ArrayList<DeptBean> dept) {
+	public InnerMenu(UserBean loginUser) {
 		this.loginUser = loginUser;
-		this.emp = emp;
-		this.dept = dept;
 	}
 
 	//Permission confirmation
 	public boolean runMenu() {
-		if (loginUser.getType().equals("admin"))
+		if (loginUser.getType().equals("MANAGER") || loginUser.getType().equals("PRESIDENT"))
 			return this.admin();
-		else if (loginUser.getType().equals("user"))
+		else 
 			return this.users();
-
-		return EXIT;
 	}
 
 	public boolean admin() {
@@ -83,37 +73,37 @@ public class InnerMenu extends InputMSG {
 			switch (flag) {
 			case 1:
 				System.out.println("1. 사원정보조회");
-				new SearchEmp(emp).searchInfo();
+				new SearchEmp().searchInfo();
 				break;
 			case 2:
 				System.out.println("2. 사원추가");
-				new AddEmp(emp).addEmp();
+				new AddEmp().addEmp();
 				break;
 			case 3:
 				System.out.println("3. 사원수정");
-				new FixEmp(emp).fixEmp();
+				new FixEmp().fixEmp();
 				break;
 			case 4:
 				System.out.println("4. 사원삭제");
-				new DeleteEmp(emp).deleteEmp();
+				new DeleteEmp().deleteEmp();
 				break;
 			case 5:
 				System.out.println("5. 부서정보 조회");
-				new SearchDept(dept).searchInfo();
+				new SearchDept().searchInfo();
 				break;
 			case 6:
 				System.out.println("6. 부서추가");
-				deptView = new AddDept(dept);
+				deptView = new AddDept();
 				deptView.edit();
 				break;
 			case 7:
 				System.out.println("7. 부서수정");
-				deptView = new FixDept(dept);
+				deptView = new FixDept();
 				deptView.edit();
 				break;
 			case 8:
 				System.out.println("8. 부서삭제");
-				new DeleteDept(dept).deleteDept();
+				new DeleteDept().deleteDept();
 				break;
 			case 9:
 				System.out.println("9. 종료");
@@ -154,12 +144,12 @@ public class InnerMenu extends InputMSG {
 			switch (flag) {
 			case 1:
 				System.out.println("1. 사원정보조회");
-				new SearchEmp(emp).searchInfo();
+				new SearchEmp().searchInfo();
 				break;
 			case 2:
 				System.out.println("2. 부서정보 조회"); //자신의 부서만 확인 가능하게 할 경우 메소드 생성해야 함
 				System.out.println("당신이 소속된 부서의 조회결과 입니다.");
-				new SearchDept(dept).selectView(loginUser.getDept());
+				new SearchDept().selectView(loginUser.getDept());
 				break;
 			case 3:
 				System.out.println("3. 종료");
