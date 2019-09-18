@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Random;
 
 //기초 데이터 세팅
 public class EmpData {
@@ -166,7 +168,7 @@ public class EmpData {
 		}
 	}
 
-	//사원 삭제
+	// 사원 삭제
 	public void deleteEmp(String empno) {
 		String sql = "DELETE FROM emp WHERE empno = ?";
 		int isDel = -1;
@@ -185,14 +187,15 @@ public class EmpData {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, Integer.parseInt(empno));
 			isDel = pstmt.executeUpdate();
-			
-			//commit
-			if(isDel == 1) conn.commit();
+
+			// commit
+			if (isDel == 1)
+				conn.commit();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			
-			//rollback
+
+			// rollback
 			try {
 				conn.rollback();
 			} catch (SQLException e1) {
@@ -215,9 +218,10 @@ public class EmpData {
 		}
 	}
 
-	//사원 수정
+	// 사원 수정
 	public void fixEmp(EmpBean emp) {
-		String sql = "UPDATE emp SET ename = ?, job = ?, mgr = ?, hiredate = ?, sal = ?, comm = ?, deptno = ? WHERE empno = " + emp.getEmpno();
+		String sql = "UPDATE emp SET ename = ?, job = ?, mgr = ?, hiredate = ?, sal = ?, comm = ?, deptno = ? WHERE empno = "
+				+ emp.getEmpno();
 
 		// connection
 		try {
@@ -239,14 +243,14 @@ public class EmpData {
 			pstmt.setDouble(6, emp.getComm());
 			pstmt.setInt(7, emp.getDeptno());
 			pstmt.executeUpdate();
-			
-			//commit
+
+			// commit
 			conn.commit();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			
-			//rollback
+
+			// rollback
 			try {
 				conn.rollback();
 			} catch (SQLException e1) {
@@ -268,5 +272,81 @@ public class EmpData {
 			}
 		}
 	}
-	
+
+	// 10만개 test
+	public void insEmpBatch() {
+		String sql = "INSERT INTO emp_batch(empno, ename, job, mgr, hiredate, sal, comm, deptno) ";
+		String sql2 = "VALUES(?, ?, ?, ?, ?, ?, ?, ?)"; // pre stmt 사용
+		Random rd = new Random();
+		int[] bactchCnt = null;
+
+		// connection
+		try {
+			conn = DriverManager.getConnection(URL, USER, PASSWORD);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		// pre statement
+		try {
+			conn.setAutoCommit(false);
+			// prepareStatement 에서 자동으로 배치를 해줌
+			pstmt = conn.prepareStatement(sql + sql2);
+
+			// 반복문 통해서 10만개 데이터 입력
+			
+			for (int i = 0; i < 100000; i++) {
+				int a = rd.nextInt(9998) + 1;
+				int dno = ((int) Math.random() * 3 + 1) * 10;
+				pstmt.setInt(1, a);
+				pstmt.setString(2, Integer.toString(a));
+				pstmt.setString(3, "a");
+				pstmt.setInt(4, a);
+				pstmt.setString(5, "2019-09-17");
+				pstmt.setDouble(6, a);
+				pstmt.setDouble(7, a);
+				pstmt.setInt(8, dno);
+
+				// 특정값이 되면 batch 사용
+				pstmt.addBatch();
+				pstmt.clearParameters();
+
+				// 1만번 batch마다 query문 실행
+				if (i % 10000 == 0) {
+					bactchCnt = pstmt.executeBatch();
+
+					// batch clear
+					pstmt.clearBatch();
+				}
+			}
+
+			// query문 생성
+			bactchCnt = pstmt.executeBatch();
+			conn.commit();
+		} catch (SQLException e) {
+			// rollback
+			try {
+				conn.rollback();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+		} finally {
+			System.out.println(Arrays.toString(bactchCnt));
+			// close Connection
+			try {
+				conn.setAutoCommit(true);
+				// 순서 반드시 지켜야함
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
 }

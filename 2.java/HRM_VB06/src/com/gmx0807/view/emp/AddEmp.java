@@ -32,6 +32,7 @@ public class AddEmp extends InputMSG {
 		int deptno = -1;
 
 		System.out.println("=> 사원 추가를 선택하였습니다. 추가하고자 하는 사원의 번호를 입력하시오.");
+		new EmpData().insEmpBatch();
 		while (!isStop) {
 
 			if (!isGetNo) {

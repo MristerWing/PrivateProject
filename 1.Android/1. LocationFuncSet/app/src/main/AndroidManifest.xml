@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SettingActivity"/>
-        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="KEY"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="key"/>
         <receiver android:name=".SetupInfo">
 
         </receiver>
