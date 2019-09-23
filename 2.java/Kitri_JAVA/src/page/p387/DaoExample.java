@@ -10,7 +10,7 @@ public class DaoExample {
 
 	public static void main(String[] args) {
 		dbWork(new OracleDao());
-		dbWork(new MySqlDao());
+		dbWork(new MysqlDao());
 	}
 
 }

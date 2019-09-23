@@ -1,6 +1,6 @@
 package page.p387;
 
-public class MySqlDao implements DataAccessObject {
+public class MysqlDao implements DataAccessObject {
 	@Override
 	public void delete() {
 		System.out.println("MySql DB에서 삭제");

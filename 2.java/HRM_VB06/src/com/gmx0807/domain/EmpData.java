@@ -10,13 +10,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-//기초 데이터 세팅
-public class EmpData {
-	// Create Connection
-	private final String URL = "jdbc:oracle:thin:@127.0.0.1:1521:XE"; // direct conn
-	private final String USER = "scott";
-	private final String PASSWORD = "tiger";
+import com.gmx0807.view.CommonMethod;
 
+//기초 데이터 세팅
+public class EmpData extends CommonMethod{
+	// Create Connection
+	private static final String URL = "jdbc:oracle:thin:@127.0.0.1:1521:XE"; // direct conn
+	private static final String USER = "scott";
+	private static final String PASSWORD = "tiger";
+	
 	private Connection conn = null;
 	private ResultSet rs = null;
 	private Statement stmt = null;
@@ -31,12 +33,7 @@ public class EmpData {
 		String sql = "SELECT empno, ename, job, mgr, hiredate, sal, comm, deptno FROM emp";
 
 		// connection
-		try {
-			conn = DriverManager.getConnection(URL, USER, PASSWORD);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		conn = dbCon();
 
 		// statement, result
 		try {

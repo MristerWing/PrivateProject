@@ -21,14 +21,14 @@ public class Gugudan {
 		System.out.println("Gugudan Input: ");
 		int dan = Integer.parseInt(in.nextLine());
 
-		//gugudan ÇÔ¼ö¸¦ »ı¼ºÇÏ¿© ÀÔ·Â°ªÀ» È®ÀÎ
+		//gugudan  í•¨ìˆ˜ë¥¼ ìƒì„±í•˜ì—¬ ì…ë ¥ê°’ì„ í™•ì¸
 		Function<Integer, Observable<String>> gugudan = num -> // num is variable
 		Observable.range(1, 9).map(row -> num + " X " + row + " = " + (dan * row));
 		//function
 		
 		/*
-		 * ¾î¶°ÇÑ ¹®Á¦°¡ ¹ß»ıÇÏ¸é ±× ¹®Á¦¿¡ ¸Â´Â ÇÔ¼ö¸¦ Áı¾î ³Ö´Â´Ù. 
-		 * ¸Ş¼Òµå?
+		 * ì–´ë– í•œ ë¬¸ì œê°€ ë°œìƒí•˜ë©´ ê·¸ ë¬¸ì œì— ë§ëŠ” í•¨ìˆ˜ë¥¼ ì§‘ì–´ ë„£ëŠ”ë‹¤. 
+		 * ë©”ì†Œë“œ?
 		 * 
 		 */
 		

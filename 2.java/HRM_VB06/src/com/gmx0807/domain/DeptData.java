@@ -10,9 +10,9 @@ import java.util.ArrayList;
 
 public class DeptData {
 	// Create Connection
-	private final String URL = "jdbc:oracle:thin:@127.0.0.1:1521:XE"; // direct conn
-	private final String USER = "scott";
-	private final String PASSWORD = "tiger";
+	private static final String URL = "jdbc:oracle:thin:@127.0.0.1:1521:XE"; // direct conn
+	private static final String USER = "scott";
+	private static final String PASSWORD = "tiger";
 
 	// 연결 유지
 	private Connection conn = null;
