@@ -14,7 +14,7 @@ public class AsyncSubjectExample {
 		subject.onNext("5");
 		subject.onComplete();
 		
-//		±¸µ¶ÀÚ·Î µ¿ÀÛÇÏ´Â AsyncSubject
+//		êµ¬ë…ìë¡œ ë™ì‘í•˜ëŠ” AsyncSubject
 		Float[] temperature = {10.1f, 13.4f, 12.5f};
 		Observable<Float> source = Observable.fromArray(temperature);
 		

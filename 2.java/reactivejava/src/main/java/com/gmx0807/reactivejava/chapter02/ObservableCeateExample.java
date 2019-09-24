@@ -15,19 +15,19 @@ public class ObservableCeateExample {
 					emitter.onComplete();
 				});
 		
-		//data´Â º¯¼öÀÇ ÀÌ¸§ÀÌ¹Ç·Î ¿øÇÏ´Â º¯¼ö¸íÀ¸·Î ±âÀÔ
+		//dataëŠ” ë³€ìˆ˜ì˜ ì´ë¦„ì´ë¯€ë¡œ ì›í•˜ëŠ” ë³€ìˆ˜ëª…ìœ¼ë¡œ ê¸°ì…
 		
-		/* ÀÍ¸í°´Ã¼
+		/* ìµëª…ê°ì²´
 		 * source.subscribe(new Consumer<Integer>() {
 		 * 
 		 * @Override public void accept(Integer data) throws Exception {
 		 * System.out.printIn("Result : " + data); } });
 		 */
 		
-		//¶÷´Ù½Ä
+		//ëŒë‹¤ì‹
 		//source.subscribe(data -> System.out.println("Result : " + data)); 
 		
-		//System.out::println °°Àº ÇüÅÂ¸¦ ¸Ş¼­µå ·¹ÆÛ·±½º¶ó°íÇÔ
+		//System.out::println ê°™ì€ í˜•íƒœë¥¼ ë©”ì„œë“œ ë ˆí¼ëŸ°ìŠ¤ë¼ê³ í•¨
 		source.subscribe(System.out::println);
 	}
 

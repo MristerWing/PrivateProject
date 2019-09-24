@@ -7,28 +7,28 @@ import com.gmx0807.reactivejava.common.*;
 public class SingleExample {
 	
 	public void emit() {
-//		1. ±âÁ¸ Observable¿¡¼­ Single °´Ã¼·Î º¯È¯ÇÏ±â.
+//		1. ê¸°ì¡´ Observableì—ì„œ Single ê°ì²´ë¡œ ë³€í™˜í•˜ê¸°.
 		Observable<String> source = Observable.just("Hello Single");
 		Single.fromObservable(source)
 		.subscribe(System.out::println);
 		
-//		2. single() ÇÔ¼ö¸¦ È£ÃâÇØ Single °´Ã¼ »ı¼ºÇÏ±â.
+//		2. single() í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•´ Single ê°ì²´ ìƒì„±í•˜ê¸°.
 		Observable.just("Hello Single")
 		.single("defalut item")
 		.subscribe(System.out::println);
 		
-//		3. first() ÇÔ¼ö¸¦ È£ÃâÇØ Single °´Ã¼ »ı¼ºÇÏ±â.
+//		3. first() í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•´ Single ê°ì²´ ìƒì„±í•˜ê¸°.
 		String[] colors = {"Red", "Blue", "Gold"};
 		Observable.fromArray(colors)
 		.first("default value")
 		.subscribe(System.out::println);
 		
-//		4. empty Observable¿¡¼­ Single °´Ã¼ »ı¼ºÇÏ±â
+//		4. empty Observableì—ì„œ Single ê°ì²´ ìƒì„±í•˜ê¸°
 		Observable.empty()
 		.single("default value")
 		.subscribe(System.out::println);
 		
-//		5. take() ÇÔ¼ö¿¡¼­ Single °´Ã¼ »ı¼ºÇÏ±â.
+//		5. take() í•¨ìˆ˜ì—ì„œ Single ê°ì²´ ìƒì„±í•˜ê¸°.
 		Observable.just(new Order("ORD-1"), new Order("ORD-2"))
 		.take(1)
 		.single(new Order("default order"))
