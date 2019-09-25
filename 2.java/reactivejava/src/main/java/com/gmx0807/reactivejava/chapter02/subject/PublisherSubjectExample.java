@@ -1,11 +1,11 @@
-package com.gmx0807.reactivejava.chapter02;
+package com.gmx0807.reactivejava.chapter02.subject;
 
-import io.reactivex.subjects.ReplaySubject;
+import io.reactivex.subjects.PublishSubject;
 
-public class ReplaySubjectExample {
+public class PublisherSubjectExample {
 
 	public void emit() {
-		ReplaySubject<String> subject = ReplaySubject.create();
+		PublishSubject<String> subject = PublishSubject.create();
 		subject.subscribe(data -> System.out.println("Subscriber #1 => " + data));
 		subject.onNext("1");
 		subject.onNext("3");
@@ -15,7 +15,7 @@ public class ReplaySubjectExample {
 	}
 
 	public static void main(String[] args) {
-		ReplaySubjectExample demo = new ReplaySubjectExample();
+		PublisherSubjectExample demo = new PublisherSubjectExample();
 		demo.emit();
 	}
 

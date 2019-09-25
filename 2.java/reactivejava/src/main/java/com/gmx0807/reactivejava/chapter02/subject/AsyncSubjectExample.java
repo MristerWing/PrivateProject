@@ -1,4 +1,4 @@
-package com.gmx0807.reactivejava.chapter02;
+package com.gmx0807.reactivejava.chapter02.subject;
 
 import io.reactivex.subjects.AsyncSubject;
 import io.reactivex.Observable;
