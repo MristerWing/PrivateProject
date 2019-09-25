@@ -3,6 +3,7 @@ RxJava 공부한것들
 이 프로젝트 내에 있는 코드는 한빛미디어의 RxJava 프로그래밍(저자 유동환, 박정준)을 보며 공부한 코드들입니다.  
   
 * 원본 코드 출처: https://github.com/yudong80/reactivejava
+* MarbleDiagram 이미지 출처: http://reactivex.io/
   
 ---
 

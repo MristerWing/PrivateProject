@@ -33,7 +33,10 @@ public class SingleExample {
 		.take(1)
 		.single(new Order("default order"))
 		.subscribe(System.out::println);
+		
 	}
+	
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
