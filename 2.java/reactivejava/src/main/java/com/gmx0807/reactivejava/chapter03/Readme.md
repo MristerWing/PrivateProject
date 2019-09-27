@@ -37,7 +37,7 @@ FlatMap
 
 1.  
 <pre><code>@SchedulerSupport(SchedulerSupport.NONE)
-public final <R> Observable <R> faltMap (
+public final < R > Observable < R > faltMap (
     Function<? super T, ? extends ObservableSource<? extends R>> mapper)</code></pre>
 * SchedulerSupport.NONE은 현제 스레드에서 실행된다는 의미입니다.
 * ObservableSource는 chapter02에서 사용한 함수들이 구현되었는 인터페이스입니다. Single을 제외한 대부분의 데이터 발행 함수가 포함됩니다. Single은 SingleSource라는 별도 인터페이스에 구현되어 있습니다.
@@ -45,7 +45,7 @@ public final <R> Observable <R> faltMap (
 2.  
 <pre><code>@CheckReturnValue
 @SchedulerSupport(SchedulerSupport.NONE)
-public final <U, R> Observable<R> flatMap (
+public final < U, R > Observable< R > flatMap (
     Function<? super T, ? extends ObservableSource<? extends U>> mapper, 
         BiFunction<? super T, ? extends R> resultSelector)</code></pre>
 * 두번째 인자로 BiFunction<T, U, R> 형태의 resultSelector가 추가된 형태입니다. 
