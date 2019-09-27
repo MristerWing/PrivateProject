@@ -42,6 +42,7 @@ public class Gugudan {
 		System.out.println("Guguda Input: ");
 		int dan = Integer.parseInt(in.nextLine());
 		
+//		인자는 just()-> flatMap() -> map()순으로 전달되며 num이 dan의 값을 전달받는다.
 		Observable<String> source = Observable.just(dan)
 				.flatMap(num -> Observable.range(1,9)
 				.map(row -> num + " X " + row + " = " + (dan * row)));
@@ -54,6 +55,13 @@ public class Gugudan {
 		Scanner in = new Scanner(System.in);
 		System.out.println("Guguda Input: ");
 		int dan = Integer.parseInt(in.nextLine());
+		
+		/*
+		 * resultSelector를 사용한 방식이다. 
+		 * Observable.just(dan)에서 발행하는 값이 flatMap의 gugu로 전달되며,
+		 * 이후 Observable.range()함수가 BiFunction(T, U, R)의 U를 의미하게 된다. 
+		 * 최종 반환값은 range의 반환값이 된다.
+		 */
 		
 		Observable<String> source = Observable.just(dan)
 				.flatMap(gugu -> Observable.range(1, 9),

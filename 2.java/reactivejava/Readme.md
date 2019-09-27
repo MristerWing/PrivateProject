@@ -20,12 +20,13 @@ RxJava 공부한것들
 ---
 RxJava
 ---
-* RxJava의 함수형 인터페이스  
-|  <center>인터페이스명</center> |  <center>포함 메소드</center> |  <center>설명</center> |
-|:--------|:--------:|--------:|
-|Predicate<T>   | boolean test(T t) | t 값을 받아서 참이나 거짓을 반환합니다.|
-|Consumer<T>    | void accept<T t>  | t 값을 받아서 처리합니다. 반환값 X     |
-|Function<T, R> | R apply(T t)      | t 값을 받아서 결과를 반환합니다.       |
+* RxJava의 제네릭 함수형 인터페이스  
+
+| 인터페이스명     | 포함메소드        | 설명                                    |
+|------------------|-------------------|-----------------------------------------|
+| Predicate<T >    | boolean test(T t) | t 값을 받아서 참이나 거짓을 반환합니다. |
+| Consumer<T >     | void accept(T t)  | t 값을 받아서 처리합니다. 반환값 X      |
+| Function<T,  R > | R apply(T t)      | t 값을 받아서 결과를 반환합니다.        |
 
 ---
 chapter01
