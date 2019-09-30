@@ -36,3 +36,23 @@ RxAndroid
 | AndroidSchedulers.mainThread() | 안드로이드 UI 스레드에서 동작하는 스케줄러 |
 | HandlerScheduler.from(handler) | 특정 핸드러에 의존하여 동작하는 스케줄러   |
 
+---
+### RxAndroid 기본 gradle 내역
+<pre><code>    //Rx Utils dependencies
+    //RxJava 2.x
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.3'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    //RxLifecycle 2.x
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-android:2.1.0'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle:2.1.0'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+
+    //utils
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+
+    //utils - butterknife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'</code></pre>
+
+    

@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"></activity>
-    </application>
+        <activity android:name=".com.gmx0807.activities.HelloActivity">
+            <intent-filter>
 
+            </intent-filter>
+        </activity>
+    </application>
 </manifest>
