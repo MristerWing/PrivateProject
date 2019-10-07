@@ -78,7 +78,14 @@ RxJava공부한 것들이 정리한 것들.
 개인 적으로 JSP공부한 프로젝트파일. 챕터별로 정리함.
 
 ---
-5.JavaScript
+5.MVC
 ---
-개인적인 JavaScript정리 프로젝트
+개인적인 JavaScript & HTML & CSS정리 프로젝트
++ kitri학원에서 배운 것들 정리 & 프로젝트
+
+---
+6.UML
+---
+ktri에서 배운 UML정리 프로젝트
+classDiagram, useCaseDiagram, sequenceDiagram에 대해서 배우고 정리한것들
 
