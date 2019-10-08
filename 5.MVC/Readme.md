@@ -6,4 +6,4 @@ MVC
 * port: 8181
 
 ---
-[Go Docs](https://github.com/MristerWing/PrivateProject/5.MVC/Docs)
+[Go Docs](https://github.com/MristerWing/PrivateProject/tree/subDrive/5.MVC/Docs)

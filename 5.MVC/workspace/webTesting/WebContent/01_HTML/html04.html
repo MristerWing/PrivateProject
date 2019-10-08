@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML04 - input</title>
+</head>
+<body>
+	<!-- name은 식별자(변수명)을 의미한다. -->
+
+	<h3>Text Type</h3>
+	<input type="text" name="id" />
+	<br />
+
+	<h3>Password Type</h3>
+	<input type="password" name="pwd" />
+	<br />
+
+	<!-- 값을 숨긴다, value로 값을 지정하여 사용 값만이 넘어갈뿐 사용자에게 보이지 않는다. -->
+	<h3>Hidden Type</h3>
+	<input type="hidden" name="num" value="1234" />
+	<br />
+
+	<h3>Radio Type</h3>
+	<input type="radio" name="gender" value="male" />
+	<span>male</span>
+
+	<input type="radio" name="gender" value="female" />
+	<span>female</span>
+
+	<!-- View에 뿌려줄때에는 처음부터 0번지로 인식되지만 체크된 시점에서는 체크된 곳부터 0번지로 인식한다. -->
+	<h3>Check Type</h3>
+	<input type="checkbox" name="subject" value="python" />
+	<span>Python</span>
+
+	<input type="checkbox" name="subject" value="c" />
+	<span>C</span>
+
+	<input type="checkbox" name="subject" value="java" />
+	<span>Java</span>
+
+	<input type="checkbox" name="subject" value="swift" />
+	<span>Swift</span>
+
+	<h3>File Type</h3>
+	<input type="file" name="upload">
+	<br />
+
+	<h3>Color Type</h3>
+	<input type="Color" name="sColor" />
+	<br />
+	<br />
+
+	<h3>Date Type</h3>
+	<input type="date" name="sDate" />
+	<br />
+	<br />
+
+	<h3>Button Type</h3>
+	<!-- need event handler -->
+	<input type="button" value="로그인" />
+	<!-- non-event button. must use form -->
+	<input type="reset" value="취소" />
+	<input type="submit" value="전송" />
+	<br />
+
+	<h3>Select Type</h3>
+	<select name="fruit">
+		<option value="apple">사과</option>
+		<option value="orange">오렌지</option>
+		<option value="banana">바나나</option>
+	</select>
+
+	<br />
+	<br />
+
+	<select name="fruit2" multiple="multiple">
+		<option value="apple">사과</option>
+		<option value="orange">오렌지</option>
+		<option value="banana">바나나</option>
+		<option value="melon">멜론</option>
+	</select>
+
+	<br />
+	<br />
+
+	<!-- can not single Tag -->
+	<h3>Text Area</h3>
+	<textarea rows="10" cols="50" name="contents"></textarea>
+
+	<br />
+	<br />
+</body>
+</html>

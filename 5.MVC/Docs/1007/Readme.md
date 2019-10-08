@@ -9,9 +9,8 @@
 5. protocol(규약)이랑 권고안의 차이.
 6. 컴파일러, 스크립트, 인터프리터
 7. singleTag(br, image, input...)
-8. 현 시점에서 HTML은 데이터를 뿌려주는 구분자 역할만을 수행한다.
-9. 데이터를 가져오는 것은 XML과 JSON으로 가능하다.
-10. CSS에서 템플릿을 만들 때 BLOCK Tag를 사용한다.
+8. 데이터를 가져오는 것은 XML과 JSON으로 가능하다.
+9. CSS에서 템플릿을 만들 때 BLOCK Tag를 사용한다.
 
 ---
 ### .properties
@@ -115,4 +114,4 @@
 > 출처: https://ko.wikipedia.org/wiki/XML
 
 ---
-[Go Docs](https://github.com/MristerWing/PrivateProject/5.MVC/Docs)  
+[Go Docs](https://github.com/MristerWing/PrivateProject/tree/subDrive/5.MVC/Docs)  

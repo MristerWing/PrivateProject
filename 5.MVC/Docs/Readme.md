@@ -7,4 +7,9 @@ Docs
 ### 10/07
 * .properties, .json, war, port, HTML, dom, core, http
 
-[Go1007](https://github.com/MristerWing/PrivateProject/5.MVC/Docs/1007)
+[Go1007](https://github.com/MristerWing/PrivateProject/tree/subDrive/5.MVC/Docs/1007)
+
+### 10/08
+* 
+
+[Go1007](https://github.com/MristerWing/PrivateProject/tree/subDrive/5.MVC/Docs/1008)
