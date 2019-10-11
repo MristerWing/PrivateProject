@@ -1,0 +1,46 @@
+@charset "UTF-8";
+form {
+	text-align: center;
+	border: solid 1px; 
+	width: 500px;
+	height: 370px;
+}
+
+label {
+	display: block;
+/* 	border: dotted 1px green; */
+	border-right-style: solid;
+	border-right-width: 1px;
+	width: 130px;
+	height: 30px;
+	
+	margin: 0px 0px 0px;
+
+	text-align: left;
+	line-height: 30px;
+	
+	float: left;
+}
+
+input {
+	margin-left: 2px;
+}
+
+.insert {
+	/* border: solid 1px blue; */
+	
+	width: 360px;
+	height: 25px;
+	
+	margin: 2px 0px 0px;
+	text-align: left;
+	float: left;
+}
+
+.liner {
+	border-bottom: solid 1px;
+	
+	width: 500px;
+	height: 30px;
+	margin: 0px 0px 0px;
+}

@@ -6,6 +6,8 @@ PrivateProject
 2. java
 3. py
 4. web_project(jsp&servlet)
+5. MVC
+6. UML
 ---
 1.Android
 ---
