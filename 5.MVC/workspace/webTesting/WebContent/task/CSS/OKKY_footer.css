@@ -1,0 +1,12 @@
+#footer {
+    border-top: 1px solid #ddd; 
+    width: 805px;
+    /* color: #999; */
+    font-size: 12px;
+    margin-top: 50px;
+    margin-left: 230px;
+    padding: 20px 0;
+    height: 100px;
+    text-align: left;
+    background-color: blanchedalmond;
+}

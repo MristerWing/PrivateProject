@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+ul {
+    padding: 0;
+}
+
+#wrap {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+#wrap>div {
+    float: left;
+}
+
+#wrap>.sideBar {
+    width: 210px;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: block;
+    overflow: hidden;
+    background-color: #0059ab;
+    height: auto;
+}
+
+#wrap>.sideBar>img:first-child {
+    margin: 10px 0;
+}

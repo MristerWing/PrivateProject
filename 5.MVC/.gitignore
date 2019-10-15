@@ -1,0 +1,6 @@
+/.metadata/
+/personal/node_modules/
+/personal/package-lock.json/
+/personal/dist/
+/personal/public/dist/
+# /personal/package.json/

@@ -1,0 +1,7 @@
+#wrap>.rightBanners {
+    width: 180px;
+    height: 550px;
+    position: fixed;
+    left: 1050px;
+    background-color: bisque;
+}

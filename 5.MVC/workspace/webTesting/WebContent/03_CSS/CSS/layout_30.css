@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/* body * {
+	overflow: hidden;
+} */
+li {
+	list-style-type: none;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	width: 90%;
+	margin: 0 auto;
+	border: 1px solid #CCCCCC;
+}
+
+section {
+	width: 90%;
+	height: 400px;
+	margin: 5px auto;
+	border: 1px solid #CCCCCC;
+	overflow: hidden;
+}
+
+footer {
+	width: 90%;
+	height: 100px;
+	margin: 5px auto;
+	border: 1px solid #CCCCCC;
+	font-family: 'Long Cang', cursive;
+	
+	text-align: center;
+	line-height: 100px;
+}
+
+header>#gnb, header>#lnb {
+	/* border: 1px dotted red; */
+	overflow: hidden;
+	margin: 10px;
+}
+
+header>#gnb li, header>#lnb li {
+	border: 1px dotted #CCCCCC;
+	float: left;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+}
+
+header>#lnb li {
+	float: right;
+}
+
+section>* {
+	border: 1px solid #CCCCCC;
+	margin: 5px;
+	float: left;
+	height: 380px;
+}
+
+section>article {
+	font-family: 'Liu Jian Mao Cao', cursive;
+	width: 80%;
+}
+
+section>aside {
+	font-family: 'Mansalva', cursive;
+	width: 17%;
+}
