@@ -22,9 +22,9 @@ ul {
 }
 
 #wrap {
-    width: 100%;
+    max-width: 1280px;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 0;
 }
 
 #wrap>div {
@@ -43,8 +43,148 @@ ul {
     overflow: hidden;
     background-color: #0059ab;
     height: auto;
+    margin: 0 auto;
 }
 
-#wrap>.sideBar>img:first-child {
-    margin: 10px 0;
+#wrap>.sideBar>h1 {
+    width: 180px;
+    margin: 10px; 
+}
+
+#wrap>.sideBar>.logo{
+    height: 40px;
+    width: 90%;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+#wrap>.sideBar>.sideBar_search{
+    padding-top: 10px;
+    padding-bottom: 25px;
+    overflow: hidden;
+}
+
+#wrap>.sideBar>.sideBar_search *{
+    font-size: 14px;
+    height: 30px;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+}
+
+#wrap>.sideBar>.sideBar_search>input[type="text"] {
+    color: #555;
+    border: 1px solid #ccc;
+    width: 78%;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    height: 30px;
+    line-height: 18px;
+    letter-spacing: normal;
+    padding: 5px 10px;
+    text-align: start;
+    z-index: 2;
+}
+
+#wrap>.sideBar>.sideBar_search>input[type="button"] {
+    background-image: url(../img/search_btn.PNG);
+}
+
+#wrap>.sideBar>.sideBar_login {
+    height: 150px;
+    margin-right: -17px;
+    margin-left: -15px;
+    padding: 10px 15px 0 10px;
+}
+
+#wrap>.sideBar .side_l_icon,
+#wrap>.sideBar>.sideBar_menu .side_m_icon {
+    display: inline-block;
+    border: 1px solid #fff;
+}
+
+#wrap>.sideBar .side_l_icon {
+    margin: 0;
+    width: 10.3px;
+    height: 12px;
+}
+
+#wrap>.sideBar>.sideBar_login>ul{
+    margin-right: -21px;
+    margin-left: -20px;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#wrap>.sideBar>.sideBar_login>ul>li{
+    width: 50%;
+    float: left;
+    text-align: center;
+    border-top: 1px solid #00519c;
+    border-bottom: 1px solid #00519c;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    height: 38px;
+    line-height: 38px;
+}
+
+#wrap>.sideBar>.sideBar_login>ul>li>a{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+#wrap>.sideBar>.sideBar_menu {
+    margin-right: -21px;
+    margin-left: -20px;
+    padding-left:  0;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+#wrap>.sideBar>.sideBar_menu .side_m_icon {
+    width: 18px;
+    height: 14px;
+    padding-left: 4px;
+    margin-right: 20px;
+}
+
+#wrap>.sideBar>.sideBar_menu li {
+    display: block;
+    position: relative;
+    height: 60px;
+    padding: 20px 20px;
+}
+
+#wrap>.sideBar>.sideBar_menu a {
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+}
+
+#wrap>.sideBar>.sideBar_bottom {
+    margin-top: 40px;
+    font-size: 10px;
+    border-left: 4px solid #9fb0c9;
+    padding-left: 0;
+}
+
+#wrap>.sideBar>.sideBar_bottom li{
+    height: 34px;
+    line-height: 34px;
+}
+
+#wrap>.sideBar>.sideBar_bottom a{
+    color: #FFF;
+    margin-left: 10px;
 }
