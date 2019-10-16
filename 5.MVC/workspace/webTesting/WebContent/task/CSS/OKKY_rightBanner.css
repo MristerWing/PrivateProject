@@ -3,5 +3,12 @@
     height: 550px;
     position: fixed;
     left: 1050px;
+}
+
+#wrap>.rightBanners>.ad1, #wrap>.rightBanners>.ad2 {
+    width: 160px;
+    margin: auto;
+    margin-top: 10px;
+    height: 384px;
     background-color: bisque;
 }

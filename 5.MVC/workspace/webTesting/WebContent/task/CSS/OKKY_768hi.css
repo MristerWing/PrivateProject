@@ -16,4 +16,14 @@
     width: 66.66666667%;
 }
 
+.col-sm-9 {
+    width: 75%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
 }

@@ -4,122 +4,845 @@
 <head>
     <title>OKKY - ALL That Developer</title>
     <meta charset="UTF-8">
+    <link href="CSS/OKKY_768hi.css" rel="stylesheet">
     <link href="CSS/OKKY_sideBar.css" rel="stylesheet">
     <link href="CSS/OKKY_mainContainer.css" rel="stylesheet">
-    <link href="CSS/OKKY_768hi.css" rel="stylesheet">
     <link href="CSS/OKKY_rightBanner.css" rel="stylesheet">
     <link href="CSS/OKKY_footer.css" rel="stylesheet">
 </head>
 
 <body>
     <div id="wrap">
+        <!--sideBar-->
         <div class="sideBar">
-                <img src="//okky.kr/assets/okjsp_logo-467f1484e489ca1133e6320083e1fb9f.png" alt="OKKY" title="OKKY">
+            <h1>
+                <div class="logo">
+                    <img src="//okky.kr/assets/okjsp_logo-467f1484e489ca1133e6320083e1fb9f.png" alt="OKKY" title="OKKY">
+                </div>
+            </h1>
+            <div class="sideBar_search">
+                <input type="text" name="search_ins" placeholder="Google 검색" />
+                <input type="button" name="serarch_but" value="     " />
+            </div>
+            <div class="sideBar_login">
+                <ul>
+                    <li style="border-right: 1px solid #00519c;">
+                        <div class="side_l_icon"></div>
+                        <a href="#">로그인</a>
+                    </li>
+                    <li>
+                        <div class="side_l_icon"></div>
+                        <a href="#">회원가입</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sideBar_menu">
+                <ul>
+                    <li>
+                        <div class="side_m_icon"></div>
+                        <a href="#">Q&A</a>
+                    </li>
+                    <li>
+                        <div class="side_m_icon"></div>
+                        <a href="#">Tech</a>
+                    </li>
+                    <li>
+                        <div class="side_m_icon"></div>
+                        <a href="#">커뮤니티</a>
+                    </li>
+                    <li>
+                        <div class="side_m_icon"></div>
+                        <a href="#">칼럼</a>
+                    </li>
+                    <li>
+                        <div class="side_m_icon"></div>
+                        <a href="#">Jobs</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sideBar_bottom">
+                <ul>
+                    <li>
+                        <div class="side_l_icon" style="margin:0 0 0 10px;"></div>
+                        <a href="https://github.com/okjsp/okky/issues">
+                            <span>Github Issues</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
+        <!--mainContainer-->
         <div class="mainContainer">
             <div class="mainBanner">mainBanner</div>
+            <!--content-->
             <div class="content">
+                <!--editor choice-->
                 <div class="col-sm-6 left_top_block">
                     <div class="main-block">
-                        <h4 class="main-header">Editor's Choice</h4>
+                        <h4 class="main-header">
+                            <div class="header_icon"></div>
+                            Editor's Choice
+                        </h4>
                         <div class="panel">
                             <ul>
-                                <li>tmp</li>
-                                <li>tmp</li>
-                                <li>tmp</li>
-                                <li>tmp</li>
-                                <li>tmp</li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
+                <!--weekly best-->
                 <div class="col-sm-6 right_top_block">
                     <div class="main-block">
-                        <h4 class="main-header">Editor's Choice</h4>
+                        <h4 class="main-header">
+                            <div class="header_icon"></div>
+                            Weekly Best
+                        </h4>
                         <div class="panel">
                             <ul>
-                                <li>tmp</li>
-                                <li>tmp</li>
-                                <li>tmp</li>
-                                <li>tmp</li>
-                                <li>tmp</li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
+                <!--Q&A-->
                 <div class="col-sm-8 left_bottom_block">
                     <div class="main-block">
-                        <h4 class="main-header">Q&A</h4>
-                    </div>
-                    <div class="panel">
-                        <ul>
-                            <li>tmp</li>
-                            <li>tmp</li>
-                            <li>tmp</li>
-                            <li>tmp</li>
-                            <li>tmp</li>
-                            <li>tmp</li>
-                            <li>tmp</li>
-                            <li>tmp</li>
-                            <li>tmp</li>
-                            <li>tmp</li>
-                            <li>tmp</li>
-                        </ul>
-                    </div>
-                    <div class="main-block">
-                        <h4 class="main-header">커뮤니티</h4>
-                    </div>
-                    <div class="panel">
-                        <ul>
-                            <li>index1</li>
-                            <li>index2</li>
-                            <li>index3</li>
-                            <li>index4</li>
-                            <li>index5</li>
-                            <li>index6</li>
-                            <li>index7</li>
-                            <li>index8</li>
-                            <li>index9</li>
-                            <li>index10</li>
-                            <li>index11</li>
-                            <li>index12</li>
-                            <li>index13</li>
-                            <li>index14</li>
-                            <li>index15</li>
-                            <li>index16</li>
-                            <li>index17</li>
-                            <li>index18</li>
-                            <li>index19</li>
-                            <li>index20</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-4 right_bottom_block">
-                    <div class="main-block main-block-banner">ad1</div>
-                    <div class="main-block">
-                        <h4 class="main-header">Tech</h4>
+                        <h4 class="main-header">
+                            <div class="header_icon"></div>
+                            Q&A
+                        </h4>
                         <div class="panel">
                             <ul>
-                                <li>index1</li>
-                                <li>index2</li>
-                                <li>index3</li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="main-block">
-                        <h4 class="main-header">칼럼</h4>
-                        <div class="panel">
 
-                        </div>
-                    </div>
+                    <!--commu-->
                     <div class="main-block">
-                        <h4 class="main-header">학원/홍보</h4>
+                        <h4 class="main-header">
+                            <div class="header_icon"></div>
+                            커뮤니티
+                        </h4>
                         <div class="panel">
                             <ul>
-                                <li>index1</li>
-                                <li>index2</li>
-                                <li>index3</li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-4 right_bottom_block">
+                    <!--container ad-->
+                    <div class="main-block main-block-banner">container ad</div>
+                    <!--tech-->
+                    <div class="main-block">
+                        <h4 class="main-header">
+                            <div class="header_icon"></div>
+                            Tech
+                        </h4>
+                        <div class="panel article">
+                            <ul>
+                                <li>
+                                    <div class="list_tag">
+                                        <a href="#" class="item_tag blue_tag">long title TAG</a>
+                                        <a href="#" class="item_tag">TAG</a>
+                                        <a href="#" class="item_tag">TAG</a>
+                                    </div>
+                                    <div class="title">
+                                        <a href="#" class="tech_title">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_tag">
+                                        <a href="#" class="item_tag blue_tag">long title TAG</a>
+                                        <a href="#" class="item_tag">TAG</a>
+                                        <a href="#" class="item_tag">TAG</a>
+                                    </div>
+                                    <div class="title">
+                                        <a href="#" class="tech_title">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_tag">
+                                        <a href="#" class="item_tag blue_tag">long title TAG</a>
+                                        <a href="#" class="item_tag">TAG</a>
+                                        <a href="#" class="item_tag">TAG</a>
+                                    </div>
+                                    <div class="title">
+                                        <a href="#" class="tech_title">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--calum-->
+                    <div class="main-block">
+                        <h4 class="main-header">
+                            <div class="header_icon"></div>
+                            칼럼
+                        </h4>
+                        <div class="panel">
+                            <div class="panel_body">
+                                <a href="#" class="item_tag">TAG</a>
+                                <a href="#" class="cal_title">title_name</a>
+                                <a href="#" class="cal_content">contents</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--promo-->
+                    <div class="main-block">
+                        <h4 class="main-header">
+                            <div class="header_icon"></div>
+                            학원/홍보
+                        </h4>
+                        <div class="panel">
+                            <ul>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <a href="#">title_name</a>
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="time_ago">timeline</span>
+                                        <div class="activity">
+                                            <span>text</span>
+                                            <div class="icon"></div>
+                                        </div>
+                                        <a href="#">name</a>
+                                        <div class="icon"></div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -128,12 +851,66 @@
             </div>
         </div>
 
+        <!--right banner-->
         <div class="rightBanners">
-            rightBanners
+            <div class="ad1">ad1</div>
+            <div class="ad2">ad2</div>
         </div>
 
+        <!--footer-->
         <div id="footer">
-            foo
+            <div class="col-sm-9">
+                <div class="footer_logo">
+                    <img src="//okky.kr/assets/okky_logo_footer-afc30f99f303854f15a531d9089a1d50.png">
+                </div>
+                <div class="footer_left">
+                    <div class="f_left_content">
+                        <div class="links">
+                            <ul>
+                                <li><a href="#">Abuot OKKY</a> |&nbsp;</li>
+                                <li><a href="#"> 개인정보보호</a> |&nbsp;</li>
+                                <li><a href="#"> 광고문의</a> |&nbsp;</li>
+                                <li><a href="#"> Contact</a> |&nbsp;</li>
+                                <li><a href="#"> Facebook</a> |&nbsp;</li>
+                                <li><a href="#"> Github</a> v0.12</li>
+                            </ul>
+                        </div>
+                        <div class="copyright">
+                            <ul>
+                                <li>
+                                    <span class="blod">상호명</span>
+                                    <span> : 이브레인 |&nbsp;</span>
+                                </li>
+                                <li>
+                                    <span class="blod">대표명</span>
+                                    <span> : 노상범 |&nbsp;</span>
+                                </li>
+                                <li>
+                                    <span class="blod">사업자등록번호</span>
+                                    <span> : 144-81-32887 |&nbsp;</span>
+                                </li>
+                                <li>
+                                    <span class="blod">유선번호</span>
+                                    <span> : 02-6933-5070</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="etc">
+                        <span class="blod">주소</span>
+                        <span> : 서울 강남구 봉은사로 303 TGL경복빌딩 502호 (06103)</span><br />
+                        <span>@ 2019 <a href="#">eBrain Management</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_right">
+                <div class="f_right_sponsor">
+                    <div class="sponsor_banner">Sponsored by</div>
+                    <a href="http://www.inames.co.kr" target="_blank">
+                        <img src="//okky.kr/assets/spb_inames-47b092113795fdf02b8d8b0f36f91c5f.png" alt="아이네임즈" />
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
