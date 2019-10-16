@@ -27,7 +27,6 @@
     color: #0062b6;
     font-size: 14;
     line-height: 20px;
-    border: 1px solid #0062b6;
 }
 
 #wrap>.mainContainer .blue_tag {
@@ -118,7 +117,21 @@
 #wrap>.mainContainer .panel .avatar .icon {
     width: 10px;
     height: 10px;
-    border: 1px solid rgb(42, 100, 150);
+    margin: 0 0 0 5px;
+}
+
+#wrap>.mainContainer .panel .avatar .avatar_icon {
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    display: inline-block;
+    border: 1px solid #ededed;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+#wrap>.mainContainer .panel .avatar .avatar_icon>img {
+    margin: auto;
 }
 
 #wrap>.mainContainer .panel ul {

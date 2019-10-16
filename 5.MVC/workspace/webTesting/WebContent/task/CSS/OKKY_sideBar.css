@@ -90,8 +90,23 @@ ul {
     z-index: 2;
 }
 
-#wrap>.sideBar>.sideBar_search>input[type="button"] {
-    background-image: url(../img/search_btn.PNG);
+#wrap>.sideBar>.sideBar_search>.search_btn {
+    margin-left: 0px;
+    border-radius: 0;
+    position: relative;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    white-space: nowrap;
+    text-align: center;vertical-align: middle;
+    border: 1px solid transparent;
+    cursor: pointer;
 }
 
 #wrap>.sideBar>.sideBar_login {
