@@ -104,7 +104,8 @@ ul {
 #wrap>.sideBar .side_l_icon,
 #wrap>.sideBar>.sideBar_menu .side_m_icon {
     display: inline-block;
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
+    color: #fff;
 }
 
 #wrap>.sideBar .side_l_icon {
