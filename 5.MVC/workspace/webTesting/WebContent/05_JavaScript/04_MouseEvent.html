@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        function disp(value) {
+            document.write("<h3> disp Function: " + value + " </h3>");
+        }
+        function sub() {
+            //javascript에 기본적으로 내장되어 있는 내장객체, 편리함 제공 + new를 이용한 객체발생 X
+
+            /* 
+            내장객체 구성: 최상위-window 
+                1) dom: 웹 표시에 표현되는 HTML, XML 등 이루어진 인터페이스
+                2) bom: location, history, navigator...
+                3) javascript 객체: Object, Array, Number...
+
+                window의 내장함수는  window생략가능
+            */
+
+            alert("HELLO WORDL!!")
+        }
+
+        function dlsub() {
+            alert("it's Double Click!");
+        }
+        function aa() {
+            var result = prompt("원하는 숫자를 입력하시오.: ", "정수형 1 ~ 10까지 수만 가능");
+            alert(result);
+        }
+
+        function bb() {
+            var bool = confirm("정말로 삭제 하시겠습니까?");
+            if(bool) {
+                alert("1");
+            }else {
+                alert("0");
+            }
+        }
+
+        //js는 대소문자를 구분하기 때문에 _가 아닌 대소문자로 구분한다. ex) font_size => fontSize
+        function xx(tag) {
+            tag.style.color = "#ddd";
+            tag.style.fontSize = "20px";
+            tag.style.backgroundColor = "#0059ab"
+        }
+
+        function yy(tag) {
+            tag.style.color = "#000";
+            tag.style.fontSize = "16px";
+            tag.style.backgroundColor = "#fff"
+        }
+    </script>
+</head>
+
+<body>
+    <!--마우스 이벤트: https://www.w3schools.com/tags/ref_eventattributes.asp-->
+    <input type="button" value="확인1" onclick="disp(10)" style="cursor: pointer;" />
+
+    <a href="#" style="text-decoration: none;" onclick="disp(24.8)">클릭</a>
+
+    <h3 style="cursor: pointer;" onclick="disp('HELLO WORLD!!')">Click!</h3>
+
+    <input type="button" value="확인2" onmousedown="sub()" style="cursor: pointer;" />
+    <br />
+
+    <input type="button" value="확인3" onmouseup="sub()" style="cursor: pointer;" />
+    <br />
+
+    <input type="button" value="확인4" ondblclick="dlsub()" style="cursor: pointer;" />
+    <br />
+
+    <input type="button" value="확인5" onclick="aa()" style="cursor: pointer;" />
+    <br /><br />
+
+    <input type="button" value="확인6" onclick="bb()" style="cursor: pointer;" />
+    <br /><br />
+
+    <!--this로 자기자신(TAG)를 던져줄 수 있다.-->
+    <a href="#" style="text-decoration: none;" onmouseover="xx(this)" onmouseout="yy(this)">Click This!!</a>
+    <br /><br />
+</body>
+
+</html>

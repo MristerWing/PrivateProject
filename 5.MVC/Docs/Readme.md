@@ -32,6 +32,12 @@ Docs
 
 ### 10/14
 
-* 
+* Postion
 
 [Go1014](https://github.com/MristerWing/PrivateProject/tree/subDrive/5.MVC/Docs/1014)
+
+### 10/17
+
+* 
+
+[Go1017](https://github.com/MristerWing/PrivateProject/tree/subDrive/5.MVC/Docs/1017)
