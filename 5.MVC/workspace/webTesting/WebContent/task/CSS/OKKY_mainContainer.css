@@ -114,6 +114,14 @@
     margin-right: 3px;
 }
 
+#wrap>.mainContainer .panel .avatar>.time_ago {
+    color: #cccccc;
+}
+
+#wrap>.mainContainer .panel .avatar .activity * {
+    color: #888;
+}
+
 #wrap>.mainContainer .panel .avatar .icon {
     width: 10px;
     height: 10px;
