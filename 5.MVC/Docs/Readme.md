@@ -38,6 +38,12 @@ Docs
 
 ### 10/17
 
-* 
+* 웹 구성요소, 프로그램 메모리 영역
 
 [Go1017](https://github.com/MristerWing/PrivateProject/tree/subDrive/5.MVC/Docs/1017)
+
+### 10/18
+
+* Page, Requst, 세션, 어플리케이션
+
+[Go1017](https://github.com/MristerWing/PrivateProject/tree/subDrive/5.MVC/Docs/1018)

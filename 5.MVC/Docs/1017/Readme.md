@@ -29,13 +29,5 @@
 * stack: 지역변수의 값, heap의 주소를 참조
 * register: CPU register area
 
-### Page
-
-### Requst
-
-### 세션
-
-### 어플리케이션
-
 ---
 [Go Docs](https://github.com/MristerWing/PrivateProject/tree/subDrive/5.MVC/Docs)  

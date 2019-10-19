@@ -21,22 +21,23 @@ while (funds > 1 && funds < 100) {
     // === : 엄격한 비교, 타입형까지 확인
     if (new Date().getDay() === 3) {
         totalBet = 1;
-    } 
+    }
 
     switch (totalBet) {
         case 7:
             totalBet = funds;
             break;
-        case 13:
-            funds -= 1;
         case 11:
+            totalBet = 0;
+            break;
+        case 13:
             totalBet = 0;
             break;
         case 21:
             totalBet = 21;
             break;
     }
-    
+
     if (totalBet === 7) {
         totalBet = funds;
         bets.heart = totalBet;

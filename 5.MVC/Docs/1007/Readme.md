@@ -84,6 +84,8 @@
 * DOM이란 HTML, XML문서의 프로그래밍 interface이다. DOM은 구조화된 표현을 제공하며 프로그래밍 언어가 DOM구조에 접근할 수 있는 방법을 제공하여 그들이 문서 구조, 스타일, 내용 등을 변경할 수 있게 돕는다.
 * DOM은 구조화된 nodes와 property와 method를 갖고 있는 objects로 문서를 표현한다.
 
+>참고 Link: https://poiemaweb.com/js-dom
+
 >출처: https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model/%EC%86%8C%EA%B0%9C
 
 ### JavaScript:Core

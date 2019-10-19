@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        var su = -10;
+        var value = new Number(20);
+        document.write(su + "<br/>" + value + "<br/>");
+
+        var num = 123.45678;
+        document.write("num: " + num.toFixed(3) + "<br/>");
+        document.write("num: " + num.toPrecision(10) + "<br/>");
+        document.write("num: " + num.toPrecision(5) + "<br/>");
+        document.write("num: " + Number.MAX_VALUE + "~" + Number.MIN_VALUE + "<br/>");
+
+        //Array
+        var a = [2, 3, 4];
+        var srtArr = new Array("tex1", "tex2", "tex3");
+        srtArr.push("text4");
+
+        document.write(srtArr + "<br/>");
+        document.write(srtArr.join("/") + "<br/>");
+        document.write(srtArr.slice(2) + "<br/>");
+        document.write(srtArr.sort() + "<br/>");
+        document.write(srtArr.reverse() + "<br/>");
+
+        //Global 객체, 객체만으로 따로 사용 x
+        //alert("is Global");
+
+        //특수문자 처리 디코딩, 엔코딩
+        var url = "!@#$%^%^%^";
+        var b = encodeURIComponent(url);
+        document.write("b: " + b + "<br/>"); //출력값: 16진수
+        //decoding
+        document.write("decoding: " + decodeURIComponent(b) + "<br/>");
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
