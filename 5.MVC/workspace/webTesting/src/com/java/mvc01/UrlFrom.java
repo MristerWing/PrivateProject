@@ -16,7 +16,7 @@ public class UrlFrom extends HttpServlet {
 		String id = req.getParameter("id");
 		String pwd = req.getParameter("pwd");
 		
-		System.out.println(id + "aaaa \t " + pwd);
+		System.out.println(id + " \t " + pwd);
 	}
 
 	@Override
