@@ -44,6 +44,12 @@ Docs
 
 ### 10/18
 
-* Page, Requst, 세션, 어플리케이션
+* none
 
 [Go1017](https://github.com/MristerWing/PrivateProject/tree/subDrive/5.MVC/Docs/1018)
+
+### 10/21
+
+* 
+
+[Go1021](https://github.com/MristerWing/PrivateProject/tree/subDrive/5.MVC/Docs/1021)

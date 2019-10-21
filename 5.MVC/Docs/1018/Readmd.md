@@ -8,17 +8,4 @@
 
 ---
 
-### Page
-
-### Requst
-
-### 세션
-
-### 어플리케이션
-
-### DB 유도된 필드
-
-### decoding, encoding
-
----
 [Go Docs](https://github.com/MristerWing/PrivateProject/tree/subDrive/5.MVC/Docs)  

@@ -29,5 +29,85 @@
     <servlet-name>UrlFrom</servlet-name>
     <url-pattern>/com/java/mvc01/UrlFrom</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Example01</servlet-name>
+    <servlet-class>com.java.mvc01.Example01</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Example01</servlet-name>
+    <url-pattern>/com/java/mvc01/Example01</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Example02</servlet-name>
+    <servlet-class>com.java.mvc01.Example02</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Example02</servlet-name>
+    <url-pattern>/com/java/mvc01/Example02</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Example03</servlet-name>
+    <servlet-class>com.java.mvc01.Example03</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Example03</servlet-name>
+    <url-pattern>/com/java/mvc01/Example03</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Example04</servlet-name>
+    <servlet-class>com.java.mvc01.Example04</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Example04</servlet-name>
+    <url-pattern>/com/java/mvc01/Example04</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Example04_Success</servlet-name>
+    <servlet-class>com.java.mvc01.Example04_Success</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Example04_Success</servlet-name>
+    <url-pattern>/com/java/mvc01/Example04_Success</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Example04_Fail</servlet-name>
+    <servlet-class>com.java.mvc01.Example04_Fail</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Example04_Fail</servlet-name>
+    <url-pattern>/com/java/mvc01/Example04_Fail</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Example05</servlet-name>
+    <servlet-class>com.java.mvc01.Example05</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Example05</servlet-name>
+    <url-pattern>/com/java/mvc01/Example05</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Example05_sub</servlet-name>
+    <servlet-class>com.java.mvc01.Example05_sub</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Example05_sub</servlet-name>
+    <url-pattern>/com/java/mvc01/Example05_sub</url-pattern>
+  </servlet-mapping>
 
 </web-app>
