@@ -3,5 +3,6 @@
 /personal/package-lock.json/
 /personal/dist/
 /personal/public/dist/
-# /workspace/
+/workspace
+# /reactExam/
 # /personal/package.json/

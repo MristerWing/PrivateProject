@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        /* 
+        내장객체: windwo. document, Browser관련(location, history, navigator)... 
+        https://www.w3schools.com/jsref/default.asp
+        */
+
+        //String
+        var abc = "HELLO!!";
+        var a = String("HELLP!!HELLO!!");
+        document.write(abc + "<br/>" + a + "<br/>");
+
+        var str = "ABCDEFGHIJ";
+        document.write(str.substring(6) + "<br/>");
+        document.write(str.substring(2, 8) + "<br/>");
+
+        var email = "gmx0807@gmail.com";
+        var index = email.indexOf("@");
+        document.write(index + "<br/>");
+        document.write(email.substring(index + 1) + "<br/>");
+        document.write(email.toLocaleLowerCase() + "<br/>");
+        document.write(email.toLocaleUpperCase() + "<br/>");
+
+        document.write(email.split("@")[0] + " / " + email.split("@")[1] + "<br/>");
+
+        var su = 10;
+
+        var text = su.toString();
+
+        document.write(su + "'s text: " + text + " and " + ++su  + "<br/>");
+        document.write(++su.toString()  + "<br/>"); //err!
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

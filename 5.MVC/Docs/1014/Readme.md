@@ -17,7 +17,7 @@
 * default는 static
 * static, absolute ,fixed
 
-![broke](01.png)
+![broke](./01.png)
 
 * width를 넘어가면 block가 깨져서 넘어가지는 현상이 발생한다.
 * 해결법
@@ -28,4 +28,4 @@
 >link:https://www.w3schools.com/cssref/pr_class_position.asp
 
 ---
-[Go Docs](https://github.com/MristerWing/PrivateProject/tree/subDrive/5.MVC/Docs)  
+[Go Docs](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs)

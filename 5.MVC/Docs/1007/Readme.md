@@ -116,4 +116,4 @@
 > 출처: https://ko.wikipedia.org/wiki/XML
 
 ---
-[Go Docs](https://github.com/MristerWing/PrivateProject/tree/subDrive/5.MVC/Docs)  
+[Go Docs](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs)

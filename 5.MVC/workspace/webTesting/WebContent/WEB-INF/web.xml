@@ -109,5 +109,65 @@
     <servlet-name>Example05_sub</servlet-name>
     <url-pattern>/com/java/mvc01/Example05_sub</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Example06_CookieSet</servlet-name>
+    <servlet-class>com.java.mvc01.Example06_CookieSet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Example06_CookieSet</servlet-name>
+    <url-pattern>/com/java/mvc01/Example06_CookieSet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Example06_CookieGet</servlet-name>
+    <servlet-class>com.java.mvc01.Example06_CookieGet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Example06_CookieGet</servlet-name>
+    <url-pattern>/com/java/mvc01/Example06_CookieGet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Example06_CookieDel</servlet-name>
+    <servlet-class>com.java.mvc01.Example06_CookieDel</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Example06_CookieDel</servlet-name>
+    <url-pattern>/com/java/mvc01/Example06_CookieDel</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Example07_SessionSet</servlet-name>
+    <servlet-class>com.java.mvc01.Example07_SessionSet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Example07_SessionSet</servlet-name>
+    <url-pattern>/com/java/mvc01/Example07_SessionSet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Example07_SessionGet</servlet-name>
+    <servlet-class>com.java.mvc01.Example07_SessionGet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Example07_SessionGet</servlet-name>
+    <url-pattern>/com/java/mvc01/Example07_SessionGet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Example07_SessionDel</servlet-name>
+    <servlet-class>com.java.mvc01.Example07_SessionDel</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Example07_SessionDel</servlet-name>
+    <url-pattern>/com/java/mvc01/Example07_SessionDel</url-pattern>
+  </servlet-mapping>
 
 </web-app>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        function winOpen() {
+            open("https://www.naver.com",
+                "naverWin", "width = 300px, height = 200px, scrollbars=yes");
+        }
+
+        function winOpenTwo() {
+            open("http://127.0.0.1:5500/workspace/webTesting/WebContent/05_JavaScript/01_Core.html",
+                    "coreOpen", "width = 300px, height = 200px, scrollbars=yes");
+        }
+
+    </script>
+</head>
+
+<body onload = "winOpenTwo()">
+    <input type="button" value="open" onclick="winOpen()">
+</body>
+
+</html>

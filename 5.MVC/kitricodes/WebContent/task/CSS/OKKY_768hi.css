@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+
+.mainContainer {
+    float: left;
+}
+
+.col-sm-4 {
+    width: 33.33333333%;
+}
+
+.col-sm-6 {
+    width: 50%;
+}
+
+.col-sm-8 {
+    width: 66.66666667%;
+}
+
+.col-sm-9 {
+    width: 75%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+}

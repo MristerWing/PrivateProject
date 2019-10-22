@@ -52,4 +52,4 @@
 >출처: **https://blog.outsider.ne.kr/312**
 
 ---
-[Go Docs](https://github.com/MristerWing/PrivateProject/tree/subDrive/5.MVC/Docs)  
+[Go Docs](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs)

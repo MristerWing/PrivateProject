@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -37,6 +38,9 @@ public class Example05 extends HttpServlet {
 		 * 데이터 전달시 request객체에 파라미터로 전달. RequestScope,
 		 * SessionScope, ApplicationScope
 		 */
+		//쿠키 테스트
+		Cookie[] cookies = request.getCookies();
+		System.out.println(cookies.length);
 		
 		request.setCharacterEncoding("UTF-8");
 		String meg = request.getParameter("message");

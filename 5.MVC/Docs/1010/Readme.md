@@ -36,4 +36,4 @@ nth: https://firerope.tistory.com/5
 link: https://m.blog.naver.com/wolfre/220319783903
 
 ---
-[Go Docs](https://github.com/MristerWing/PrivateProject/tree/subDrive/5.MVC/Docs)  
+[Go Docs](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs)

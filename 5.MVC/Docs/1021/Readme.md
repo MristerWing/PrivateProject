@@ -26,4 +26,4 @@ Link: https://victorydntmd.tistory.com/156
 
 ---
 
-[Go Docs](https://github.com/MristerWing/PrivateProject/tree/subDrive/5.MVC/Docs)  
+[Go Docs](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs)  

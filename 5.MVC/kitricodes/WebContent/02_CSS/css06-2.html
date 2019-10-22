@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS06-2 속성선택자</title>
+<style type="text/css">
+/* 
+	[name] : name 속성명이 있는 요소를 찾는 선택자 
+	[name = "value"] : name 속성 값과 value가 일치하는 요소를 찾는 선택자 
+	jquery: [name != "value"] : name 속성 값과 value가 일치하지 않는 요소를 찾는 선택자 
+	[name ~= "value"] : name 속성 값에 ""value""가 포함되어 있는지를 확인하는 선택자 declared
+	[name ^= "value"] : name 속성 값과 value에 해당하는 문자가 시작부분에 포함되어 있는지를 확인하는 선택자 
+	[name $= "value"] : name 속성 값과 value에 해당하는 문자가 끝 부분에 포함되어 있는지를 확인하는 선택자 declared
+	[name *= "value"] : name 속성 값과 value에 해당하는 문자가 포함하는지 확인하는 선택자
+*/
+
+form > input:nth-of-type(1) {
+	font-style: italic;
+}
+
+input[type] {
+	color: orange;
+}
+
+img[alt] {
+	color:yellow;
+}
+
+input[type=text] {
+	font-size: 20px;
+}
+
+/* start text */
+span[id^=complex] {
+/* old version: [id |= comlpex] */
+	color: blue;
+}
+/* end text */
+span[id$=text1] {
+	font-size:  20px;
+}
+/* contains text */
+span[id*=text] {
+/* old version: [id ~= comlpex] */
+	background-color: yellow;
+}
+
+</style>
+</head>
+<body>
+<form>
+	<label>name</label>
+	<input type="text"/>
+	<br/>
+	
+	<label>id</label>
+	<input type="text"/>
+	<br/>
+	
+	<label>password</label>
+	<input type="password"/>
+	<br/>
+	
+	<label>phone number</label>
+	<input type="tel"/>
+	<br/>
+	
+	<img alt="image's loding..." src="" width="200" height="100"/>
+	<br/>
+	
+	<span id = "simpletext1">simlpetext1</span>
+	<br/>
+	<span id = "simpletext2">simlpetext2</span>
+	<br/>
+	<span id = "complextext1">complextext1</span>
+	<br/>
+	<span id = "complextext2">complextext2</span>
+	<br/>
+	<span id = "complex">complex</span>
+	<br/>
+	
+</form>
+
+
+</body>
+</html>

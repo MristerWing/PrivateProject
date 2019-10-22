@@ -1,0 +1,224 @@
+#wrap>.mainContainer {
+    position: relative;
+    width: 805px;
+    overflow: hidden;
+    margin-left: 210px;
+    padding: 20px 0 0 30px;
+}
+
+#wrap>.mainContainer .item_tag {
+    background-color: #bbb;
+    color: #FFF;
+    font-weight: 400;
+    line-height: 13.65px;
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 10px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
+#wrap>.mainContainer .header_icon {
+    display: inline-block;
+    width: 14px;
+    height: 20px;
+    color: #0062b6;
+    font-size: 14;
+    line-height: 20px;
+}
+
+#wrap>.mainContainer .blue_tag {
+    background-color: #5bc0de;
+}
+
+#wrap>.mainContainer>.mainBanner {
+    height: 95px;
+    background-color: bisque;
+}
+
+#wrap>.mainContainer>.content {
+    overflow: hidden;
+}
+
+#wrap>.mainContainer>.content>div {
+    float: left;
+    box-sizing: border-box;
+}
+#wrap>.mainContainer .left_top_block, #wrap>.mainContainer .right_top_block {
+    /* height: 283.172px; */
+    overflow: hidden;
+    padding-right: 15px;
+    overflow: hidden;
+}
+
+#wrap>.mainContainer .main-block {
+    margin: 0 0 30px 0;
+    overflow: hidden;
+}
+
+#wrap>.mainContainer .main-header {
+    font-size: 14px;
+    color: #56595c;
+    margin: 10px 0 10px 0;
+}
+
+#wrap>.mainContainer .main-block-banner {
+    width: 254px;
+    height: 250px;
+    background-color: bisque;    
+}
+
+#wrap>.mainContainer .panel {
+    margin: 0 0 20px 0;
+    background-color: #FFF;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-left-width: 4px;
+}
+
+#wrap>.mainContainer .panel .title {
+    color: rgb(26, 68, 107);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.4px;
+    margin: 3px 0;
+    text-align: left;
+    text-size-adjust: 100%;
+}
+
+#wrap>.mainContainer .panel .title>a {
+    margin: 0;
+    color: rgb(42, 100, 150);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.4px;
+    text-decoration-color: rgb(42, 100, 150);
+    text-decoration-style: solid;
+    text-size-adjust: 100%;
+}
+
+#wrap>.mainContainer .panel .avatar {
+    overflow: hidden;
+    line-height: 14.4px;
+    text-size-adjust: 100%;
+    font-size: 10px;
+}
+
+#wrap>.mainContainer .panel .avatar * {
+    padding: 0;
+    margin: 0;
+    float: right;
+    height: 14px;
+    margin-right: 3px;
+}
+
+#wrap>.mainContainer .panel .avatar>.time_ago {
+    color: #cccccc;
+}
+
+#wrap>.mainContainer .panel .avatar .activity * {
+    color: #888;
+}
+
+#wrap>.mainContainer .panel .avatar .icon {
+    width: 10px;
+    height: 10px;
+    margin: 0 0 0 5px;
+}
+
+#wrap>.mainContainer .panel .avatar .avatar_icon {
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    display: inline-block;
+    border: 1px solid #ededed;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+#wrap>.mainContainer .panel .avatar .avatar_icon>img {
+    margin: auto;
+}
+
+#wrap>.mainContainer .panel ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#wrap>.mainContainer .panel li {
+    position: relative;
+    width: 100%;
+    line-height: 20px;
+    text-size-adjust: 100%;
+    line-height: 35px;
+    padding: 6px 10px; 
+    border-bottom: 1px solid #ddd;
+}
+
+#wrap>.mainContainer .panel li:last-child {
+    border-bottom-width: 0px; 
+}
+
+#wrap>.mainContainer .article {
+    padding: 15px;
+    border-left-width: 1px;
+}
+
+#wrap>.mainContainer .article li{
+    padding: 0;
+}
+
+#wrap>.mainContainer .article .title>.tech_title {
+    font-size: 14px;
+    color: #2a6496;
+    font-weight: 500;
+    line-height: 15.4px;
+}
+
+#wrap>.mainContainer .article .list_tag {
+    width: 100%;
+    height: 19px;
+    overflow: hidden;
+    line-height: 20px;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+#wrap>.mainContainer .panel>.panel_body {
+    padding: 15px;
+    overflow: hidden;
+}
+
+#wrap>.mainContainer .panel>.panel_body .cal_title,
+#wrap>.mainContainer .panel>.panel_body .cal_content {
+    display: block;
+}
+
+#wrap>.mainContainer .panel>.panel_body>.cal_title {
+    color: #2a6496;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 15.4px;
+    margin: 10px 0;
+}
+
+#wrap>.mainContainer .panel>.panel_body>.cal_content {
+    margin-bottom: 10px;
+    color: #888;
+    font-size: 12px;
+    word-break: break-all;
+}
+
+#wrap>.mainContainer .left_bottom_block, #wrap>.mainContainer .right_bottom_block {
+    overflow: hidden;
+}
+
+#wrap>.mainContainer .left_bottom_block {
+    padding-right: 15px;
+}
+
+#wrap>.mainContainer .right_bottom_block {
+    padding-left: 15px;
+}

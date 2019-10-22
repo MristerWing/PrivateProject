@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        function myBlur(obj) {
+            obj.value = "아이디를 입력하시오.";
+            obj.style.color = "red";
+        }
+        function myFoucs(obj) {
+            obj.value = "중복아이디입니다.";
+            obj.style.color = "blue";
+        }
+
+        function myChange(obj) {
+            alert(obj.value);
+        }
+
+        function mySelect(obj) {
+            alert("is select!");
+        }
+    </script>
+</head>
+<body>
+    <!-- form event : focus, blue, change, select, submit...-->
+
+    <form action="#" method="GET">
+        <input type="text" onblur="myBlur(this)" onfocus="myFoucs(this)"/>
+
+        <select onchange="myChange(this)">
+            <option value="apple">apple</option>
+            <option value="dorian">dorian</option>
+            <option value="banana">banana</option>
+            <option value="painapple">painapple</option>
+        </select>
+        
+        <input type="text" value="HELLO WORLD!!" onselect="mySelect()"/>
+    </form>
+</body>
+</html>

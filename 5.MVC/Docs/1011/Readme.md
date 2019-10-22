@@ -14,4 +14,4 @@
 link: https://www.w3schools.com/cssref/pr_class_position.asp
 
 ---
-[Go Docs](https://github.com/MristerWing/PrivateProject/tree/subDrive/5.MVC/Docs)  
+[Go Docs](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs)

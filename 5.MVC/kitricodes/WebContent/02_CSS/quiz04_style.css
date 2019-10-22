@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/* 
+body * {
+	border: dotted 1px gray;
+} */
+
+body {
+	background-color: #f5f6f7;
+	font-family: 나눔스퀘어;
+}
+
+h3 {
+	display: block;
+	font-size: 1.17em;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+}
+
+.join_title {
+	margin: 19px 0 8px;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.joinrow {
+	text-align: left;
+	width: 60%;
+	height: 30%;
+}
+
+.ps_box {
+	display: block;
+	width: 100%;
+	height: 51px;
+	border: solid 1px #dadada;
+	padding: 10px 14px 10px 14px;
+	background: #fff;
+	box-sizing: border-box;
+	vertical-align: top;
+}
+
+.ps_box.int_id {
+	padding-right: 110px;
+}
+
+.int {
+	display: block;
+	width: 80%;
+	height: 29px;
+	line-height: 29px;
+	border: none;
+	background: #fff;
+	font-size: 15px;
+	box-sizing: border-box;
+	z-index: 10;
+	float: left;
+}
+
+.step_url {
+	margin: 3px 0 0 1px;
+    font-size: 15px;
+    line-height: 18px;
+    color: #8e8e8e;
+    float: left;
+}
+
+.step_img {
+	margin-left: 30px;
+	float: right;
+}
+
+#container, #footer, #headesr {
+	margin: 0 auto;
+	width: auto;
+	max-width: 768px;
+}
+
+#footer {
+	text-align: center;
+	height: 5%;
+}
