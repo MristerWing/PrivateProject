@@ -53,3 +53,15 @@ Docs
 * 
 
 [Go1021](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs/1021)
+
+### 10/22
+
+* Cookie & Session, Application Scope, EL, JSTL
+
+[Go1022](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs/1022)
+
+### 10/23
+
+* 
+
+[Go1023](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs/1023)
