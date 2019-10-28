@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>webTesting</display-name>
   <welcome-file-list>
@@ -170,4 +170,59 @@
     <url-pattern>/com/java/mvc01/Example07_SessionDel</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>ABC</servlet-name>
+    <servlet-class>com.java.mvc02.ABC</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ABC</servlet-name>
+    <url-pattern>*.sbs</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CON</servlet-name>
+    <servlet-class>com.java.mvc02.Controller</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>CON</servlet-name>
+    <url-pattern>*.kitri</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Cnt</servlet-name>
+    <servlet-class>com.java.mvc03.SampleCnt</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Cnt</servlet-name>
+    <url-pattern>*.action</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>CommandCtrl</servlet-name>
+    <servlet-class>com.java.mvc04.CommandCtrl</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>CommandCtrl</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FrontController</servlet-name>
+    <servlet-class>com.java.mvc05.FrontController</servlet-class>
+    <init-param>
+      <param-name>configFile</param-name>
+      <param-value>F:\PrivateProject\5.MVC\workspace\webTesting\WebContent\WEB-INF\lib\command.properties</param-value>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>FrontController</servlet-name>
+    <url-pattern>*.nhn</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
+
