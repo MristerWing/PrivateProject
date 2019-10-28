@@ -7,3 +7,6 @@
 2. file의 기본 읽기는 1024, 네트워크는 512. 단위(byte)
 
 DB생성, DB연결, 상대경로로 변경 방명록 연결
+
+---
+[Go Docs](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs)

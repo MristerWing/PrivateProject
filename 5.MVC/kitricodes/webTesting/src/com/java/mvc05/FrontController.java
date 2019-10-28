@@ -38,11 +38,13 @@ public class FrontController extends HttpServlet {
 		FileInputStream fis = null;
 		BufferedInputStream bis = null;
 		
+		String path = config.getServletContext().getRealPath(configFile);
+		
 		//안드로이드면 매니페스트등록과 같다.
 		Properties pro = new Properties();
 
 		try {
-			fis = new FileInputStream(configFile);
+			fis = new FileInputStream(path);
 			bis = new BufferedInputStream(fis, 1024);
 			pro.load(bis);
 

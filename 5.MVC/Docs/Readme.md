@@ -62,6 +62,18 @@ Docs
 
 ### 10/23
 
-* 
+* MVC2, 프로퍼티스, 파일 입출력
 
 [Go1023](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs/1023)
+
+### 10/24
+
+* none
+
+[Go1024](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs/1024)
+
+### 10/28
+
+* 컬렉션, frontController, command, 커넥션풀, di, aop
+
+[Go1028](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs/1028)

@@ -215,7 +215,7 @@
     <servlet-class>com.java.mvc05.FrontController</servlet-class>
     <init-param>
       <param-name>configFile</param-name>
-      <param-value>F:\PrivateProject\5.MVC\workspace\webTesting\WebContent\WEB-INF\lib\command.properties</param-value>
+      <param-value>\WEB-INF\lib\command.properties</param-value>
     </init-param>
   </servlet>
 
