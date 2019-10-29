@@ -6,18 +6,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>로그인</title>
+<title>회원탈퇴</title>
 <script type="text/javascript" src="${root}/javascript/member/login.js"></script>
 </head>
 <body>
 	<jsp:include page="../../../index.jsp"/>
 	<br>
 	<br>
-
+	
 	<div align="center" style="margin: 0 auto;">
-		<form action="${root}/member/loginOk.do" method="POST" onsubmit="return chkId(this)">
+	<h3>정말로 탈퇴를 원하시면 아래에 비밀번호를 다시 입력하여 주세요.</h3>
+		<form action="${root}/member/deleteOk.do" method="POST" onsubmit="return chkId(this)">
         <label>아이디 </label>
-        <input type="text" name="id"/>
+        <input type="text" name="id" value="${id}" disabled="disabled"/>
         <br><br>
 
         <label>비밀번호</label>
