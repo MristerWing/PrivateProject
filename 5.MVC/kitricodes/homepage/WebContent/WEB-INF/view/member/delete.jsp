@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <title>회원탈퇴</title>
 <script type="text/javascript" src="${root}/javascript/member/login.js"></script>
+<link rel="stylesheet" href="${root}/css/common.css" />
 </head>
 <body>
 	<jsp:include page="../../../index.jsp"/>

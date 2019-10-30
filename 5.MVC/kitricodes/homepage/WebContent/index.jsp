@@ -7,11 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>FirstPage</title>
-<style>
-a {
-	margin-right: 10px;
-}
-</style>
+<link rel="stylesheet" href="${root}/css/common.css" />
 </head>
 <body>
 	<h3>회원관리</h3>

@@ -1,13 +1,28 @@
 @charset "UTF-8";
 
-form {
-	/* border: solid 1px red; */
+.form {
+	border: solid 0.01em #e6b3ff;
 	position: relative;
-	top: -100px;
-	
+	top: -140px;
 	width: 410px;
 	height: 155px;
-	margin: 0px 0px 0px 0px;
+	margin: 5px;
+	margin-bottom: 20px;
+	background-color: #e6e6ff;
+}
+
+.index {
+	border: 1px solid #d3d3d3;
+	text-align: left;
+	padding-left: 5px;
+	background-color: #fff;
+	width: 385px;
+	height: 86px;
+	margin: 2px 0;
+}
+
+.message {
+	font-size: 14px;
 }
 
 .title {
@@ -24,9 +39,10 @@ form {
 	width: 400px;
 	height: 86px;
 	margin: 2px 0px;
+	text-align: left;
 }
 
 label {
 	/* display: block; */
-	margin-left: 10px; 
+	margin-left: 10px;
 }

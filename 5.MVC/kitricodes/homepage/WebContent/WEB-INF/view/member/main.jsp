@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>${id}님 환영합니다.</title>
+<link rel="stylesheet" href="${root}/css/common.css" />
 </head>
 <body>
 	<jsp:include page="../../../index.jsp"/>
