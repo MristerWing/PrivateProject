@@ -30,8 +30,12 @@
 	<h3>방명록</h3>
 	<a href="${root}/guest/write.do">글쓰기</a>
 
+	<h3>게시판</h3>
+	<a href="${root}/board/write.do">게시글 쓰기</a>
+	<br>
+	<a href="${root}/board/list.do">목록보기</a>
+	
 	<!-- 
-        <h3>게시판</h3>
         <h3>파일게시판</h3>
     -->
 </body>

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-form {
+.registerBox {
 	text-align: center;
 	border: solid 2px; 
 	width: 500px;

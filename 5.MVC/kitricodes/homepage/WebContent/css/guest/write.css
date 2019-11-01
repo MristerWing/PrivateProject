@@ -11,6 +11,10 @@
 	background-color: #e6e6ff;
 }
 
+.update {
+	position: static;
+}
+
 .index {
 	border: 1px solid #d3d3d3;
 	text-align: left;

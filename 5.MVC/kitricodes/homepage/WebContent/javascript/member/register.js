@@ -4,6 +4,8 @@ function registerForm(obj) {
 	// '`',];
 	var nameReg = /[가-힣]+/;
 	var idReg = /\w+|\d+/g;
+	var resReg1 = /^(?:[0-9]{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[1,2][0-9]|3[0,1]))/;
+	var resReg2 = /^[1-4][0-9]{6}$/;
 	var elements = obj.elements;
 	var str = "";
 
@@ -16,7 +18,6 @@ function registerForm(obj) {
 			return false;
 		}
 	}
-
 	if(!idReg.test(obj.id.value)||obj.id.value.length > 13) {
 		alert("id는 숫자와 영문으로만 가능하며 13자리를 초과할 수 없습니다.");
 		obj.id.focus();
@@ -36,6 +37,16 @@ function registerForm(obj) {
 		|| (obj.name.value.length < 2 || obj.name.value.length > 5)) {
 		alert("이름은 한글만, 2글자 미만, 5글자 이상 입력해주셔야 합니다.");
 		obj.name.focus();
+		return false;
+	}
+	else if (!resReg1.test(obj.jumin1.value)) {
+		alert("주민번호 앞자리를 확인해 주세요.");
+		obj.jumin1.focus();
+		return false;
+	}
+	else if (!resReg2.test(obj.jumin2.value)) {
+		alert("주민번호 뒷자리를 확인해 주세요.");
+		obj.jumin2.focus();
 		return false;
 	}
 	else if(obj.job.value=="") {
@@ -70,7 +81,7 @@ function idCheck(obj, root) {
 		obj.id.foucs();
 		return false;
 	}
-
+	
 	var url = root + "/member/idCheck.do?id=" + obj.id.value;
 	// alert(url);
 

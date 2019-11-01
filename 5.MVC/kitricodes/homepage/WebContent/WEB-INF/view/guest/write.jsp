@@ -10,6 +10,7 @@
 <title>방명록</title>
 <link rel="stylesheet" href="${root}/css/common.css" />
 <link rel="stylesheet" href="${root}/css/guest/write.css" />
+<script type="text/javascript" src="${root}/javascript/guest/guest.js"></script>
 </head>
 <body>
 	<jsp:include page="../../../index.jsp"></jsp:include>
@@ -45,8 +46,8 @@
 					<div class="index">
 						<span class="message"><c:out value="${guestDto.message}"></c:out></span>
 					</div>
-					<button type="button" onclick="location.href='${root}/guest/write.do'">수정</button>
-					<button type="button" onclick="location.href='${root}/guest/write.do'">삭제</button>
+					<button type="button" onclick="updateCheck('${root}', '${guestDto.num}', '${currentPage}')">수정</button>
+					<button type="button" onclick="deleteCheck('${root}', '${guestDto.num}', '${currentPage}')">삭제</button>
 				</div>
 			</c:forEach>
 		</c:if>

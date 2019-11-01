@@ -18,7 +18,7 @@
 	
     <div align="center" style="margin: 0 auto">
 		<div style="font-weight: bold;">회원가입(*필수입력사항입니다.)</div>
-		<form action="${root }/member/registerOk.do" name="createForm" method="post" onsubmit="return registerForm(this)">
+		<form class="registerBox" action="${root }/member/registerOk.do" name="createForm" method="post" onsubmit="return registerForm(this)">
 			<div class="liner">
 				<label>아이디</label>
 				<div class="insert">
