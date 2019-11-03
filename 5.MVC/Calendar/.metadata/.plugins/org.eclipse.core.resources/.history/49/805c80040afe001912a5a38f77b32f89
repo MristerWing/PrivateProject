@@ -1,0 +1,5 @@
+package com.calendar.calendar.command;
+
+public class CalendarAction {
+
+}

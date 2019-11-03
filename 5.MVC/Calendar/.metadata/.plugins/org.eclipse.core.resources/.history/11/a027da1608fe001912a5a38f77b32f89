@@ -1,0 +1,5 @@
+package com.calendar.command;
+
+public interface CommandAction {
+
+}

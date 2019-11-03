@@ -1,0 +1,14 @@
+package com.calendar.calendar.command;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.calendar.command.CommandAction;
+
+public class CalendarAction implements CommandAction {
+	@Override
+	public String propertiesRequest(HttpServletRequest request, HttpServletResponse response) throws Throwable {
+		logger.info(logMsg + "ok");
+		return "/WEB-INF/view/calendar/calendar.jsp";
+	}
+}

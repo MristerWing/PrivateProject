@@ -1,0 +1,8 @@
+package com.calendar.command;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public interface CommandAction {
+	public String propertiesRequest(HttpServletRequest request, HttpServletResponse response) throws Throwable;
+}

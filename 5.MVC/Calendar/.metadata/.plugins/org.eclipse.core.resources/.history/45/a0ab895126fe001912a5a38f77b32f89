@@ -1,0 +1,38 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<c:set var="root" value="${pageContext.request.contextPath}"></c:set>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calendar</title>
+<link rel="stylesheet" href="${root}/css/calendar/calendar.css" />
+</head>
+<body>
+	<%-- <h3>${month} / ${days}</h3> --%>
+	<div class="mainContainer">
+		<div class="calendar">
+			<ul class="weekBox">
+				<li class="dayBox">
+					<div class="dayTitle">
+						<label>week</label>
+					</div>
+					<div class="dayTitle">
+						<label>day</label>
+					</div>
+					<div class="dayContent">
+						<span>this is content</span>
+					</div>
+				</li>
+				<li class="dayBox"></li>
+				<li class="dayBox"></li>
+				<li class="dayBox"></li>
+				<li class="dayBox"></li>
+				<li class="dayBox"></li>
+				<li class="dayBox"></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
