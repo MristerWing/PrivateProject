@@ -1,3 +1,3 @@
 function boardForm(obj) {
-    console.log("OK");
+    //console.log("OK");
 }

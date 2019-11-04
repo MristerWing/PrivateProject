@@ -7,11 +7,16 @@ import javax.servlet.http.HttpSession;
 import com.java.command.CommandAction;
 import com.java.member.dao.MemberDao;
 
+/**
+ * @개발자 KJS
+ * @작성일 2019. 10. 29.
+ * @설명 
+ */
+
 public class DeleteOkAction implements CommandAction {
 
 	@Override
 	public String proRequest(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		
 		HttpSession session = request.getSession();
 		
 		String id = (String) session.getAttribute("id");

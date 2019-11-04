@@ -6,6 +6,12 @@ import javax.servlet.http.HttpSession;
 
 import com.java.command.CommandAction;
 
+/**
+ * @개발자 KJS
+ * @작성일 2019. 10. 29.
+ * @설명 
+ */
+
 public class MainAction implements CommandAction{
 	@Override
 	public String proRequest(HttpServletRequest request, HttpServletResponse response) throws Throwable {

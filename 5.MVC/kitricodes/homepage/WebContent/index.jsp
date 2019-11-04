@@ -24,7 +24,7 @@
 		<c:if test="${memberLevel == 'MA'}">
 			<br>
 			<h3>관리자 메뉴</h3>
-				
+
 		</c:if>
 	</c:if>
 	<h3>방명록</h3>
@@ -34,9 +34,12 @@
 	<a href="${root}/board/write.do">게시글 쓰기</a>
 	<br>
 	<a href="${root}/board/list.do">목록보기</a>
-	
-	<!-- 
-        <h3>파일게시판</h3>
-    -->
+
+
+	<h3>파일게시판</h3>
+	<a href="${root}/fileboard/write.do">게시글 쓰기</a>
+	<br>
+	<a href="${root}/fileboard/list.do">목록보기</a>
+
 </body>
 </html>

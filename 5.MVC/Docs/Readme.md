@@ -50,7 +50,7 @@ Docs
 
 ### 10/21
 
-* 
+* Page, Request, 세션, 어플리케이션, DB 유도된 필드, decoding, encoding, EL, JSTL
 
 [Go1021](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs/1021)
 
@@ -77,3 +77,15 @@ Docs
 * 컬렉션, frontController, command, 커넥션풀, di, aop
 
 [Go1028](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs/1028)
+
+### 10/30
+
+* page 기법
+
+[Go1030](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs/1030)
+
+### 11/04
+
+* form의 html과 ajax의 entype
+
+[Go1104](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs/1104)

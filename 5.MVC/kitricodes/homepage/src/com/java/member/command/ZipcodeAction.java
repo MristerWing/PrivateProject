@@ -9,6 +9,13 @@ import com.java.command.CommandAction;
 import com.java.member.dao.MemberDao;
 import com.java.member.dto.ZipcodeDto;
 
+/**
+ * @개발자 KJS
+ * @작성일 2019. 10. 28.
+ * @설명 
+ */
+
+
 public class ZipcodeAction implements CommandAction {
 
 	@Override

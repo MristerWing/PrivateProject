@@ -6,6 +6,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.java.command.CommandAction;
 import com.java.member.dao.MemberDao;
 
+/**
+ * @개발자 KJS
+ * @작성일 2019. 10. 28.
+ * @설명 
+ */
+
 public class LoginOkAction implements CommandAction {
 
 	@Override

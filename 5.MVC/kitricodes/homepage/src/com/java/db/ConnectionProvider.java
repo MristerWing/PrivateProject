@@ -1,24 +1,30 @@
 package com.java.db;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
 
 public class ConnectionProvider {
 	public static Connection getConnection() {
 		Connection conn = null;
 		
+		// server context
 		try {
-			String url = "jdbc:oracle:thin:@localhost:1521:XE";
-			String id = "mvc";
-			String pwd = "1234";
+			Context initContext = new InitialContext();
 			
-			conn = DriverManager.getConnection(url, id, pwd);
+			// 접두어(resource)
+			Context envContext = (Context) initContext.lookup("java:/comp/env");
 			
-		} catch (SQLException e) {
-			System.out.println("Connection Error: " + e);
+			// mvcDb in resource
+			DataSource ds = (DataSource) envContext.lookup("jdbc/mvcDB");
+			conn = ds.getConnection();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-	
+		
 		return conn;
 		
 	}

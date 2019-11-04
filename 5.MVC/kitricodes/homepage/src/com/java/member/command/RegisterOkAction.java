@@ -9,22 +9,16 @@ import com.java.command.CommandAction;
 import com.java.member.dao.MemberDao;
 import com.java.member.dto.MemberDto;
 
+/**
+ * @개발자 KJS
+ * @작성일 2019. 10. 27.
+ * @설명 
+ */
+
 public class RegisterOkAction implements CommandAction {
 
 	@Override
 	public String proRequest(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		// TODO Auto-generated method stub
-		request.setCharacterEncoding("UTF-8");
-		/*
-		 * MemberDto memberDto = new MemberDto(request.getParameter("id"),
-		 * request.getParameter("password"), request.getParameter("name"),
-		 * request.getParameter("jumin1"), request.getParameter("jumin2"),
-		 * request.getParameter("email"), request.getParameter("zipcode"),
-		 * request.getParameter("address"), request.getParameter("job"),
-		 * request.getParameter("mailing"), request.getParameter("interest"), "BA", new
-		 * Date());
-		 */
-		
 		MemberDto memberDto= new MemberDto();
 		memberDto.setId(request.getParameter("id"));
 		memberDto.setPassword(request.getParameter("password"));

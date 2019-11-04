@@ -7,11 +7,16 @@ import com.java.command.CommandAction;
 import com.java.member.dao.MemberDao;
 import com.java.member.dto.MemberDto;
 
+/**
+ * @개발자 KJS
+ * @작성일 2019. 10. 29.
+ * @설명 
+ */
+
 public class UpdateOkAction implements CommandAction {
 
 	@Override
 	public String proRequest(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		request.setCharacterEncoding("UTF-8");
 		MemberDto memberDto = new MemberDto();
 		
 		memberDto.setNum(Integer.parseInt(request.getParameter("id")));

@@ -9,7 +9,6 @@ public class LoginAction implements CommandAction {
 
 	@Override
 	public String proRequest(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		
 		return "/WEB-INF/view/member/login.jsp";
 	}
 
