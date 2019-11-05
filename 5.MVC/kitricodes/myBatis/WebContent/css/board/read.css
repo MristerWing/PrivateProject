@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+ul {
+	padding: 0;
+	margin: 0;
+	border-bottom: 3px double #888;
+	background-color: #ffffff;
+	overflow: hidden;
+}
+
+ul:last-child {
+	border-bottom-width: 0;
+}
+
+.wrap {
+	position: relative;
+	top: -150px;
+	margin: 0 auto;
+	width: 630px;
+}
+
+.main {
+	border: 3px double #888;
+	margin: 0 auto;
+	width: 650px;
+	text-align: center;
+	overflow: hidden;
+}
+
+.menu {
+	border-left: 3px double #888;
+	box-sizing: border-box;
+	text-align: center;
+	display: inline-block;
+	margin: 0;
+	width: 24.1%;
+	height: 50%;
+}
+
+.subject {
+	width: 100%;
+	border-width: 0;
+	border-bottom: 1px solid #888;
+	background-color: #D1DBDB;
+	box-sizing: content-box;
+	/* color: #fff; */
+}
+
+.menu-f {
+	border-left-width: 0;
+	width: 23%;
+}
+
+.menu-l {
+	padding-left: 1px;
+	width: 25%;
+}
+
+.contentLayout {
+	height: 350px;
+}
+
+.content {
+	/* border-bottom: 1px solid #888; */
+	text-align: center;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.subjectC {
+	border-right: 3px double #888;
+	height: 100%;
+	width: 20%;
+}
+
+.contentC {
+	text-align: left;
+	width: 78%;
+	padding-left: 5px;
+	height: 100%;
+}
+
+.bottom {
+	padding: 5px 0;
+	overflow: hidden;
+}
+
+.fileBox {
+	width: 100%;
+	height: 30px;
+}
+
+.filebutton {
+	position: relative;
+	top: 3px;
+	font-size: 12px;
+	margin-right: 10px;
+}
