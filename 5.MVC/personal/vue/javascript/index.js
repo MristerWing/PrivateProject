@@ -1,4 +1,6 @@
-const days = moment().endOf('month').format("DD")
+const month = moment().endOf('month').format("MM")
+const month2 = month - 1
+const days = moment().endOf(month2)
 
 var app = new Vue({
     el: '#app',
