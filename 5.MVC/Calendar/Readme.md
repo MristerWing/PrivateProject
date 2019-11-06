@@ -5,13 +5,15 @@
 	1. 구글 캘렌더
 
 ## 1. 사용할 기술:
-	1. FRONTEND: es6, react
+	1. FRONTEND: es6, moment.js
 	2. BACKEND: java(MVC2)
-	3. DB: mariadb
+	3. DB: oracle datebase xe 11g
 
 * 추가로 고려해볼 기술
 	1. java8 stream(rambda)
 	2. Rxjava
+	3. react.js?
+	4. mariaDB
 
 ---
 
@@ -27,7 +29,7 @@
 
 ## 3. FRONTEND
 	1. 뷰는 일단 월단위로 표기
-	2. 일정의 추가는 새로고침이 아니라 react를 통해 변환
+	2. 일정의 추가는 새로고침이 아니라 Dom을 통해 변환
 	3. js.dom을 이용하여 새로운 CSS적용 -> 레이아웃 위에 새로운 div태그 생성
 
 ---
