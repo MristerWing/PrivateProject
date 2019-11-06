@@ -20,11 +20,11 @@ public class DeleteAction implements CommandAction {
 			File file = new File(boardDto.getPath());
 
 			if (file.exists() && file.isFile()) {
-				if (file.delete()) {
-					check = BoardDao.getInstance().delete(boardNumber);
-				}
+				file.delete();
 			}
 		}
+		
+		check = BoardDao.getInstance().delete(boardNumber);
 
 		request.setAttribute("pageNumber", request.getParameter("pageNumber"));
 		request.setAttribute("check", check);

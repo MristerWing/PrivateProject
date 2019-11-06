@@ -15,7 +15,7 @@
 <body>
 	<jsp:include page="../../../index.jsp"></jsp:include>
 	<div align="center" class="wrap">
-		<%-- <h3> boardNum:${boardNumber} groupNum: ${groupNumber} sequenceNum: ${sequenceNumber} sequencelevel: ${sequencelevel}</h3> --%>
+		<h3> boardNum:${boardNumber} groupNum: ${groupNumber} sequenceNum: ${sequenceNumber} sequencelevel: ${sequencelevel}</h3>
 		<div class="top" style="font-weight: bold;">글쓰기</div>
 		<div class="top" style="text-align: right;">
 			<a href="${root}/fileboard/list.do?pageNumber=${pageNumber}">글목록</a>

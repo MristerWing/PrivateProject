@@ -17,5 +17,8 @@
   </environments>
   <mappers>
     <mapper resource="com/java/member/dao/MemberMapper.xml"/>
+    <mapper resource="com/java/board/dao/BoardMapper.xml"/>
+    <mapper resource="com/java/guest/dao/GuestMapper.xml"/>
+    <mapper resource="com/java/fileboard/dao/FileboardMapper.xml"/>
   </mappers>
 </configuration>

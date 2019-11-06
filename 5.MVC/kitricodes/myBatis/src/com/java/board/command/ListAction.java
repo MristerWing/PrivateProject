@@ -1,6 +1,6 @@
 package com.java.board.command;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,7 +26,7 @@ public class ListAction implements CommandAction {
 
 		int count = BoardDao.getInstance().getCount();
 		logger.info(logMsg + count);
-		ArrayList<BoardDto> boardList = null;
+		List<BoardDto> boardList = null;
 
 		if (count > 0) {
 			boardList = BoardDao.getInstance().getBoardList(startRow, endRow);

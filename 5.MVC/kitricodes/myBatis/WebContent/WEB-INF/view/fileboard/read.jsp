@@ -16,6 +16,7 @@
 <body>
 	<jsp:include page="../../../index.jsp"></jsp:include>
 	<div align="center" class="wrap">
+		<h3> boardNum:${boardNumber} groupNum: ${boardDto.groupNumber} sequenceNum: ${sequenceNumber} sequencelevel: ${sequencelevel}</h3>
 		<div class="main">
 			<ul>
 				<li class="menu subject">${boardDto.subject}</li>

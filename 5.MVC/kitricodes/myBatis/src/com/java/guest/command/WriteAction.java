@@ -1,6 +1,6 @@
 package com.java.guest.command;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -29,7 +29,7 @@ public class WriteAction implements CommandAction {
 		
 		int count = GuestDao.getInstance().getCount();
 		logger.info(logMsg + count);
-		ArrayList<GuestDto> guestList = null;
+		List<GuestDto> guestList = null;
 		
 		if(count > 0) {
 			guestList = GuestDao.getInstance().guestList(startRow, endRow);
