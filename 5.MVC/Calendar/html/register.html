@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="register.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="mainContainer">
+        <div class="logo"><span class="logoContent">LOGO</span></div>
+        <div class="registerBox">
+          <form action="" method="post">
+            <ul>
+              <li>
+                <label class="lineText" for="ID">아이디 2~13 영문자 숫자 조합</label
+                ><input type="text" name="ID" id="ID" size="13.6" />
+                <button class="checkIdButton">확인</button>
+                <span id="checkId"></span>
+              </li>
+              <br>
+              <li>
+                <label class="lineText" for="name">이름</label
+                ><input type="text" name="name" id="name" />
+                <span id="checkName"></span>
+              </li>
+              <br>
+              <li>
+                <label class="lineText" for="password">비밀번호 8~13 영문자 숫자 조합</label
+                ><input type="password" name="password" id="password" />
+              </li>
+              <li>
+                <label class="lineText" for="checkPassword">비밀번호 확인</label
+                ><input type="password" name="checkPassword" id="checkPassword" />
+                <span id="checkPassword"></span>
+              </li>
+              <br>
+              <li>
+                <label class="lineText" for="email">email</label
+                ><input type="email" name="email" id="email" />
+                <span id="checkEmail"></span>
+              </li>
+              <br>
+              <li>
+                <label class="lineText" for="findPassword"
+                  >비밀번호 찾기 문자</label
+                ><input type="text" name="findPassword" id="findPassword" />
+                <span id="checkFindPassword"></span>
+              </li>
+              <br>
+              <li><input type="submit" value="가입" class="registerButton"/></li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

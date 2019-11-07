@@ -11,7 +11,14 @@ public class CalendarAction implements CommandAction {
 
 	@Override
 	public String propertiesRequest(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		LocalDate today = LocalDate.now();
+		LocalDate today = null;
+		
+		if(request.getParameter("month") != null) {
+			int getMonth = Integer.parseInt(request.getParameter("month"));
+			today = LocalDate.of(LocalDate.now().getYear(), getMonth, LocalDate.now().getDayOfMonth());
+		}else {
+			today = LocalDate.now();
+		}
 		//LocalDate today = LocalDate.of(2019, 12, 1); //nextMonth test
 		int month = today.getMonthValue();
 		int days = today.lengthOfMonth();
@@ -29,7 +36,6 @@ public class CalendarAction implements CommandAction {
 		request.setAttribute("days", days);
 		request.setAttribute("lastMontStartDay", lastMonthStartDay);
 		request.setAttribute("lastDays", lastDays);
-		request.setAttribute("weekLessDay", weekLessDay);
 		request.setAttribute("isSunday", isSunday);
 		//request.setAttribute("everyWeek", everyWeek);
 

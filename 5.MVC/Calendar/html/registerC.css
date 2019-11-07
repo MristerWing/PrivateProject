@@ -1,0 +1,45 @@
+.wrap {
+  width: 100%;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.mainContainer {
+  width: 800px;
+  margin: 5px auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.welcome {
+  display: block;
+  width: 600px;
+  height: 180px;
+  background-color: springgreen;
+  text-align: center;
+  line-height: 180px;
+  border-radius: 10px;
+  margin: 20px auto;
+  color: whitesmoke;
+  font-size: 90px;
+}
+
+.content {
+  font-size: 20px;
+  text-align: left;
+  margin-left: 120px;
+}
+
+.link {
+  text-decoration: none;
+  color: whitesmoke;
+  background-color: springgreen;
+  font-size: 20px;
+  border-radius: 2px;
+  margin-right: 120px;
+}
+
+.link:hover {
+  color: springgreen;
+  background-color: whitesmoke;
+}

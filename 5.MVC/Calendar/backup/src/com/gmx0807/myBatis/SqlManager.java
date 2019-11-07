@@ -12,7 +12,7 @@ public class SqlManager {
 
 	public static SqlSessionFactory getInstance() {
 
-		String resource = "com/java/myBatis/SqlMapConfig.xml";
+		String resource = "com/gmx0807/myBatis/SqlMapConfig.xml";
 		try {
 			InputStream inputStream = Resources.getResourceAsStream(resource);
 			sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);

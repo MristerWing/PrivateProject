@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gmx0807.consumer.dao.ComsumerDao">
+	<insert id="consumerRegister"
+		parameterType="com.gmx0807.consumer.dto.ConsumerDto">
+		insert into consumer(
+		id, password, email, findPassword,
+		name, registerDate
+		) 
+		values (
+		#{id}, #{password}, #{email},
+		#{findPassword}, #{name}, #{registerDate}
+		)
+	</insert>
+	
+	<select id="consumerCheckID" parameterType="String" resultType="int">
+		select nvl(count(*), 0) from consumer where id = #{id}
+	</select>
+	
+	<select id="consumerLogin" parameterType="java.util.Map" resultType="int">
+		select nvl(count(*), 0) from consumer where id = #{id} and password = #{password}
+	</select>
+	
+	<select id="consumerGetConsumer" parameterType="java.util.Map" resultType="com.gmx0807.consumer.dto.ConsumerDto">
+		select * from consumer where id = #{id} and password = #{password}
+	</select>
+	
+	<update id="consumerUpdate" parameterType="com.gmx0807.consumer.dto.ConsumerDto">
+		update consumer set password = #{password}, email = #{email}, findPassword = #{findPassword} where id = #{id}
+	</update>
+	
+	<delete id="consumerDelete" parameterType="String">
+		delete from consumer where id = #{id}
+	</delete>
+	
+</mapper>

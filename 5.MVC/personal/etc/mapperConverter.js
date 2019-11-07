@@ -1,4 +1,4 @@
-const str = "fileName path fileSize";
+const str = "id password email findpassword name registerdate";
 
 const a = str.split(" ");
 const aLength = a.length;

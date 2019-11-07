@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.loginBox {
+    width: 60%;
+    padding: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    background-color: cornsilk;
+    border-radius: 10px;
+}
+
+.lineText {
+    margin: 6px 0;
+}
+
+.loginButton {
+    color: whitesmoke;
+    background-color: springgreen;
+    width: 100px;
+    height: 30px;
+    box-shadow: 30px;
+    font-size: 18px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loginButton:hover {
+    background-color: whitesmoke;
+    color: springgreen;
+}

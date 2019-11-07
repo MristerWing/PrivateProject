@@ -11,18 +11,33 @@ ul {
 	padding: 0;
 }
 
+.mainContainer {
+	width: 100%;
+	margin: 5px auto;
+	overflow: hidden;
+}
+
 .header {
 	text-align: right;
-	width: 100%;
+	width: 1250px;
 	overflow: hidden;
+}
+
+.flexBox {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
 }
 
 .infoBlock {
 	border: 1px solid blue;
-	width: 300px;
+	max-width: 200px;
 	overflow: hidden;
-	float: left;
+	display: inline-block;
 	margin: 5px;
+	flex: 1 1 0;
 }
 
 .infoBlockSub {
@@ -40,20 +55,22 @@ ul {
 	height: 300px;
 }
 
+.calendar {
+	max-width: 955px;
+	overflow: hidden;
+	margin: 5px;
+	display: inline-block;
+	flex: 3 1 0;
+}
+
 .weekBox {
 	height: 132px;
-	width: 951px;
+	max-width: 951px;
 	text-align: left;
 	/* border: 1px solid #888; */
 	border-right-width: 0;
 	display: flex;
 	flex: 1 1 0%;
-}
-
-.mainContainer {
-	width: 100%;
-	margin: 5px auto;
-	overflow: hidden;
 }
 
 .calendarTitle {
@@ -69,13 +86,6 @@ ul {
 	letter-spacing: 0;
 	line-height: 28px;
 	white-space: nowrap;
-}
-
-.calendar {
-	width: 955px;
-	overflow: hidden;
-	float: left;
-	margin: 5px;
 }
 
 .dayBox {
@@ -96,16 +106,52 @@ ul {
 	height: 15%;
 	margin: 1px 0;
 	/* top: -45px; */
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.day {
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .dayContent {
 	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
-.weekBox:last-child {
+.weekBox:nth-last-child(2) {
 	border-bottom: 1px solid #888;
 }
 
 .weekBox>.dayBox:last-child {
 	border-right: 1px solid #888;
+}
+
+.calendarFooter {
+	/* border: solid violet; */
+	margin-top: 30px;
+	box-sizing: border-box;
+	overflow: hidden;
+	text-align: center; 
+}
+
+.preMonth, .nextMonth {
+    color: whitesmoke;
+    background-color: springgreen;
+    width: 200px;
+    height: 50px;
+    box-shadow: 30px;
+    font-size: 24px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 1px 20px;
+}
+
+.preMonth:hover, .nextMonth:hover {
+    background-color: whitesmoke;
+    color: springgreen;
 }

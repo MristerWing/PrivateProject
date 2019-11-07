@@ -1,0 +1,44 @@
+ul {
+	text-decoration: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: #0066ff;
+}
+
+.wrap {
+    width: 100%;
+    overflow: hidden;
+    margin: 5px auto;
+}
+
+.mainContainer {
+    width: 800px;
+    margin: 5px auto;
+    overflow: hidden;
+}
+
+.logo {
+    width: 600px;
+    height: 280px;
+    background-color: springgreen;
+    margin: 3px auto;
+    text-align: center;
+    line-height: 256px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.logoContent {
+    color: whitesmoke;
+    font-style: inherit;
+    font-size: 128px;
+}
