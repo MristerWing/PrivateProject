@@ -13,7 +13,6 @@
 <script type="text/javascript" src="${root}/javascript/guest/guest.js"></script>
 </head>
 <body>
-	<jsp:include page="../../../index.jsp"></jsp:include>
 	<div align="center">
 		<c:if test="${count == 0 || currentPage == 1}">
 			<form class="form" action="${root}/guest/writeOk.do" method="get">

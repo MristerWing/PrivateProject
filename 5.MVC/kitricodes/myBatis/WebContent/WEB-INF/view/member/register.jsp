@@ -12,10 +12,6 @@
 <script type="text/javascript" src="${root}/javascript/member/register.js"></script>
 </head>
 <body>
-	<jsp:include page="../../../index.jsp"/>
-	<br>
-	<br>
-	
     <div align="center" style="margin: 0 auto">
 		<div style="font-weight: bold;">회원가입(*필수입력사항입니다.)</div>
 		<form class="registerBox" action="${root }/member/registerOk.do" name="createForm" method="post" onsubmit="return registerForm(this)" >

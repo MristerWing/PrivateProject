@@ -89,3 +89,9 @@ Docs
 * form의 html과 ajax의 entype
 
 [Go1104](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs/1104)
+
+### 11/08
+
+* myBatis connectPool설정법, DOM
+
+[Go1108](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs/1108)

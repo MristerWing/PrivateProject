@@ -13,7 +13,6 @@
 <link rel="stylesheet" href="${root}/css/board/list.css" />
 </head>
 <body>
-	<jsp:include page="../../../index.jsp"></jsp:include>
 	<div class="wrap">
 		<div align="center" class="header">
 			<div>

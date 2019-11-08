@@ -14,7 +14,6 @@
 	src="${root}/javascript/fileboard/read.js"></script>
 </head>
 <body>
-	<jsp:include page="../../../index.jsp"></jsp:include>
 	<div align="center" class="wrap">
 		<h3> boardNum:${boardNumber} groupNum: ${boardDto.groupNumber} sequenceNum: ${sequenceNumber} sequencelevel: ${sequencelevel}</h3>
 		<div class="main">

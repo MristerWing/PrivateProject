@@ -12,10 +12,6 @@
 <link rel="stylesheet" href="${root}/css/member/login.css" />
 </head>
 <body>
-	<jsp:include page="../../../index.jsp"/>
-	<br>
-	<br>
-
 	<div align="center">
 		<div class="loginBox">
 			<form action="${root}/member/loginOk.do" method="POST" onsubmit="return chkId(this)">

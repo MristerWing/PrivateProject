@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="${root}/css/common.css" />
 </head>
 <body>
-	<jsp:include page="../../../index.jsp"/>
 	<br>
 	<br>
 	<h3>${id}님 환영합니다.</h3>

@@ -13,7 +13,6 @@
 	src="${root}/javascript/fileboard/update.js"></script>
 </head>
 <body>
-	<jsp:include page="../../../index.jsp"></jsp:include>
 	<div align="center" class="wrap">
 		<h3>boardNum:${boardNumber}</h3>
 		<div class="top" style="font-weight: bold;">글쓰기</div>

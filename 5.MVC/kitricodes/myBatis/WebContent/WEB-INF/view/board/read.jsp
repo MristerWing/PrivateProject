@@ -13,7 +13,6 @@
 <script type="text/javascript" src="${root}/javascript/board/read.js"></script>
 </head>
 <body>
-	<jsp:include page="../../../index.jsp"></jsp:include>
 	<div align="center" class="wrap">
 		<div class="main">
 			<ul>

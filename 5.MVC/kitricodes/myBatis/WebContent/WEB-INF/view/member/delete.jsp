@@ -11,10 +11,6 @@
 <link rel="stylesheet" href="${root}/css/common.css" />
 </head>
 <body>
-	<jsp:include page="../../../index.jsp"/>
-	<br>
-	<br>
-	
 	<div align="center" style="margin: 0 auto;">
 	<h3>정말로 탈퇴를 원하시면 아래에 비밀번호를 다시 입력하여 주세요.</h3>
 		<form action="${root}/member/deleteOk.do" method="POST" onsubmit="return chkId(this)">
