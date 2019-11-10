@@ -17,5 +17,6 @@
   </environments>
   <mappers>
     <mapper resource="com/gmx0807/consumer/dao/ConsumerMapper.xml"/>
+    <mapper resource="com/gmx0807/calendar/dao/CalendarMapper.xml"/>
   </mappers>
 </configuration>

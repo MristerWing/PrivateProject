@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gmx0807.consumer.dao.CalendarDao">
+	<insert id="eventRegister"
+		parameterType="com.gmx0807.calendar.dto.EventDto">
+		insert into event(
+		eventCode, id, startDate, endDate, attendee, loc, explan, title
+		) values (
+		event_eventCode_seq.nextval, #{id}, #{startDate}, #{endDate},
+		#{attendee}, #{loc},
+		#{explan}, #{title}
+		)
+	</insert>
+	
+	<select id="eventGetList" parameterType="String" resultType="com.gmx0807.calendar.dto.EventDto">
+		select * from event where id = #{id}
+	</select>
+</mapper>

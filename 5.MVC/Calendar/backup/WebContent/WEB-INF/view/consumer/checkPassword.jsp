@@ -14,7 +14,7 @@
 	<div class="wrap">
 		<div class="mainContainer">
 			<div class="logo">
-				<span class="logoContent">LOGO</span>
+				<span class="logoContent">Calendar</span>
 			</div>
 			<form action="${root}/consumer/${goingURL}.do" method="post">
 				<h3>사용자 확인을 위해 비밀번호를 다시 입력해 주세요.</h3>

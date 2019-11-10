@@ -14,7 +14,7 @@
 <body>
 	<div class="wrap">
       <div class="mainContainer">
-        <div class="logo"><span class="logoContent">LOGO</span></div>
+        <div class="logo"><span class="logoContent">Calendar</span></div>
         <div class="registerBox">
           <form id="form" action="${root}/consumer/registerOk.do" method="post" onsubmit="return registerCheck(this)">
             <ul>

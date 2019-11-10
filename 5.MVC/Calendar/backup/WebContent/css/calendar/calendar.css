@@ -3,7 +3,6 @@
 /* body * {
 	border: 1px dotted darkred;
 } */
-
 ul {
 	text-decoration: none;
 	list-style: none;
@@ -32,7 +31,6 @@ ul {
 }
 
 .infoBlock {
-	border: 1px solid blue;
 	max-width: 200px;
 	overflow: hidden;
 	display: inline-block;
@@ -43,16 +41,64 @@ ul {
 .infoBlockSub {
 	width: 100%;
 	text-align: center;
-	border: 1px dotted red;
+	background-color: cornsilk;
+    border-radius: 5px;
+}
+
+#selectedEndDate, #selectedStartDate {
+	margin-bottom: 5px;
+}
+
+.selectTime {
+	width: 15%;
+}
+
+.selectAction {
+	margin: 5px 0;
+}
+
+.selectButton {
+	color: whitesmoke;
+	background-color: black;
+	border: 0;
+	border-radius: 2px;
+	font-weight: bold;
+	height: 25px;
+	cursor: pointer;
+}
+
+.selectBox {
+	width: 100%;
+	height: 55%;
+	/* border: 1px solid green; */
+	box-sizing: border-box;
+	margin-bottom: 5px;
+}
+
+.selectLine {
+	font-size: 13px;
+	margin: 5px 0;
 }
 
 .info {
-	height: 500px;
+	height: 400px;
 	margin-bottom: 20px;
 }
 
-.edit {
-	height: 300px;
+.infoBox {
+	
+}
+
+.infoLine {
+	font-size: 16px;
+	font-weight: bold;
+	flex-wrap: nowrap;
+	color: whitesmoke;
+	background-color: black;
+	border: 0;
+	box-shadow: 0;
+	border-radius: 5px;
+	margin: 5px auto;
 }
 
 .calendar {
@@ -121,6 +167,23 @@ ul {
 	white-space: nowrap;
 }
 
+.dayContentTitle {
+	cursor: pointer;
+	margin: 1px 0;
+	color: whitesmoke;
+	background-color: springgreen;
+	border: 0;
+	box-shadow: 0;
+	border-radius: 2px;
+}
+
+.dayContentTitle:hover {
+	cursor: pointer;
+	color: springgreen;
+	background-color: whitesmoke;
+	font-weight: bold;
+}
+
 .weekBox:nth-last-child(2) {
 	border-bottom: 1px solid #888;
 }
@@ -134,24 +197,25 @@ ul {
 	margin-top: 30px;
 	box-sizing: border-box;
 	overflow: hidden;
-	text-align: center; 
+	text-align: center;
 }
 
 .preMonth, .nextMonth {
-    color: whitesmoke;
-    background-color: springgreen;
-    width: 200px;
-    height: 50px;
-    box-shadow: 30px;
-    font-size: 24px;
-    border: 0;
-    border-radius: 10px;
-    cursor: pointer;
-    display: inline-block;
-    margin: 1px 20px;
+	color: whitesmoke;
+	background-color: springgreen;
+	width: 200px;
+	height: 50px;
+	box-shadow: 30px;
+	font-size: 24px;
+	border: 0;
+	border-radius: 10px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 1px 20px;
+	line-height: 50px;
 }
 
 .preMonth:hover, .nextMonth:hover {
-    background-color: whitesmoke;
-    color: springgreen;
+	background-color: whitesmoke;
+	color: springgreen;
 }

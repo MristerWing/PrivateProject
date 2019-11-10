@@ -53,7 +53,7 @@ function checkId(form, root) {
     }
 
     let url = root + "/consumer/idCheck.do?ID=" + form.ID.value;
-    open(url, "", "width=400, heigth=200, scrollbars=yes");
+    open(url, "", "width=400, height=200, scrollbars=yes");
     
     console.log(form.isCheckedID.value);
 }

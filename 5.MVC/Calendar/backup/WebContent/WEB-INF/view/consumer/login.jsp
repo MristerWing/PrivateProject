@@ -14,17 +14,20 @@
 <body>
 	<div class="wrap">
       <div class="mainContainer">
-          <div class="logo"><span class="logoContent">LOGO</span></div>
+          <div class="logo"><span class="logoContent">Calendar</span></div>
         <form action="${root}/consumer/loginCheck.do" method="post">
           <ul class="loginBox">
             <li class="lineText"><span style="margin-right: 20px;">아이디:</span><input type="text" name="ID" /></li>
             <li class="lineText"><span style="margin-right: 4px;">비밀번호:</span><input type="password" name="password" /></li>
-            <li class="lineText">
+            <!-- <li class="lineText">
               <a href="http://">아이디 찾기</a>
               <span>/</span>
               <a href="http://">비밀번호 찾기</a>
+            </li> -->
+            <li>
+            	<input class="loginButton" type="button" value="회원가입" onclick="javascript:location.href='${root}/consumer/register.do'" />
+            	<input class="loginButton" type="submit" value="Login" />
             </li>
-            <li><input class="loginButton" type="submit" value="Login" /></li>
           </ul>
         </form>
       </div>
