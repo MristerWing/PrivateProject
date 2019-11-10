@@ -128,8 +128,11 @@
 									<div class="dayContent">
 										<c:forEach items="${eventList}" var="eventDto">
 											<c:if test="${printCalendarEventMap.get(eventDto.eventCode).peek() == (startDate-1)}">
+												<fmt:formatDate var="formatingStartDate" value="${eventDto.startDate}" pattern="yyyy-MM-dd HH:mm E"/>
+												<fmt:formatDate var="formatingEndDate" value="${eventDto.endDate}" pattern="yyyy-MM-dd HH:mm E"/>
 												<button class="dayContentTitle" 
-												onclick="javascript:printDayContent('${eventDto.title}', '${eventDto.attendee}', '${eventDto.loc}', '${eventDto.explan}')">
+												onclick="javascript:printDayContent('${eventDto.title}', '${eventDto.attendee}', '${eventDto.loc}', 
+												'${eventDto.explan}', '${formatingStartDate}', '${formatingEndDate}')">
 													${eventDto.title}
 												</button>
 												<br>

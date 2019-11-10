@@ -108,25 +108,51 @@ function submitSelectValue(type, root) {
     }
 }
 
-function printDayContent(title, attendee, loc, explan) {
+function printDayContent(title, attendee, loc, explan, startDate, endDate) {
     const infoBox = document.getElementById('infoBox');
     infoBox.innerHTML =
         '<ul>' +
         "<li class='infoLine'>" +
-        "<label>제목</label>" + "<br>" +
-        "<span>" + title + "</span>" +
+        '<label>제목</label>' +
+        '<br>' +
+        '<span>' +
+        title +
+        '</span>' +
         '</li>' +
         "<li class='infoLine'>" +
-        "<label>참석자</label>" + "<br>" +
-        "<span>" + attendee + "</span>" +
+        '<label>참석자</label>' +
+        '<br>' +
+        '<span>' +
+        attendee +
+        '</span>' +
         '</li>' +
         "<li class='infoLine'>" +
-        "<label>장소</label>" + "<br>" +
-        "<span>" + loc + "</span>" +
+        '<label>장소</label>' +
+        '<br>' +
+        '<span>' +
+        loc +
+        '</span>' +
         '</li>' +
         "<li class='infoLine'>" +
-        "<label>설명</label>" + "<br>" +
-        "<span>" + explan + "</span>" +
+        '<label>설명</label>' +
+        '<br>' +
+        '<span>' +
+        explan +
+        '</span>' +
+        '</li>' +
+        "<li class='infoLine'>" +
+        '<label>시작일</label>' +
+        '<br>' +
+        '<span>' +
+        startDate +
+        '</span>' +
+        '</li>' +
+        "<li class='infoLine'>" +
+        '<label>종료일</label>' +
+        '<br>' +
+        '<span>' +
+        endDate +
+        '</span>' +
         '</li>' +
         '</ul>';
 }
