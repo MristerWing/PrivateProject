@@ -14,12 +14,22 @@
 	<c:if test="${ID != null}">
 		<h3>${ID}님, 환영합니다!</h3>
 		<a href="${root}/consumer/logout.do">go to logout</a>
+		<br>
+		<br>
 		<a href="${root}/consumer/checkPassword.do?goingURL=update">go to update</a>
+		<br>
+		<br>
 		<a href="${root}/consumer/checkPassword.do?goingURL=delete">go to delete</a>
+		<br>
+		<br>
 	</c:if>
 	<c:if test="${ID == null}">
 		<a href="${root}/consumer/login.do">go to login</a>
+		<br>
+		<br>
 		<a href="${root}/consumer/register.do">go to register</a>
+		<br>
+		<br>
 	</c:if>
 	<a href="${root}/calendar/calendar.do">go to calendar</a>
 	

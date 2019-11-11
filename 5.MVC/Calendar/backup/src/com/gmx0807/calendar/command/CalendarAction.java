@@ -52,9 +52,9 @@ public class CalendarAction implements CommandAction {
 		if (id != null) {
 			List<EventDto> eventList = CalendarDao.getInstance().getEventList(id);
 			// logger.info(logMsg + eventList.toString());
-			HashMap<Integer, Queue<Integer>> printCalendarEventMap = getEventMap(eventList);
+			HashMap<Integer, HashMap<Integer, Queue<Integer>>> printCalendarEventMap = getEventMap(eventList, month, lastDays);
 			logger.info(logMsg + printCalendarEventMap.toString());
-			
+
 			request.setAttribute("eventList", eventList);
 			request.setAttribute("printCalendarEventMap", printCalendarEventMap);
 		}
@@ -109,8 +109,9 @@ public class CalendarAction implements CommandAction {
 	}
 
 	// 이벤트 코드에 해당하는 날짜들의 큐를 생성한다. 이후 출력에서 사용
-	private HashMap<Integer, Queue<Integer>> getEventMap(List<EventDto> evantList) {
+	private HashMap<Integer, HashMap<Integer, Queue<Integer>>> getEventMap(List<EventDto> evantList, int month, int lastDays) {
 		HashMap<Integer, Queue<Integer>> map = new HashMap<Integer, Queue<Integer>>();
+		HashMap<Integer, HashMap<Integer, Queue<Integer>>> eventMap = new HashMap<Integer, HashMap<Integer, Queue<Integer>>>();
 
 		for (EventDto dto : evantList) {
 			Queue<Integer> eventdays = new LinkedList<Integer>();
@@ -118,15 +119,44 @@ public class CalendarAction implements CommandAction {
 			LocalDateTime startDate = LocalDateTime.ofInstant(dto.getStartDate().toInstant(), ZoneId.systemDefault());
 			LocalDateTime endDate = LocalDateTime.ofInstant(dto.getEndDate().toInstant(), ZoneId.systemDefault());
 
-			// 큐에 이벤트에 해당하는 날짜를 추가
-			if (startDate.getMonth() == endDate.getMonth()) {
-				for (int i = startDate.getDayOfMonth(); i <= endDate.getDayOfMonth(); i++) {
-					eventdays.offer(i);
+			if (startDate.getMonthValue() == month) {
+				// 큐에 이벤트에 해당하는 날짜를 추가
+				if (startDate.getMonth() == endDate.getMonth()) {
+					for (int i = startDate.getDayOfMonth(); i <= endDate.getDayOfMonth(); i++) {
+						eventdays.offer(i);
+					}
+					map.put(month, eventdays);
+				}
+
+				// 이번달 ~ 다른달 이벤트
+				else {
+					Queue<Integer> eventdays2 = new LinkedList<Integer>();
+					if (startDate.getDayOfMonth() > endDate.getDayOfMonth()) {
+
+						// this month
+						for (int i = startDate.getDayOfMonth(); i <= lastDays; i++) {
+							eventdays.offer(i);
+						}
+						map.put(month, eventdays);
+
+						// next month
+						for (int i = 1; i <= endDate.getDayOfMonth(); i++) {
+							eventdays2.offer(i);
+						}
+						map.put(month + 1, eventdays2);
+					} 
+					
+					// long event
+					else {
+
+					}
 				}
 			}
-			map.put(dto.getEventCode(), eventdays);
+			logger.info(logMsg + map.toString());
+			eventMap.put(dto.getEventCode(), map);
+			map = new HashMap<Integer, Queue<Integer>>();
 		}
 
-		return map;
+		return eventMap;
 	}
 }

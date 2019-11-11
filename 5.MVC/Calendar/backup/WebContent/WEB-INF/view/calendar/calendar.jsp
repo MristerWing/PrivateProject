@@ -82,7 +82,7 @@
 						<ul class="weekBox">
 							<c:forEach var="day" begin="${startDay}" end="${startDay + 6}" step="1">
 								<c:set var="daysID" value="day${day}"></c:set>
-								<li class="dayBox" role="button" onclick="javascript:console.log(${day})">
+								<li class="dayBox" role="button" onclick="printSelectDate('${year}', '${month}', '${day}')">
 									
 									<!-- print day(sun, mon...) -->
 									<div class="dayTitle">
@@ -91,53 +91,58 @@
 									</div>
 									
 									<!-- print date(1, 2, 3....) -->
-									<div class="dayTitle">
-										<label> 
-											<!-- isSunday = 시작일이 일요일이 아닌가? -->
-											<c:if test="${isSunday == false}">
-												<!-- 1일의 이전달의 일수가 존재할 경우 -->
-												<c:if test="${lastMontStartDay > lastDays}">
-													<!-- 시작날 출력 -->
-													<c:if test="${startDate > days}">
-														<c:set var="startDate" value="1"></c:set>		
-													</c:if>
-													${startDate}
-													<c:set var="startDate" value="${startDate + 1}"></c:set>
-												</c:if>
-												
-												<c:if test="${lastMontStartDay <= lastDays}">
-													${lastMontStartDay}
-													<c:set var="lastMontStartDay" value="${lastMontStartDay + 1}"></c:set>
-												</c:if>
-											</c:if>
-											 
-											 <!-- isSunday = 시작일이 일요일인가? -->
-											<c:if test="${isSunday == true}">
+									<div class="dayTitle" id="date${day}">
+										<!-- isSunday = 시작일이 일요일이 아닌가? -->
+										<c:if test="${isSunday == false}">
+											<!-- 1일의 이전달의 일수가 존재할 경우 -->
+											<c:if test="${lastMontStartDay > lastDays}">
+												<!-- 시작날 출력 -->
 												<c:if test="${startDate > days}">
 													<c:set var="startDate" value="1"></c:set>
 												</c:if>
-												<c:if test="${startDate <= days}">
-													${startDate}
-													<c:set var="startDate" value="${startDate + 1}"></c:set>
-												</c:if>
+
+												<label>${startDate}</label>
+												<c:set var="startDate" value="${startDate + 1}"></c:set>
 											</c:if>
-										</label>
+											
+											<c:if test="${lastMontStartDay <= lastDays}">
+												<label>${lastMontStartDay}</label>
+												<input type="hidden" name="preMonth" value="pre" />
+												<c:set var="lastMontStartDay" value="${lastMontStartDay + 1}"></c:set>
+											</c:if>
+										</c:if>
+											 
+										 <!-- isSunday = 시작일이 일요일인가? -->
+										<c:if test="${isSunday == true}">
+											<c:if test="${startDate > days}">
+												<c:set var="startDate" value="1"></c:set>
+											</c:if>
+											
+											<c:if test="${startDate <= days}">
+												<label>${startDate}</label>
+												<c:set var="startDate" value="${startDate + 1}"></c:set>
+											</c:if>
+										</c:if>
 									</div>
 									
 									<!-- 일정내용 -->
 									<div class="dayContent">
-										<c:forEach items="${eventList}" var="eventDto">
-											<c:if test="${printCalendarEventMap.get(eventDto.eventCode).peek() == (startDate-1)}">
-												<fmt:formatDate var="formatingStartDate" value="${eventDto.startDate}" pattern="yyyy-MM-dd HH:mm E"/>
-												<fmt:formatDate var="formatingEndDate" value="${eventDto.endDate}" pattern="yyyy-MM-dd HH:mm E"/>
-												<button class="dayContentTitle" 
-												onclick="javascript:printDayContent('${eventDto.title}', '${eventDto.attendee}', '${eventDto.loc}', 
-												'${eventDto.explan}', '${formatingStartDate}', '${formatingEndDate}')">
-													${eventDto.title}
-												</button>
-												<br>
-												<c:set var="tmp" value="${printCalendarEventMap.get(eventDto.eventCode).poll()}"></c:set>
-											</c:if>
+										<c:set var="dayContentMonth" value="${month}"></c:set>
+										<c:forEach begin="0" end="${printCalendarEventMap.get(eventDto.eventCode).size()}" step="1">
+											<c:forEach items="${eventList}" var="eventDto">
+												<c:if test="${printCalendarEventMap.get(eventDto.eventCode).get(dayContentMonth).peek() == (startDate-1)}">
+													<fmt:formatDate var="formatingStartDate" value="${eventDto.startDate}" pattern="yyyy-MM-dd HH:mm E"/>
+													<fmt:formatDate var="formatingEndDate" value="${eventDto.endDate}" pattern="yyyy-MM-dd HH:mm E"/>
+													<button class="dayContentTitle" 
+													onclick="javascript:printDayContent('${eventDto.title}', '${eventDto.attendee}', '${eventDto.loc}', 
+													'${eventDto.explan}', '${formatingStartDate}', '${formatingEndDate}')">
+														${eventDto.title}
+													</button>
+													<br>
+													<c:set var="tmp" value="${printCalendarEventMap.get(eventDto.eventCode).get(dayContentMonth).poll()}"></c:set>
+												</c:if>
+											</c:forEach>
+											<c:set var="dayContentMonth" value="${dayContentMonthmonth + 1}"></c:set>
 										</c:forEach>
 									</div>
 								</li>
