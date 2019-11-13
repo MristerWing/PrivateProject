@@ -1,0 +1,18 @@
+{
+    "member": [{
+            "studentNumber": "0001",
+            "studentName": "KIM",
+            "score": 95
+        },
+        {
+            "studentNumber": "0002",
+            "studentName": "PARK",
+            "score": 100
+        },
+        {
+            "studentNumber": "0003",
+            "studentName": "LEE",
+            "score": 85
+        }
+    ]
+}

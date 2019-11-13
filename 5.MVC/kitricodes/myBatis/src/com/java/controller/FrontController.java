@@ -107,12 +107,14 @@ public class FrontController extends HttpServlet {
 		if (view != null) {
 			RequestDispatcher rd = null;
 			
-			if(view.equals("/WEB-INF/view/member/idCheck.jsp") || view.equals("/WEB-INF/view/member/zipcode.jsp")) {
-				rd = request.getRequestDispatcher(view);
-			} else {
-				request.setAttribute("viewPage", view);
-				rd = request.getRequestDispatcher("/template/index.jsp");
-			}
+			/*
+			 * if(view.equals("/WEB-INF/view/member/idCheck.jsp") ||
+			 * view.equals("/WEB-INF/view/member/zipcode.jsp")) { rd =
+			 * request.getRequestDispatcher(view); } else { request.setAttribute("viewPage",
+			 * view); rd = request.getRequestDispatcher("/template/index.jsp"); }
+			 */
+			
+			rd = request.getRequestDispatcher(view);
 			rd.forward(request, response);
 		}
 		

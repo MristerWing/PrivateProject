@@ -7,16 +7,27 @@
   <environments default="development">
     <environment id="development">
       <transactionManager type="JDBC"/>
-      <dataSource type="JNDI">
-        <property name="initial_context" value="java:/comp/env"/>
-        <property name="data_source" value="jdbc/mvcDB"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+        <property name="username" value="hr"/>
+        <property name="password" value="hr"/>
       </dataSource>
     </environment>
   </environments>
   <mappers>
-    <mapper resource="com/java/member/dao/MemberMapper.xml"/>
-    <mapper resource="com/java/board/dao/BoardMapper.xml"/>
-    <mapper resource="com/java/guest/dao/GuestMapper.xml"/>
-    <mapper resource="com/java/fileboard/dao/FileboardMapper.xml"/>
+    <mapper resource="com/java/sawon/SawonMapper.xml"/>
   </mappers>
 </configuration>
+
+<!-- <dataSource type="JNDI">
+        <property name="initial_context" value="java:/comp/env"/>
+        <property name="data_source" value="jdbc/mvcDB"/>
+      </dataSource> -->
+      
+      <!-- <mapper resource="com/java/member/dao/MemberMapper.xml"/>
+    <mapper resource="com/java/board/dao/BoardMapper.xml"/>
+    <mapper resource="com/java/guest/dao/GuestMapper.xml"/>
+    <mapper resource="com/java/fileboard/dao/FileboardMapper.xml"/> -->
+    
+    

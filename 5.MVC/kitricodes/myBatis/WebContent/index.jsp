@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="${root}/css/common.css" />
 </head>
 <body>
-	<h3>회원관리</h3>
+	<%-- <h3>회원관리</h3>
 	<c:if test="${id == null}">
 		<a href="${root}/member/register.do">회원가입</a>
 		<a href="${root}/member/login.do">로그인</a>
@@ -20,7 +20,7 @@
 		<a href="${root}/member/logout.do">로그아웃</a>
 		<a href="${root}/member/update.do">회원수정</a>
 		<a href="${root}/member/delete.do">회원탈퇴</a>
-		<%--write admin action--%>
+		write admin action
 		<c:if test="${memberLevel == 'MA'}">
 			<br>
 			<h3>관리자 메뉴</h3>
@@ -39,7 +39,9 @@
 	<h3>파일게시판</h3>
 	<a href="${root}/fileboard/write.do">게시글 쓰기</a>
 	<br>
-	<a href="${root}/fileboard/list.do">목록보기</a>
+	<a href="${root}/fileboard/list.do">목록보기</a> --%>
+	
+	<a href="${root}/sawon/list.do">사원리스트</a>
 
 </body>
 </html>

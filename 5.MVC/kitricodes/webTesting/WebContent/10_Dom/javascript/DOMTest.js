@@ -1,9 +1,9 @@
 function sub() {
-	var app = document.getElementById("app");
-	var nodes = getAllChildNodes(app);
-    
-    var div = document.createElement('div');
-    var span = document.createElement('span');
+    //var app = document.getElementById("app");
+    var nodes = getAllChildNodes(document.body);
+
+    var div = document.createElement("div");
+    var span = document.createElement("span");
 
     span.innerHTML = nodes;
     div.appendChild(span);
@@ -11,22 +11,24 @@ function sub() {
 }
 
 function getAllChildNodes(node) {
-	var result = '';
+    var result = "<p>";
+    var nodeChildLength = node.childNodes.length;
+    var child = node.childNodes;
 
-	if (node.childNodes.length == 1) {
-		if (node.nodeType == 1) {
-			return node.childNodes[0].nodeValue; 
-		} else {
-			return '';
-		}
-	} else if (node.childNodes.length > 1) {
-        for (var i = 0; i < node.childNodes.length; i++) {
-            if (node.childNodes[i].nodeType == 1) {
-				//console.log(node.childNodes[i]);
-				result += getAllChildNodes(node.childNodes[i]);
-			}
-		}
-	}
-	
-	return result;
+    if (nodeChildLength == 1) {
+        if (child[0].nodeType == 1) {
+            return getAllChildNodes(node.childNodes[0]);
+        } else {
+            return child[0].nodeValue;
+        }
+    } else if (nodeChildLength > 1) {
+        for (var i = 0; i < nodeChildLength; i++) {
+            if (child[i].nodeType == 1) {
+                //console.log(node.childNodes[i]);
+                result += getAllChildNodes(child[i]) + "</p><p>";
+            }
+        }
+    }
+
+    return result;
 }

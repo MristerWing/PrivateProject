@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.sawonName {
+	background-color: #575757;
+}
+
+.sawonMain {
+	display: flex;
+	max-width: 786px;
+	overflow: hidden;
+	border: 1px solid #888;
+	border-bottom-width: 0; 
+	border-right-width: 0; 
+}
+
+.sawonMain:last-child {
+	border-bottom: 1px solid #888; 
+}
+
+.sawonList {
+	flex: 1 1 0;
+	display: inline-block;
+	border-right: 1px solid #888;
+	height: 100%;
+	text-align: center;
+}
