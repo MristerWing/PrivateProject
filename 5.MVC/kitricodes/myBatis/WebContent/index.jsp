@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="${root}/css/common.css" />
 </head>
 <body>
-	<%-- <h3>회원관리</h3>
+	<h3>회원관리</h3>
 	<c:if test="${id == null}">
 		<a href="${root}/member/register.do">회원가입</a>
 		<a href="${root}/member/login.do">로그인</a>
@@ -39,9 +39,11 @@
 	<h3>파일게시판</h3>
 	<a href="${root}/fileboard/write.do">게시글 쓰기</a>
 	<br>
-	<a href="${root}/fileboard/list.do">목록보기</a> --%>
+	<a href="${root}/fileboard/list.do">목록보기</a>
 	
-	<a href="${root}/sawon/list.do">사원리스트</a>
+	<%-- <a href="${root}/sawon/list.do">사원리스트</a> --%>
 
+	<h3>댓글</h3>
+	<a href="${root}/reply/replyList.do">실시간 댓글 달기</a>
 </body>
 </html>
