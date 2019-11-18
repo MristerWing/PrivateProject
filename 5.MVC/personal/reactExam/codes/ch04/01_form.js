@@ -1,29 +1,27 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const EventPractice = () => {
-    // 객체선언
     const [form, setForm] = useState({
-        username: "",
-        message: ""
+        username: '',
+        message: ''
     });
-    // 해체할당
     const { username, message } = form;
     const onChange = e => {
         const nextForm = {
-            ...form, //form을 분해하여 선언
+            ...form,
             [e.target.name]: e.target.value
         };
         setForm(nextForm);
-    };
+    }
     const onClick = () => {
-        alert(username + ": " + message);
+        alert(username + ': ' + message);
         setForm({
-            username: "",
-            message: ""
+            username: '',
+            message: ''
         });
     };
     const onKeyPress = e => {
-        if (e.key === "Enter") {
+        if (e.key === 'Enter') {
             onClick();
         }
     };
