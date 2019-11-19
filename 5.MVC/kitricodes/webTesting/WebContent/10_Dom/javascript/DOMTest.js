@@ -16,17 +16,12 @@ function getAllChildNodes(node) {
     var child = node.childNodes;
 
     if (nodeChildLength == 1) {
-        if (child[0].nodeType == 1) {
-            return getAllChildNodes(node.childNodes[0]);
-        } else {
-            return child[0].nodeValue;
-        }
+        if (child[0].nodeType == 1) return getAllChildNodes(node.childNodes[0]);
+        else return child[0].nodeValue;
     } else if (nodeChildLength > 1) {
         for (var i = 0; i < nodeChildLength; i++) {
-            if (child[i].nodeType == 1) {
-                //console.log(node.childNodes[i]);
+            if (child[i].nodeType == 1)
                 result += getAllChildNodes(child[i]) + "</p><p>";
-            }
         }
     }
 
