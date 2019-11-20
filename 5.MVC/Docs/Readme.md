@@ -100,3 +100,9 @@
 -   AJAX
 
 [Go1112](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs/1112)
+
+### 11/12
+
+-   AJAX
+
+[Go1120](https://github.com/MristerWing/PrivateProject/tree/master/5.MVC/Docs/1120)

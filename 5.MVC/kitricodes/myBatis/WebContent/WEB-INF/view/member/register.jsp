@@ -9,11 +9,16 @@
 <title>회원가입</title>
 <link rel="stylesheet" href="${root}/css/common.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/member/register.css" />
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
 <script type="text/javascript" src="${root}/javascript/member/register.js"></script>
 </head>
 <body>
     <div align="center" style="margin: 0 auto">
 		<div style="font-weight: bold;">회원가입(*필수입력사항입니다.)</div>
+		<script>s1('${root}');</script>
 		<form class="registerBox" action="${root }/member/registerOk.do" name="createForm" method="post" onsubmit="return registerForm(this)" >
 			<div class="liner">
 				<label>아이디</label>

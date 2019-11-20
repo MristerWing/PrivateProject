@@ -41,9 +41,5 @@
 	<br>
 	<a href="${root}/fileboard/list.do">목록보기</a>
 	
-	<%-- <a href="${root}/sawon/list.do">사원리스트</a> --%>
-
-	<h3>댓글</h3>
-	<a href="${root}/reply/replyList.do">실시간 댓글 달기</a>
 </body>
 </html>

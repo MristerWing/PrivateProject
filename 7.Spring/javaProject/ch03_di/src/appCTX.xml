@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="aa" class="com.java.di01.AA">
+<!-- setX(x) -->
+<property name="x">
+	<value>10</value>
+</property>
+<property name="y" value="20" />
+</bean>
+
+<bean id="a" class="com.java.di03.AA">
+	<constructor-arg>
+		<value>10</value>
+	</constructor-arg>
+	
+	<constructor-arg>
+		<value>20</value>
+	</constructor-arg>
+</bean>
+
+<bean id="b" class="com.java.di03.BB">
+	<property name="a" value="77"></property>
+	<property name="b" value="88"></property>
+</bean>
+
+<bean id="c" class="com.java.di03.CC">
+	<constructor-arg ref="a"></constructor-arg>
+	<property name="bb" ref="b"></property>
+</bean>
+</beans>
