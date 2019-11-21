@@ -9,6 +9,7 @@
 5. MVC
 6. UML
 7. Spring
+8. Javascript
 
 ---
 
@@ -129,3 +130,10 @@ classDiagram, useCaseDiagram, sequenceDiagram에 대해서 배우고 정리한�
 ## 7.Spring
 
 ktri에서 공부한 Spring파일들
+
+---
+
+## 8.Javascript
+
+개인적으로 공부한 javascript + web관련들
+React공부중!

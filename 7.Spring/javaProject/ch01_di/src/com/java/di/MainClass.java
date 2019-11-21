@@ -5,22 +5,23 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 public class MainClass {
 
 	public static void main(String[] args) {
-		// Å¬·¡½º°£ °áÇÕÀÌ °­ÇØÁö°í ÀÇÁ¸¼ºÀÌ ³ô¾ÆÁö¸é ÄÚµå ¼öÁ¤ÇØ¾ß ÇÏ´Â ¹üÀ§°¡ ³Ğ¾îÁø´Ù.
-		// => Å¬·¡½º°£ÀÇ °áÇÕµµ¸¦ ¾àÇÏ°Ô ÇÏ°í ÀÇÁ¸¼ºÀ» ³·°Ô ÀÛ¼ºÇØ¾ßÇÑ´Ù.
-		
+		// í´ë˜ìŠ¤ê°„ ê²°í•©ì´ ê°•í•´ì§€ê³  ì˜ì¡´ì„±ì´ ë†’ì•„ì§€ë©´ ì½”ë“œ ìˆ˜ì •í•´ì•¼ í•˜ëŠ” ë²”ìœ„ê°€ ë„“ì–´ì§„ë‹¤.
+		// => í´ë˜ìŠ¤ê°„ì˜ ê²°í•©ë„ë¥¼ ì•½í•˜ê²Œ í•˜ê³  ì˜ì¡´ì„±ì„ ë‚®ê²Œ ì‘ì„±í•´ì•¼í•œë‹¤.
+
 		/*
 		 * Su su = new Su();
 		 * 
 		 * su.disp();
 		 */
 
-		// DI (Dependency Injection): ÀÇÁ¸¼º¿¡ ´ëÇÑ ¼³°è ÆĞÅÏ / ¿ÜºÎ·ÎºÎÅÍ Àü´Ş¹ŞÀ½.
-		
-		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("appCTX.xml");
-		
+		// DI (Dependency Injection): ì˜ì¡´ì„±ì— ëŒ€í•œ ì„¤ê³„ íŒ¨í„´ / ì™¸ë¶€ë¡œë¶€í„° ì „ë‹¬ë°›ìŒ.
+
+		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(
+				"appCTX.xml");
+
 		Su appSu = (Su) ctx.getBean("su");
 		appSu.disp();
-		
+
 		ctx.close();
 	}
 

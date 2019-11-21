@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<bean id="hong" class="com.java.di05.Student">
+		<constructor-arg value="홍길동"></constructor-arg>
+		<constructor-arg value="10살"></constructor-arg>
+		<constructor-arg value="3학년"></constructor-arg>
+		<constructor-arg value="2번"></constructor-arg>
+	</bean>
+
+	<bean id="cho" class="com.java.di05.Student">
+		<constructor-arg value="최길동"></constructor-arg>
+		<constructor-arg value="9살"></constructor-arg>
+		<constructor-arg value="2학년"></constructor-arg>
+		<constructor-arg value="22번"></constructor-arg>
+	</bean>
+
+	<bean id="kim" class="com.java.di05.Student">
+		<constructor-arg value="김갑환"></constructor-arg>
+		<constructor-arg value="10살"></constructor-arg>
+		<constructor-arg value="3학년"></constructor-arg>
+		<constructor-arg value="37번"></constructor-arg>
+	</bean>
+
+	<bean id="lee" class="com.java.di05.Student">
+		<property name="name" value="이영자"></property>
+		<property name="age" value="12살"></property>
+		<property name="gradName" value="5학년"></property>
+		<property name="className" value="14번"></property>
+	</bean>
+
+	<bean id="studentInfo" class="com.java.di05.StudentInfo">
+		<constructor-arg>
+			<list>
+				<ref bean="hong" />
+				<ref bean="cho" />
+				<ref bean="kim" />
+				<ref bean="lee" />
+			</list>
+		</constructor-arg>
+	</bean>
+</beans>

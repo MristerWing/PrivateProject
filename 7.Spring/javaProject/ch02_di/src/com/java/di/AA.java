@@ -1,13 +1,13 @@
 package com.java.di;
 
-public class AA {	// DI: »ı¼ºÀÚ, ÇÁ·ÎÆÛÆ¼¸¸ µ¥ÀÌÅÍ Á¢±Ù °¡´É.(ÀÏ¹İ ÇÔ¼ö Á¢±Ù ºÒ°¡´É)
+public class AA { // DI: ìƒì„±ì, í”„ë¡œí¼í‹°ë§Œ ë°ì´í„° ì ‘ê·¼ ê°€ëŠ¥.(ì¼ë°˜ í•¨ìˆ˜ ì ‘ê·¼ ë¶ˆê°€ëŠ¥)
 	private int a;
 	private int b;
-	
+
 	public AA() {
 		System.out.println("constrator");
 	}
-	
+
 	public AA(int a, int b) {
 		super();
 		this.a = a;
@@ -18,5 +18,5 @@ public class AA {	// DI: »ı¼ºÀÚ, ÇÁ·ÎÆÛÆ¼¸¸ µ¥ÀÌÅÍ Á¢±Ù °¡´É.(ÀÏ¹İ ÇÔ¼ö Á¢±Ù ºÒ°
 	public String toString() {
 		return "AA [a=" + a + ", b=" + b + "]";
 	}
-	
+
 }
