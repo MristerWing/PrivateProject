@@ -1,4 +1,6 @@
 /.metadata/
+/.vscode/
+/personal/
 /personal/node_modules/
 /personal/package-lock.json/
 /personal/dist/
