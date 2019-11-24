@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	<bean id="teacher" class="com.java.aop05.Teacher"></bean>
+	<bean id="student" class="com.java.aop05.Student"></bean>
+
+	<bean id="pAspect" class="com.java.aop05.PAsepect"></bean>
+
+	<aop:config>
+		<aop:aspect ref="pAspect">
+		<!-- within: 모든 함수에 적용을 받아라 -->
+			<aop:pointcut
+				expression="within(com.java.aop05.*)" id="publicMethod" />
+			<aop:around method="getAround" pointcut-ref="publicMethod" />
+		</aop:aspect>
+	</aop:config>
+
+	<!-- <pre> 
+	Advice 종류 
+	aop:before: 핵심함수전에 Advice 실행 
+	aop:after: 핵심함수후에 Advice 실행 
+	aop:after-returning: 핵심함수 실행 후에 정상적으로 종료시 
+	aop:after-throwing: 핵심함수 실행 후에 에러가 발생할 경우 
+	aop:around: 4개의 기능이 모두 합쳐진 것 </pre> -->
+</beans>

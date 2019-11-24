@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<!-- 핵심 -->
+	<bean id="baby" class="com.java.aop01.Baby"></bean>
+	<bean id="father" class="com.java.aop01.Father"></bean>
+	<bean id="mother" class="com.java.aop01.Mother"></bean>
+
+	<!-- 공통 -->
+	<bean id="pBaby" class="com.java.aop01.PersonAspect">
+		<constructor-arg>
+			<ref bean="baby" />
+		</constructor-arg>
+	</bean>
+	
+	<bean id="pFather" class="com.java.aop01.PersonAspect">
+		<constructor-arg>
+			<ref bean="father" />
+		</constructor-arg>
+	</bean>
+	
+	<bean id="pMother" class="com.java.aop01.PersonAspect">
+		<constructor-arg>
+			<ref bean="mother" />
+		</constructor-arg>
+	</bean>
+</beans>

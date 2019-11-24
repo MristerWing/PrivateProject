@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	<!-- 핵심 -->
+	<bean id="baby" class="com.java.aop03.Baby"></bean>
+	<bean id="father" class="com.java.aop03.Father"></bean>
+	<bean id="mother" class="com.java.aop03.Mother"></bean>
+
+	<!-- 공통클래스 객체 -->
+	<bean id="personAspect" class="com.java.aop03.PersonAspect"></bean>
+
+	<!-- AOP, 관점 지향 프로그래밍 -->
+	<aop:config>
+		<aop:aspect ref="personAspect">
+			<!-- execution(), -->
+			<aop:pointcut
+				expression="execution(* com.java.aop03.*.work())" id="publicMethod" />
+			<aop:before method="wakeUp" pointcut-ref="publicMethod" />
+			<aop:after method="sleep" pointcut-ref="publicMethod" />
+		</aop:aspect>
+	</aop:config>
+
+</beans>

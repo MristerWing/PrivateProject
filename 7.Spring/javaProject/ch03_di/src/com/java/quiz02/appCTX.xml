@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<!-- <bean id="kim" class="com.java.quiz02.Student"> <constructor-arg value="김철수"></constructor-arg> 
+		<constructor-arg value="100"></constructor-arg> <constructor-arg value="90"></constructor-arg> 
+		<constructor-arg value="70"></constructor-arg> </bean> <bean id="lee" class="com.java.quiz02.Student"> 
+		<constructor-arg value="이재용"></constructor-arg> <constructor-arg value="60"></constructor-arg> 
+		<constructor-arg value="45"></constructor-arg> <constructor-arg value="61"></constructor-arg> 
+		</bean> <bean id="park" class="com.java.quiz02.Student"> <constructor-arg 
+		value="박주영"></constructor-arg> <constructor-arg value="77"></constructor-arg> 
+		<constructor-arg value="88"></constructor-arg> <constructor-arg value="99"></constructor-arg> 
+		</bean> <bean id="im" class="com.java.quiz02.Student"> <constructor-arg value="임요환"></constructor-arg> 
+		<constructor-arg value="59"></constructor-arg> <constructor-arg value="100"></constructor-arg> 
+		<constructor-arg value="42"></constructor-arg> </bean> -->
+
+	<bean id="kim" class="com.java.quiz02.Student">
+		<constructor-arg value="김철수"></constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry>
+					<key>
+						<value>language</value>
+					</key>
+					<value>100.0</value>
+				</entry>
+				<entry>
+					<key>
+						<value>english</value>
+					</key>
+					<value>90.0</value>
+				</entry>
+				<entry>
+					<key>
+						<value>math</value>
+					</key>
+					<value>70.0</value>
+				</entry>
+			</map>
+		</constructor-arg>
+	</bean>
+
+	<bean id="lee" class="com.java.quiz02.Student">
+		<constructor-arg value="이재용"></constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry>
+					<key>
+						<value>language</value>
+					</key>
+					<value>60.0</value>
+				</entry>
+				<entry>
+					<key>
+						<value>english</value>
+					</key>
+					<value>45.0</value>
+				</entry>
+				<entry>
+					<key>
+						<value>math</value>
+					</key>
+					<value>61.0</value>
+				</entry>
+			</map>
+		</constructor-arg>
+	</bean>
+
+	<bean id="park" class="com.java.quiz02.Student">
+		<constructor-arg value="박주영"></constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry>
+					<key>
+						<value>language</value>
+					</key>
+					<value>77.0</value>
+				</entry>
+				<entry>
+					<key>
+						<value>english</value>
+					</key>
+					<value>88.0</value>
+				</entry>
+				<entry>
+					<key>
+						<value>math</value>
+					</key>
+					<value>99.0</value>
+				</entry>
+			</map>
+		</constructor-arg>
+	</bean>
+
+	<bean id="im" class="com.java.quiz02.Student">
+		<constructor-arg value="임요환"></constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry>
+					<key>
+						<value>language</value>
+					</key>
+					<value>59.0</value>
+				</entry>
+				<entry>
+					<key>
+						<value>english</value>
+					</key>
+					<value>100.0</value>
+				</entry>
+				<entry>
+					<key>
+						<value>math</value>
+					</key>
+					<value>42.0</value>
+				</entry>
+			</map>
+		</constructor-arg>
+	</bean>
+
+	<bean id="sungjuBan" class="com.java.quiz02.SungjukBan">
+		<constructor-arg>
+			<list>
+				<ref bean="kim" />
+				<ref bean="lee" />
+				<ref bean="park" />
+				<ref bean="im" />
+			</list>
+		</constructor-arg>
+	</bean>
+</beans>
