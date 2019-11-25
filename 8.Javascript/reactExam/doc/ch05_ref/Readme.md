@@ -29,7 +29,7 @@
 리액트에 내장되어 있는 `createRef`라는 함수를 이용하여 `ref`를 설정 할수도 있다.
 이 함수는 리액트 v16.3부터 도입되었다. 다음과 같이 작성한다.
 
-```
+```javascript
 impot React, { Component } from 'react';
 
 class Ref extends Component {
@@ -50,3 +50,6 @@ class Ref extends Component {
 
 export default Ref
 ```
+
+[show code(Validation)](https://github.com/MristerWing/PrivateProject/blob/master/8.Javascript/reactExam/hello-react/src/ValidationSample/ValidationSample.js)  
+[show code(ScrollBox)](https://github.com/MristerWing/PrivateProject/blob/master/8.Javascript/reactExam/hello-react/src/ScrollBox/ScrollBox.js)

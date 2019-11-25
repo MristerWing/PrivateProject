@@ -27,15 +27,15 @@
 
 -   클래스형 컴포넌트는 다음과 같이 선언한다.
 
-```
+```javascript
 import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-    render() {
-        const name = 'React';
-        return <div className="react">{name}</div>
-    }
+	render() {
+		const name = 'React';
+		return <div className="react">{name}</div>;
+	}
 }
 
 export default App;
@@ -49,12 +49,12 @@ export default App;
 
 -   함수형 컴포넌트는 다음과 같이 선언한다.
 
-```
+```javascript
 import React from 'react';
 import MyComponent from './MyComponent';
 
 const App = () => {
-    return <MyComponent />;
+	return <MyComponent />;
 };
 
 export default App;
