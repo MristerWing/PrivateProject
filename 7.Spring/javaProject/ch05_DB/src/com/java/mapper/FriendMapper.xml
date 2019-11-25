@@ -8,6 +8,18 @@
   </insert>
   
   <select id="friendSelectAll" resultType="com.java.dto.FriendDto">
-  	select * from friend;
+  	select * from friend
   </select>
+  
+  <select id="friendSelectSearch" parameterType="String" resultType="com.java.dto.FriendDto">
+  	select * from friend where name = #{name}
+  </select>
+  
+  <update id="friendUpdate" parameterType="com.java.dto.FriendDto">
+  	update friend set name = #{name}, phone = #{phone} where num = #{num}
+  </update>
+  
+  <delete id="friendDelete" parameterType="int">
+  	delete from friend where num = #{num}
+  </delete>
 </mapper>
