@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<!-- reply -->
+	
+	<bean id="replyMethodNameResolver"
+		class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/reply/list.do">replyList</prop>
+				<prop key="/reply/replyWrite.do">replyWrite</prop>
+				<prop key="/reply/replyUpdate.do">replyUpdate</prop>
+				<prop key="/reply/replyUpdateOk.do">replyUpdateOk</prop>
+				<prop key="/reply/replyDelete.do">replyDelete</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="replyController"
+		class="com.java.reply.controller.ReplyController">
+		<property name="methodNameResolver" ref="replyMethodNameResolver"></property>
+		<property name="replyService" ref="replyService"></property>
+	</bean>
+
+	<bean id="replyService"
+		class="com.java.reply.service.ReplyServiceImp">
+		<constructor-arg ref="replyDao"></constructor-arg>
+		<constructor-arg ref="replyDto"></constructor-arg>
+	</bean>
+
+	<bean id="replyDao" class="com.java.reply.dao.ReplyDaoImp">
+		<constructor-arg ref="sqlSessionTemplate"></constructor-arg>
+	</bean>
+	
+	<bean id="replyDto" class="com.java.reply.dto.ReplyDto"></bean>
+
+</beans>

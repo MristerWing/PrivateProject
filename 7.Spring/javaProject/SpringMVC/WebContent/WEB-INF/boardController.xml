@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	<!-- board -->
+
+	<!-- Board Controller(Mapping) -->
+	<bean id="pMethodNameResolver"
+		class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/board/write.do">boardWrite</prop>
+				<prop key="/board/list.do">boardList</prop>
+				<prop key="/board/writeOk.do">writeOk</prop>
+				<prop key="/board/read.do">boardRead</prop>
+				<prop key="/board/update.do">boardUpdate</prop>
+				<prop key="/board/updateOk.do">boardUpdateOk</prop>
+				<prop key="/board/delete.do">boardDelete</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- Controller -->
+	<bean id="boardController"
+		class="com.java.board.controller.BoardController">
+		<property name="methodNameResolver" ref="pMethodNameResolver" />
+		<property name="boardService" ref="boardService" />
+	</bean>
+
+	<!-- Service -->
+	<bean id="boardService"
+		class="com.java.board.service.BoardServiceImp">
+		<constructor-arg ref="boardDao"></constructor-arg>
+	</bean>
+
+	<!-- BoardDao -->
+	<bean id="boardDao" class="com.java.board.dao.BoardDaoImp">
+		<constructor-arg ref="sqlSessionTemplate"></constructor-arg>
+	</bean>
+</beans>

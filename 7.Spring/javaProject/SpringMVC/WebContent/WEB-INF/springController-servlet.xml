@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+
+	<!-- myMtehod's transaction configure -->
+	<aop:config>
+		<aop:pointcut expression="within(com.java..*)" id="tM" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="tM" />
+	</aop:config>
+
+	<!-- properties, Application handlerMapping -->
+	<bean id="handlerMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/board/*.do">boardController</prop>
+				<prop key="/reply/*.do">replyController</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- Forward의 view 이동 / MVC RequestDispatcher -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/view/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+
+	<!-- AOP -->
+	<bean id="logAspect" class="com.java.aop.LogAspect"></bean>
+	<aop:config>
+		<aop:aspect ref="logAspect">
+			<aop:pointcut expression="within(com.java..*)" id="pM" />
+			<aop:around method="advice" pointcut-ref="pM" />
+		</aop:aspect>
+	</aop:config>
+
+</beans>
