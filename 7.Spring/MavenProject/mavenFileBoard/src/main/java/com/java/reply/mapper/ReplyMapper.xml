@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.java.reply.mapper.ReplyMapper">
+	<insert id="replyInsert"
+		parameterType="com.java.reply.dto.ReplyDto">
+		insert into linereply values
+		(line_reply_bunho_seq.nextval, #{line_reply})
+	</insert>
+
+	<select id="replyGetBunho" resultType="int">
+		<![CDATA[
+		select nvl(max(bunho), 0) from linereply
+		]]>
+	</select>
+	
+	<select id="replyGetList" resultType="com.java.reply.dto.ReplyDto">
+		select * from linereply order by bunho desc
+	</select>
+	
+	<delete id="replyDelete" parameterType="int">
+		delete from linereply where bunho = #{bunho}
+	</delete>
+	
+	<select id="replyGetDto" parameterType="int" resultType="com.java.reply.dto.ReplyDto">
+		select line_reply from linereply where bunho = #{bunho}
+	</select>
+	
+	<update id="replyUpdate" parameterType="com.java.reply.dto.ReplyDto">
+		update linereply set line_reply = #{line_reply} where bunho = #{bunho}  
+	</update>
+
+</mapper>

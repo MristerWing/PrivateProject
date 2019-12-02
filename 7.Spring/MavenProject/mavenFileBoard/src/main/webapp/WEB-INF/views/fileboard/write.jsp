@@ -1,0 +1,77 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<c:set var="root" value="${pageContext.request.contextPath}"></c:set>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>게시판</title>
+<link rel="stylesheet" href="${root}/css/common.css" />
+<link rel="stylesheet" href="${root}/css/board/write.css" />
+<script type="text/javascript"
+	src="${root}/javascript/fileboard/write.js"></script>
+</head>
+<body>
+	<div align="center" class="wrap">
+		<h3> boardNum:${boardNumber} groupNum: ${groupNumber} sequenceNum: ${sequenceNumber} sequencelevel: ${sequencelevel}</h3>
+		<div class="top" style="font-weight: bold;">글쓰기</div>
+		<div class="top" style="text-align: right;">
+			<a href="${root}/fileboard/list.do?pageNumber=${pageNumber}">글목록</a>
+		</div>
+
+		<!-- application/x-www-form-urlencoded text전송시 기본값. 생략가능 ajax시 명시해야함 -->
+
+		<form class="mainContainer"
+			action="${root}/fileboard/writeOk.do?pageNumber=${pageNumber}"
+			method="post" onsubmit="return boardForm(this)"
+			enctype="multipart/form-data" >
+			<input type="hidden" name="boardNumber" value="${boardNumber}" /> <input
+				type="hidden" name="groupNumber" value="${groupNumber}" /> <input
+				type="hidden" name="sequenceNumber" value="${sequenceNumber}" /> <input
+				type="hidden" name="sequenceLevel" value="${sequencelevel}" />
+
+			<div class="liner">
+				<label>작성자</label>
+				<div class="insert">
+					<input type="text" size="20" name="writer" value="김진수" />
+				</div>
+			</div>
+			<div class="liner">
+				<label>제목</label>
+				<div class="insert">
+					<input type="text" size="50" name="subject" value="테스트작성글 입니다." />
+				</div>
+			</div>
+			<div class="liner">
+				<label>이메일</label>
+				<div class="insert">
+					<input type="email" size="50" name="email"
+						value="gmx0807@gmail.com" />
+				</div>
+			</div>
+			<div class="liner texta">
+				<label class="texta">내용</label>
+				<textarea rows="13" cols="62" name="content">Test</textarea>
+			</div>
+			<div class="liner">
+				<label>비밀번호</label>
+				<div class="insert">
+					<input type="password" size="20" name="password" value="1111" />
+				</div>
+			</div>
+			<div class="liner">
+				<label>파일명</label>
+				<div class="insert">
+					<input type="file" size="50" name="file" />
+				</div>
+			</div>
+			<div class="liner" style="border-bottom-width: 0px;">
+				<input type="submit" value="글쓰기" /> <input type="reset" value="다시작성" />
+				<input type="button" value="목록보기"
+					onclick="javascript:location.href='${root}/fileboard/list.do?pageNumber=${pageNumber}'" />
+			</div>
+		</form>
+	</div>
+</body>
+</html>

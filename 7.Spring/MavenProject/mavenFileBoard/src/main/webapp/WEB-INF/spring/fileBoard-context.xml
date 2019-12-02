@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	<bean id="propertiesMethodNameResolver"
+		class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/fileboard/write.do">fileBoardWrite</prop>
+				<prop key="/fileboard/writeOk.do">fileBoardWriteOk</prop>
+				<prop key="/fileboard/list.do">fileBoardList</prop>
+				<prop key="/fileboard/read.do">fileBoardRead</prop>
+				<prop key="/fileboard/download.do">fileBoardDownload</prop>
+				<prop key="/fileboard/update.do">fileBoardUpdate</prop>
+				<prop key="/fileboard/updateOk.do">fileBoardUpdateOk</prop>
+				<prop key="/fileboard/delete.do">fileBoardDelete</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="fileBoardController"
+		class="com.java.fileBoard.controller.FileBoardController">
+		<property name="methodNameResolver"
+			ref="propertiesMethodNameResolver"></property>
+		<property name="fileBoardService" ref="fileBoardServiceImp"></property>
+	</bean>
+
+	<bean id="fileBoardServiceImp"
+		class="com.java.fileBoard.service.FileBoardServiceImp">
+		<constructor-arg>
+			<ref bean="fileBoardDaoImp" />
+		</constructor-arg>
+		<constructor-arg>
+			<ref bean="fileBoardDto" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="fileBoardDaoImp"
+		class="com.java.fileBoard.dao.FileBoardDaoImp">
+		<property name="sqlSessionTemplate" ref="sqlSessionTemplate"></property>
+	</bean>
+
+	<bean id="fileBoardDto"
+		class="com.java.fileBoard.dto.FileBoardDto"></bean>
+
+	<!-- <aop:config>
+		<aop:aspect ref="logAspect">
+			<aop:pointcut expression="within(com.java.fileBoard.service.FileBoardServiceImp.*)"
+				id="aspectPointcut" />
+			<aop:around method="advice" pointcut-ref="aspectPointcut" />
+		</aop:aspect>
+	</aop:config> -->
+</beans>
