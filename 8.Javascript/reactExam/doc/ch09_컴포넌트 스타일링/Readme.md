@@ -28,6 +28,10 @@
 1. Sass란 Syntactically Awsome Style Sheets(문법적으로 매우 멋진 스타일시트)란 의미이다.
 2. Sass는 CSS전처리기로 복잡한 작업을 쉽게 할 수 있도록 해준다. 또한 스타일 코드의 재활용성을 높혀주며, 코드의 가동성을 높혀 유지보수를 더욱 쉽게 해준다.
 3. Sass는 .scss 와 .sass를 지원한다. 그리고 이 둘의 문법적 차이는 꾀 다르다.
+4. 다른 .scss파일을 불러올 때에는 `@import`구문을 사용한다.
+5. `yarn-eject`명령어를 이용하면 sass-loader의 설정을 커스터마이징하여 사용할 수 있다.
+    > [code(Find sassRegex)](https://github.com/MristerWing/PrivateProject/blob/master/8.Javascript/reactExam/styling-react/src/config/webpack.config.js)
+6. node_modules에 설치된 라이브러리는 ~library/로 축약할 수 있다.
 
 -   .sass
 
