@@ -1,0 +1,12 @@
+@charset "UTF-8";
+.template .menu {
+	width: 200px;
+	display: inline-block;
+	overflow: inherit;
+}
+
+.tmplate .content {
+	display: inline-block;
+	margin-left: 800px;
+	overflow: hidden;
+}

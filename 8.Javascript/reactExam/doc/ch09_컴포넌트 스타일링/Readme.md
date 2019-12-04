@@ -59,3 +59,5 @@ body {
 [show code(info)](https://github.com/MristerWing/PrivateProject/blob/master/8.Javascript/reactExam/styling-react/src/sass)
 
 ### CSS Module
+
+1. CSS 모듈은 CSS를 불러와서 사용할 때 클래스 이름을 고유한 값, 즉 [파일 이름]\_[클래스이름]\_\_[해시값] 형태로 자동으로 만들어서 컴포넌트 스타일 클래스 이름이 중첩되는 현상을 방지하는 기술이다.
