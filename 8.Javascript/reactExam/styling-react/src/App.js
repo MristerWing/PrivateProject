@@ -1,12 +1,13 @@
-import React from 'react';
-import SassComponent from './sass/SassComponent';
+import React from "react";
+//import SassComponent from './sass/SassComponent';
+import CSSModule from "./CSSModule/CSSModule";
 
 function App() {
-	return (
-		<div>
-			<SassComponent />
-		</div>
-	);
+    return (
+        <div>
+            <CSSModule />
+        </div>
+    );
 }
 
 export default App;
