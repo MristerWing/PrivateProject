@@ -60,4 +60,21 @@ body {
 
 ### CSS Module
 
-1. CSS 모듈은 CSS를 불러와서 사용할 때 클래스 이름을 고유한 값, 즉 [파일 이름]\_[클래스이름]\_\_[해시값] 형태로 자동으로 만들어서 컴포넌트 스타일 클래스 이름이 중첩되는 현상을 방지하는 기술이다.
+1. CSS모듈은 CSS를 불러와서 사용할 때 클래스 이름을 고유한 값, 즉 [파일 이름]\_[클래스이름]\_\_[해시값] 형태로 자동으로 만들어서 컴포넌트 스타일 클래스 이름이 중첩되는 현상을 방지하는 기술이다.
+2. CSS모듈은 사용자가 직접 불러온 컴포넌트 내에서만 작동하기 때문에 중복성에 대한 고민을 하지않아도 된다.
+3. 특정 클래스가 전역으로 사용될 경우, 앞에 `:global`을 붙여서 글로벌 CSS임을 명시해줄 수 있다.
+
+[show code(css)](https://github.com/MristerWing/PrivateProject/blob/master/8.Javascript/reactExam/styling-react/src/CSSModule.module.css)
+[show code(scss)](https://github.com/MristerWing/PrivateProject/blob/master/8.Javascript/reactExam/styling-react/src/CSSModule.module.scss)
+
+### CSS-in-JS
+
+1. CSS-in-JS는 자바스크립트는 파일 안에 스타일을 선언하는 방식을 의미한다.
+2. 이것은 관련된 라이브러리가 많으며 대표적인 예는 styled-domponents 와 emotion이 있다.
+
+#### styled-component
+
+1. CSS-in-JS의 라이브러리 중 하나로 js내에서 css를 바로 사용할 수 있게 도와주는 라이브러리이다.
+2. Tagged 탬플릿 리터럴을 이용하여 작성하며, 백틱을 사용하여 작성한다.
+3. styled-component의 사용법은 styled를 불러온뒤, `styled.태그명`으로 사용한다.
+4. 단순 변수가 아니라 여러 줄의 스타일 구문을 조건부로 설정해야 하는 경우, CSS를 불러와야한다.
